@@ -8,26 +8,26 @@ Resource                   ${CURDIR}/variable.robot
 
 ShouldSeeTxt
     [Arguments]    ${txt}
-    Wait Until Page Contains    ${txt}
+    Wait Until Page Contains         ${txt}
 ShouldSeeEle
     [Arguments]    ${element}
     Wait Until Element Is Visible    ${element}
 OpenWebBrowser
-    Open Browser    ${url}    ${browser}
-    ShouldSeeTxt    QA Playground
+    Open Browser     ${url}    ${browser}
+    ShouldSeeTxt     QA Playground
 HrefCheck
     Click Element    ${github}
     Location Should Be    https://github.com/marko-simic/qa-playground-tests
     Go Back
     Click Element    ${credit}
-    ShouldSeeTxt    Linkedin
+    ShouldSeeTxt     Linkedin
     Go Back
-    Click Element    ${theme}
+    Click Element         ${theme}
     Location Should Be    https://github.com/codercatdev/ajonp-fireship-theme
 
 GotoChallenge
     Click Element    ${btn_web_app}
-    ShouldSeeTxt    Each mini-app presents a unique test automation challenge
+    ShouldSeeTxt     Each mini-app presents a unique test automation challenge
 
 OpenChallenge
     [Arguments]    ${challengenum}
@@ -35,7 +35,7 @@ OpenChallenge
     
     Scroll Element Into View    xpath=/html/body/main/div[3]/a[${challengenum}]/div
     #Click Element    ${challenge_${challengenum}}
-    Click Element    xpath=/html/body/main/div[3]/a[${challengenum}]/div
+    Click Element               xpath=/html/body/main/div[3]/a[${challengenum}]/div
     
 
 ######### Challenge 2 ###########
@@ -50,7 +50,7 @@ InputChallenge2
     Input Text    xpath=/html/body/main/div/div/input[6]    ${6}
 GetAns
     #Get code from page and keep it in array form
-    ${txt}    Get Text    ${challenge_ans}
+    ${txt}     Get Text    ${challenge_ans}
     #remove unneccessary string
     ${txt}=    Remove String    ${txt}    The confirmation code is
     ${txt}=    Remove String    ${txt}    -
@@ -90,7 +90,7 @@ AttCheck
 ######### Challenge 10 ###########
 SelectStar
     [Arguments]    ${rating}
-    IF    (${rating}==1)
+    IF         (${rating}==1)
         Click Element    xpath=/html/body/div/div[1]/div[2]/label[${rating}]
     ELSE IF    (${rating}==2)
         Click Element    xpath=/html/body/div/div[1]/div[2]/label[${rating}]
@@ -114,30 +114,30 @@ SelectStar
 NewEntry
     Click Element    ${ch15_add}
 RowCount
-    @{elem} =   Get WebElements       xpath://*[@id="app"]/table/tbody[1]/tr[*]
+    @{elem} =    Get WebElements       xpath://*[@id="app"]/table/tbody[1]/tr[*]
     ${count}=    Get Length    ${elem}
-    RETURN    ${count}
+    RETURN       ${count}
 
 ######### Challenge 16 ###########
 SelectMenu
-    [Arguments]    ${menu}
+    [Arguments]          ${menu}
     Open Context Menu    ${ch16_btn}
-    ShouldSeeEle    xpath=/html/body/div/div/ul
-    Log    ${menu}
-    IF    (${menu}==6)
-        Click Element        xpath=/html/body/div/div/div/li
+    ShouldSeeEle         xpath=/html/body/div/div/ul
+    Log         ${menu}
+    IF         (${menu}==6)
+        Click Element             xpath=/html/body/div/div/div/li
         Element Should Contain    ${ch16_btn}    Menu item Settings clicked
     ELSE IF    (${menu}==2)
         Mouse Down           xpath=/html/body/div/div/ul/li[2]
-        ShouldSeeEle    xpath=/html/body/div/div/ul/li[2]/ul/li[1]
-        Click Element    xpath=/html/body/div/div/ul/li[2]/ul/li[1]
+        ShouldSeeEle         xpath=/html/body/div/div/ul/li[2]/ul/li[1]
+        Click Element        xpath=/html/body/div/div/ul/li[2]/ul/li[1]
     ELSE
         Click Element        xpath=/html/body/div/div/ul/li[${menu}]
-        VerifySelectMenu    ${menu}
+        VerifySelectMenu     ${menu}
     END
 VerifySelectMenu
     [Arguments]    ${num}
-    IF    ${num==1}
+    IF         ${num==1}
         Element Should Contain    ${ch16_btn}    Menu item Preview clicked
     ELSE IF    ${num==3}
         Element Should Contain    ${ch16_btn}    Menu item Get Link clicked
@@ -163,14 +163,14 @@ VerifySelectMenu
     Log    ${txt}
 #21
 21RowCount
-    @{elem} =   Get WebElements       xpath://*[@class="icard"]
+    @{elem} =    Get WebElements       xpath://*[@class="icard"]
     ${count}=    Get Length    ${elem}
-    RETURN    ${count}
+    RETURN       ${count}
 21Text
     [Arguments]    ${element}    ${type}
     @{elem} =   Get WebElements       ${element}
-    ${txt}=    Get Text    ${elem}[${type}]
-    IF    ${type=='0'}
+    ${txt}=     Get Text    ${elem}[${type}]
+    IF         ${type=='0'}
         Log    Title = ${txt}
     ELSE IF    ${type=='1'}
         Log    Body = ${txt}
@@ -178,7 +178,7 @@ VerifySelectMenu
 21GetSpecifictext
     [Arguments]    ${number}    ${type}
     ${elem}=    Get WebElement    xpath=/html/body/div/div[${number}]
-    IF    ${type=='title'}
+    IF         ${type=='title'}
         21Text    xpath=/html/body/div/div[${number}]/div    0
     ELSE IF    ${type=='body'}
         21Text    xpath=/html/body/div/div[${number}]/div    1
@@ -186,31 +186,31 @@ VerifySelectMenu
 #22
 CreateQR
     [Arguments]    ${key}
-    Input Text    ${ch22_input}    ${key}
-    Click Element    ${ch22_btn}
-    ShouldSeeEle    ${ch22_qr}
-    ${txt}=    Get Element Attribute  ${ch22_qr}    src
-    RETURN    ${txt}    ${key}
+    Input Text     ${ch22_input}    ${key}
+    Click Element  ${ch22_btn}
+    ShouldSeeEle   ${ch22_qr}
+    ${txt}=        Get Element Attribute  ${ch22_qr}    src
+    RETURN         ${txt}    ${key}
 OpenGoogleLens
     Go To    https://lens.google.com
 LensSearch
-    [Arguments]    ${QR}
-    ${txt}=    Get WebElement    xpath=//*[@placeholder="วางลิงก์รูปภาพ"]
+    [Arguments]     ${QR}
+    ${txt}=         Get WebElement    xpath=//*[@placeholder="วางลิงก์รูปภาพ"]
     ShouldSeeEle    ${txt}
-    Input Text    ${txt}    ${QR}
-    ${button}=    Get WebElement    xpath=//*[@class="Qwbd3"]
-    Click Element    ${button}
-    ${qr_result}=    Get Text    xpath=//*[@class="z3rBle Pqkn2e"]
-    RETURN    ${qr_result}
+    Input Text      ${txt}    ${QR}
+    ${button}=      Get WebElement    xpath=//*[@class="Qwbd3"]
+    Click Element   ${button}
+    ${qr_result}=   Get Text    xpath=//*[@class="z3rBle Pqkn2e"]
+    RETURN          ${qr_result}
 
 #23
 23CheckCountdownElement
-    [Arguments]    ${time}
+    [Arguments]     ${time}
     ShouldSeeELe    ${ch23_timer}
     Wait Until Element Contains    ${ch23_timer}    Registration closes in 00:${time} minutes!    10s
-    ${txt}=    Get Text    ${ch23_timer}
-    RETURN    ${txt}
-    Log    ${txt}
+    ${txt}=         Get Text    ${ch23_timer}
+    RETURN          ${txt}
+    #Log    ${txt}
 23CountdownComplete
     Wait Until Page Does Not Contain    Registration closes in
     ${txt2}=    Get Text    id=msg
@@ -219,13 +219,13 @@ LensSearch
 24GetElementWidth
     ${css}=         Get WebElement    xpath://*[@class="slider"]
     ${prop_val}=    Call Method       ${css}    value_of_css_property    width
-    ${percent}=    Strip String   ${prop_val}    characters=px
-    RETURN    ${percent}
+    ${percent}=     Strip String   ${prop_val}    characters=px
+    RETURN          ${percent}
 24Input
     [Arguments]    ${input_percent}
     ##    Make Input(%) in to value that match with element's width
     ${percent}=    24GetElementWidth
-    ${n1}=    Convert To Number    ${input_percent}
-    ${n2}=    Convert To Number    ${percent}
-    ${output}    Evaluate        ${n1}/100*${n2}
+    ${n1}=         Convert To Number    ${input_percent}
+    ${n2}=         Convert To Number    ${percent}
+    ${output}      Evaluate        ${n1}/100*${n2}
     Drag And Drop By Offset    ${ch24_guage}    ${output}    0
