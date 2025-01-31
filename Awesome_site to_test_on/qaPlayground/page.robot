@@ -1,5 +1,5 @@
 *** Settings ***
-Library                    SeleniumLibrary    plugins=shadowdom.py
+Library                    SeleniumLibrary
 Library                    String
 Library                    OperatingSystem
 Library                    geo.py
@@ -59,7 +59,7 @@ Test Teardown    Close Browser
     Click Element    ${challenge_8_click_me}
     Element Should Contain    ${challenge_8)_message}    Button Clicked
 09 Challenge9
-    [Tags]    Shadow DOM    WIP
+    [Tags]    Shadow DOM
     OpenChallenge    9
     #Get Shadow DOM element
     ${btn}=    Get WebElement    dom:document.querySelector("body > main > div > progress-bar").shadowRoot.querySelector("div:nth-child(3) > button")
