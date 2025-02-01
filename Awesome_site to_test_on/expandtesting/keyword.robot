@@ -89,4 +89,18 @@ Register
     Input Text    ${regis_comfirm_password}    ${confirmpassword}
     Click Element    ${regis_submit}
     RETURN    ${name}    ${password}
-    
+
+#5
+Otp Email
+    [Arguments]    ${email}    ${otp}
+    Input    ${otp_email}    ${email}
+    Click Element    ${otp_request}
+    SeeEle    ${otp_input}
+    Input    ${otp_input}      ${otp}
+    Click Element    ${otp_verify}
+GetDataFromPage
+    ${email}=    Get Text    xpath=/html/body/main/div[3]/div/div[1]/div/ul/li[1]
+    ${otp}=    Get Text    xpath=/html/body/main/div[3]/div/div[1]/div/ul/li[2]
+    ${email}=    Strip String    ${email}    mode=left    characters=Email Address: 
+    ${otp}=    Strip String    ${otp}    mode=left    characters=OTP Code: 
+    RETURN    ${email}    ${otp}

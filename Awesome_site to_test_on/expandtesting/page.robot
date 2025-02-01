@@ -90,4 +90,20 @@ GetTitle
     SeeEle           ${fotgot_confirm}
     VerifyEleMsg     ${fotgot_confirm}    An e-mail has been sent to you which explains how to reset your password.
 
-    
+05 OTP
+    [Tags]    OTP
+    SelectApp    5
+    #Negative
+        #incorrect OTP
+    Otp Email    aaaaaaa@gmail.com    5555
+    VerifyEleMsg    ${otp_msg}    The provided OTP code is incorrect. Please check your code and try again.
+    Go Back
+    Go Back
+        #invalid email
+    Input    ${otp_email}    aaaaaaa
+    Click Element    ${otp_request}
+    VerifyEleMsg     ${otp_email_error}    Please enter a valid email address.
+    #Positive
+    @{account}=    GetDataFromPage
+    Otp Email    ${account}[0]    ${account}[1]}
+    VerifyEleMsg        ${regis_noti}                    You logged into a secure area!

@@ -32,3 +32,11 @@ ${forgot_error}              xpath=//*[@id="forgot_password"]/div/div/div
 ${forgot_submit}             xpath=//*[@id="forgot_password"]/button
 ${noti}                      id=flash
 ${fotgot_confirm}            id=confirmation-alert
+
+#5
+${otp_request}               xpath=//*[@id="btn-send-otp"]
+${otp_msg}                   id=otp-message
+${otp_verify}                id=btn-send-verify
+${otp_email_error}           xpath=/html/body/main/div[3]/div/div[2]/div/div/div/form/div/div
+${otp_input}                 id=otp
+${otp_email}                 id=email
