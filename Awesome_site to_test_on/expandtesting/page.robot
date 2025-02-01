@@ -107,3 +107,11 @@ GetTitle
     @{account}=    GetDataFromPage
     Otp Email    ${account}[0]    ${account}[1]}
     VerifyEleMsg        ${regis_noti}                    You logged into a secure area!
+06 Dynamic Table
+    [Tags]    Dynamic
+    SelectApp    6
+    #Get position of target data
+    @{data_pos}=    GetData    Firefox    CPU
+    #Use data's position to get text from table
+    ${result}=    ReturnTextFromTable    ${data_pos}[0]    ${data_pos}[1]
+    Log    You Get ${result}

@@ -104,3 +104,55 @@ GetDataFromPage
     ${email}=    Strip String    ${email}    mode=left    characters=Email Address: 
     ${otp}=    Strip String    ${otp}    mode=left    characters=OTP Code: 
     RETURN    ${email}    ${otp}
+
+#6
+ReturnTextFromTable
+    [Arguments]    ${x}    ${y}
+    ${txt}=    Get Text    xpath=/html/body/main/div[3]/div/div[2]/div/div[2]/table/tbody/tr[${x}]/td[${y}]
+    RETURN    ${txt}
+CheckText
+    [Arguments]    ${txt}    
+    Element Should Contain    ${txt}    Chrome
+    RETURN    ${txt}
+CheckChrome
+    [Arguments]    ${txt}
+    IF    ${txt == '%word'}
+        RETURN    ${txt}
+    END
+GetData
+    [Arguments]    ${task_name}    ${resource}
+    ${row}=        GetRow    ${task_name}
+    ${column}=     GetColumn    ${resource}
+    RETURN    ${row}    ${column}
+GetRow
+    [Arguments]    ${task_name}
+    ${txt2}=    Convert To String    ${task_name}
+    FOR    ${i}    IN RANGE    1    5
+    #                          xpath=/html/body/main/div[3]/div/div[2]/div/div[2]/table/tbody/tr[1]/td[1]
+        Log    i=${i}
+        ${txt}=    Get Text    xpath=/html/body/main/div[3]/div/div[2]/div/div[2]/table/tbody/tr[${i}]/td[1]
+        #IF    ${txt=='Chrome'}
+        #${${txt2}==${txt}}
+        ${checkkeyword}=    Run Keyword And Return Status    Should Be Equal As Strings    ${txt2}    ${txt}
+        IF    ${checkkeyword}
+            ${row}=    Get Variable Value    ${i}
+            Log   ${row}
+            RETURN    ${row}
+            BREAK
+        ELSE
+            Continue For Loop
+        END
+    END
+GetColumn
+    [Arguments]    ${resource}
+    FOR    ${i}    IN RANGE    1    6
+        ${Col_name}=    Get Text    xpath=/html/body/main/div[3]/div/div[2]/div/div[2]/table/thead/tr/th[${i}]
+        ${checkkeyword}=    Run Keyword And Return Status    Should Be Equal As Strings    ${Col_name}    ${resource}
+        IF    ${checkkeyword}
+            ${row}=    Get Variable Value    ${i}
+            Log   ${row}
+            RETURN    ${row}
+            BREAK
+        END
+    END
+    
