@@ -115,3 +115,23 @@ GetTitle
     #Use data's position to get text from table
     ${result}=    ReturnTextFromTable    ${data_pos}[0]    ${data_pos}[1]
     Log    You Get ${result}
+07 Basic Auth
+    [Tags]    Authentication
+    [Setup]    Open Browser    https://admin:admin@practice.expandtesting.com/basic-auth    ${brw}
+    SeeTxt    Congratulations! You must have the proper credentials.
+08 Digest Auth
+    [Tags]    Authentication
+    [Setup]    Open Browser    https://admin:admin@practice.expandtesting.com/basic-auth    ${brw}
+    SeeTxt    Congratulations! You must have the proper credentials.
+09 Browser Info
+    [Tags]    Browser    Information
+    SelectApp    9
+    SeeEle    ${show_brw_info}
+    Click Element    ${show_brw_info}
+    SeeEle    id=browser-info
+10 RadioBtn
+    [Tags]    Radio
+    SelectApp    10
+    SeeTxt    Radio Buttons page for Automation Testing Practice
+    Select Radio Button    color    black
+    Select Radio Button    sport    football

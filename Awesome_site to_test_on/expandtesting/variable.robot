@@ -40,3 +40,9 @@ ${otp_verify}                id=btn-send-verify
 ${otp_email_error}           xpath=/html/body/main/div[3]/div/div[2]/div/div/div/form/div/div
 ${otp_input}                 id=otp
 ${otp_email}                 id=email
+
+#9
+${show_brw_info}             id=browser-toggle
+
+#10
+#${fav_color_radio}           id=browser-info
