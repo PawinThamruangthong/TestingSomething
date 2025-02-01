@@ -46,6 +46,9 @@ Location
     #Check Current URL
     [Arguments]    ${url}
     Location Should Be    ${url}
+VerifyEleMsg
+    [Arguments]    ${ele}    ${txt}
+    Wait Until Element Contains    ${ele}    ${txt}
 #1
 1 Input
     [Arguments]    ${num}    ${txt}    ${pwd}    ${date}
@@ -72,8 +75,19 @@ Location
     Input Text        ${2_input_id}          ${account}[0]
     Input Text        ${2_input_password}    ${account}[1]
     Click Button      ${2_btn_login}
-2 Login
+Login
     [Arguments]    ${id}    ${pwd}
     Input Text        ${2_input_id}          ${id}
     Input Text        ${2_input_password}    ${pwd}
     Click Button      ${2_btn_login}
+
+#3
+Register
+    [Arguments]    ${name}    ${password}    ${confirmpassword}
+    Input Text    ${regis_username}    ${name}
+    Input Text    ${regis_password}    ${password}
+    Input Text    ${regis_comfirm_password}    ${confirmpassword}
+    Click Element    ${regis_submit}
+    RETURN    ${name}    ${password}
+GenerateRandomAccount
+    

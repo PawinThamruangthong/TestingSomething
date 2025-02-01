@@ -18,4 +18,11 @@ ${2_input_id}          id=username
 ${2_input_password}    id=password
 ${2_btn_login}         xpath=//*[@id="login"]/button
 ${2_btn_logout}        xpath=/html/body/main/div[4]/div/a/i
-${2_login_fail_noti}    id=flash
+${2_login_fail_noti}   id=flash
+
+#3
+${regis_username}            id=username
+${regis_password}            id=password
+${regis_comfirm_password}    id=confirmPassword
+${regis_submit}              xpath=//*[@id="register"]/button
+${regis_noti}                id=flash
