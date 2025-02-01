@@ -51,7 +51,7 @@ GetTitle
     [Tags]        Register
     SelectApp     3
     SeeTxt        Test Register page for Automation Testing Practice
-    # #Negative
+    #Negative
     @{account}=         Register    Username    Password    Password
     VerifyEleMsg        ${regis_noti}                    An error occurred during registration. Please try again.
     Register            Username    ${EMPTY}    ${EMPTY}
@@ -71,4 +71,23 @@ GetTitle
     Location            https://practice.expandtesting.com/secure
     Click Element       ${2_btn_logout}
     SeeEle              ${2_btn_login}
+
+04 Forgot Password
+    [Tags]    Password
+    SelectApp    4
+    #Negative
+        #ErrorMsg In Element
+    Input    email    aaaaaaa
+    Click Element    ${forgot_submit}
+    VerifyEleMsg     ${forgot_error}    Please enter a valid email address.
+        #ErrorMsg In Notify
+    Input    email    aaaaaaa@gmail
+    Click Element    ${forgot_submit}
+    VerifyEleMsg     ${noti}    Your email is invalid!
+    #Positive
+    Input    email    aaaaaa@gmail.com
+    Click Element    ${forgot_submit}
+    SeeEle           ${fotgot_confirm}
+    VerifyEleMsg     ${fotgot_confirm}    An e-mail has been sent to you which explains how to reset your password.
+
     

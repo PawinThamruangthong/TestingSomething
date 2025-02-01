@@ -26,3 +26,9 @@ ${regis_password}            id=password
 ${regis_comfirm_password}    id=confirmPassword
 ${regis_submit}              xpath=//*[@id="register"]/button
 ${regis_noti}                id=flash
+
+#4
+${forgot_error}              xpath=//*[@id="forgot_password"]/div/div/div
+${forgot_submit}             xpath=//*[@id="forgot_password"]/button
+${noti}                      id=flash
+${fotgot_confirm}            id=confirmation-alert

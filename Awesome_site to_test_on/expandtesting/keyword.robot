@@ -89,5 +89,4 @@ Register
     Input Text    ${regis_comfirm_password}    ${confirmpassword}
     Click Element    ${regis_submit}
     RETURN    ${name}    ${password}
-GenerateRandomAccount
     
