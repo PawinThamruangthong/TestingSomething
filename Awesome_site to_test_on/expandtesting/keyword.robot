@@ -209,3 +209,33 @@ Click Noti And Verify
 LogNoti
     [Arguments]    ${txt}
     Log    ${txt}
+
+#24
+CheckTypo
+    [Arguments]    ${locator}    ${expected_text}    
+    ${txt}=    Get Text    ${locator}
+    
+    ${condition}=    Run Keyword And Return Status    Should Be Equal As Strings    ${txt}    ${expected_text}
+    IF    ${condition}
+        Log    As expect
+    ELSE
+        Log    Typo
+    END
+
+#26
+VerifyImg
+    [Arguments]    ${locator}
+    # Check Locator Should Visible
+    ${condition}=    Run Keyword And Return Status    Page Should Contain Image    ${locator}
+    IF    ${condition}
+        #Get Source
+        ${src}=    Get Element Attribute    ${locator}    src
+        Go To    ${src}
+        #Check Image Show Propery
+        Wait Until Element Is Visible     css: img
+        Go Back
+        Log    Display Corectly
+    ELSE
+        Log    Image Error
+    END
+    

@@ -221,3 +221,25 @@ GetTitle
     END
     #Click first option
     Click Element    ${txt_list}[0]
+23 ShadowDom
+    [Tags]    ShadowDom
+    SelectApp    23
+    SeeTxt    Shadow DOM page for Automation Testing Practice
+    SeeEle    ${normal_btn}
+    ${btn}=                       Get WebElement    dom:document.querySelector("#shadow-host").shadowRoot.querySelector("#my-btn")
+    SeeEle    ${btn}
+24 Typos
+    [Tags]    Typo
+    SelectApp    24
+    CheckTypo    ${msg_txt}    Sometimes you'll see a typo, other times you won't.
+    Reload Page
+    CheckTypo    ${msg_txt}    Sometimes you'll see a typo, other times you won't.
+    Reload Page
+    CheckTypo    ${msg_txt}    Sometimes you'll see a typo, other times you won't.
+26 BrokenImg
+    [Tags]    Image
+    SelectApp    26
+    VerifyImg    /html/body/main/div[3]/div/div/div[1]/img
+    VerifyImg    /html/body/main/div[3]/div/div/div[2]/img
+    VerifyImg    xpath=//html/body/main/div[3]/div/div/div[3]/img
+    
