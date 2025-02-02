@@ -239,3 +239,11 @@ VerifyImg
         Log    Image Error
     END
     
+#27
+GenParagraph
+    @{Elem}=    Get WebElements    xpath=/html/body/main/div[3]/div/div/div/div
+    ${num}=    CountElements    xpath=/html/body/main/div[3]/div/div/div/div/div
+    Log    ${num} :Paragraph generated
+    MovetoBtm
+MovetoBtm
+    Scroll Element Into View    ${btm_container}

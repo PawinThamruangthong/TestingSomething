@@ -89,3 +89,4 @@ ${normal_btn}               xpath=//*[@id="my-btn"]
 
 #24
 ${msg_txt}                      xpath=/html/body/main/div[3]/div/p[2]
+${btm_container}                xpath=/html/body/footer/div

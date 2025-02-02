@@ -242,4 +242,9 @@ GetTitle
     VerifyImg    /html/body/main/div[3]/div/div/div[1]/img
     VerifyImg    /html/body/main/div[3]/div/div/div[2]/img
     VerifyImg    xpath=//html/body/main/div[3]/div/div/div[3]/img
-    
+
+27 InfiniteScroll
+    [Tags]    Scroll
+    SelectApp    27
+    SeeTxt    Infinite Scroll page for Automation Testing Practice
+    Repeat Keyword    10s    GenParagraph
