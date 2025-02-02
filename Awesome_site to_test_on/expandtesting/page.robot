@@ -204,3 +204,20 @@ GetTitle
     SelectApp    18
     Click Noti And Verify
     Repeat Keyword    5    Click Noti And Verify
+19 AutoComplete
+    SelectApp    19
+    Input    ${country}    A
+    ${txtlower}=    Convert To Lower Case    A
+    ${txtupper}=    Convert To Upper Case    A
+    ${verify}=    Create List    ${txtlower}    ${txtupper}
+    #Wait To see suggestion list
+    Wait Until Element Is Visible    ${country_list}
+    #Get All element of suggestion list
+    @{txt_list}=    Get WebElements    xpath=//*[@id="countryautocomplete-list"]/div
+    #Check condition : every element should contain keyword from input
+    FOR    ${item}    IN    @{txt_list}
+        ${txt}=    Get Text    ${item}
+        Should Contain Any    ${txt}    ${txtlower}    ${txtupper}
+    END
+    #Click first option
+    Click Element    ${txt_list}[0]

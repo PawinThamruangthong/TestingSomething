@@ -78,3 +78,8 @@ ${element_add}              xpath=/html/body/main/div[3]/div/button
 
 #18
 ${noti_btn}                 xpath=/html/body/main/div[4]/div/p/a
+
+#19
+${country}                  id=country
+${country_list}             xpath=//*[@id="countryautocomplete-list"]/div
+${country_list_data}        xpath=//*[@id="countryautocomplete-list"]/div[1]
