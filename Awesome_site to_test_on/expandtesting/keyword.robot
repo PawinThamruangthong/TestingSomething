@@ -155,4 +155,22 @@ GetColumn
             BREAK
         END
     END
+
+#12
+DragToTarget
+    [Arguments]    ${color}
+    ${select_color}=    Get WebElement    //*[@class="${color}"]
+    Drag And Drop    ${select_color}    ${Drop_target}
     
+#13
+InputValidate
+    [Arguments]    ${name}    ${mobile}    ${date}    ${payment}
+    Input    ${cont_name}    ${name}
+    Input    ${cont_num}    ${mobile}
+    Input    ${cont_pick}    ${date}
+    #${rrr}=        Run Keyword And Return Status    ${result} 
+    Run Keyword If    '${payment}' in ['cashondelivery','card']    Select From List By Value    ${cont_paym}    ${payment}
+    #Select From List By Value    ${cont_paym}    ${payment}
+    Click Element    ${cont_regis}
+ValidatePass
+    Wait Until Element Contains   ${cont_alert}    Thank you for validating your ticket

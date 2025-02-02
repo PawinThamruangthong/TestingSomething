@@ -46,3 +46,29 @@ ${show_brw_info}             id=browser-toggle
 
 #10
 #${fav_color_radio}           id=browser-info
+
+#11
+${box_a}                    id=column-a
+${box_b}                    id=column-b
+
+#12
+${circle_1}                 xpath=//*[@id="source"]/div[1]
+${circle_2}                 xpath=//*[@id="source"]/div[2]
+${circle_3}                 xpath=//*[@id="source"]/div
+${Drop_target}              id=target
+
+#13
+${cont_name}                name=ContactName
+${cont_num}                 name=contactnumber
+${cont_pick}                name=pickupdate
+${cont_paym}                name=payment
+${cont_regis}               xpath=/html/body/main/div[3]/div/div/div/div/form/div[5]/button
+${cont_alert}               xpath=/html/body/main/div[3]/div/div
+${cont_err_name}            xpath=/html/body/main/div[3]/div/div/div/div/form/div[1]/div[2]
+${cont_err_num}             xpath=/html/body/main/div[3]/div/div/div/div/form/div[2]/div
+${cont_err_pick}            xpath=/html/body/main/div[3]/div/div/div/div/form/div[3]/div
+${count_err_paym}           xpath=/html/body/main/div[3]/div/div/div/div/form/div[4]/div
+
+#14
+${upload_section}           xpath=//*[@id="fileInput"]
+${upload_btn}               id=fileSubmit

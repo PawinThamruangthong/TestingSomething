@@ -135,3 +135,47 @@ GetTitle
     SeeTxt    Radio Buttons page for Automation Testing Practice
     Select Radio Button    color    black
     Select Radio Button    sport    football
+11 DragNDrop
+    [Tags]    Drag    Drop
+    SelectApp    11
+    Drag And Drop    ${box_a}    ${box_b}
+12 StackDragNDrop
+    [Tags]    Drag    Drop    Stacking
+    SelectApp    12
+    DragToTarget    red
+    DragToTarget    green
+    DragToTarget    blue
+13 FormValidation
+    [Tags]    Validation
+    SelectApp    13
+    #   Positive
+    InputValidate    John    012-3456789    02202025    card
+    ValidatePass
+    Go Back
+    Reload Page
+    #    Negative
+    #NameError
+    InputValidate    ${EMPTY}    012-3456789    02202025    card
+    VerifyEleMsg    ${cont_err_name}    Please enter your Contact name.
+    Reload Page
+    #ContactNumber
+    InputValidate    John    ${EMPTY}    02202025    card
+    VerifyEleMsg    ${cont_err_num}    Please provide your Contact number.
+    Reload Page
+    InputValidate    John    123456789    02202025    card
+    VerifyEleMsg    ${cont_err_num}    Please provide your Contact number.
+    Reload Page
+    #PickUp Date
+    InputValidate    John    012-3456789    ${EMPTY}    card
+    VerifyEleMsg    ${cont_err_pick}    Please provide valid Date.
+    Reload Page
+    #Method
+    InputValidate    John     012-3456789    02202025    ${EMPTY}
+
+14 Upload
+    SelectApp    14
+    SeeEle                  ${upload_section}
+    #UploadFile
+    Choose File             ${upload_section}    ${CURDIR}\\upload.txt
+    Click Element           ${upload_btn}
+    SeeTxt    File Uploaded!
