@@ -1,8 +1,10 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    String
+Library    OperatingSystem
 Resource   ${CURDIR}/keyword.robot
 Test Setup    OpenWeb
+
 #Test Teardown    Close Browser
 
 *** Test Cases ***
@@ -171,7 +173,6 @@ GetTitle
     Reload Page
     #Method
     InputValidate    John     012-3456789    02202025    ${EMPTY}
-
 14 Upload
     SelectApp    14
     SeeEle                  ${upload_section}
@@ -179,3 +180,27 @@ GetTitle
     Choose File             ${upload_section}    ${CURDIR}\\upload.txt
     Click Element           ${upload_btn}
     SeeTxt    File Uploaded!
+15 Download
+    [Setup]
+    #Set Download Location
+    ${prefs} =        Create Dictionary    download.default_directory=${CURDIR}
+    #Open Browser with Condition
+    OpenBrowser       ${url}    ${brw}    options=add_experimental_option("prefs",${prefs})
+    SelectApp    15
+    downloadFile
+    Wait Until Created    ${CURDIR}\\some-file.json
+    File Should Exist     ${CURDIR}\\some-file.json
+    Remove File           ${CURDIR}\\some-file.json
+16 Add/Remove Element
+    SelectApp    16
+    AddElements    5
+    AddElements    10
+    DeleteElements    10
+    DeleteElements    10
+17 SecuredFile
+    [Setup]    Open Browser    https://admin:admin@practice.expandtesting.com/download-secure    ${brw}
+    SeeTxt    File Downloader page for Automation Testing Practice
+18 NotiMsg
+    SelectApp    18
+    Click Noti And Verify
+    Repeat Keyword    5    Click Noti And Verify

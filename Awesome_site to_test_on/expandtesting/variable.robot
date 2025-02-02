@@ -72,3 +72,9 @@ ${count_err_paym}           xpath=/html/body/main/div[3]/div/div/div/div/form/di
 #14
 ${upload_section}           xpath=//*[@id="fileInput"]
 ${upload_btn}               id=fileSubmit
+
+#16
+${element_add}              xpath=/html/body/main/div[3]/div/button
+
+#18
+${noti_btn}                 xpath=/html/body/main/div[4]/div/p/a

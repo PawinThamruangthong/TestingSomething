@@ -174,3 +174,38 @@ InputValidate
     Click Element    ${cont_regis}
 ValidatePass
     Wait Until Element Contains   ${cont_alert}    Thank you for validating your ticket
+
+#15
+downloadFile
+    ${target_File}=    Get WebElement    xpath=//*[@href="download/some-file.json"]
+    SeeEle    ${target_File}
+    Click Element    ${target_File}
+
+#16
+AddElement
+    Click Element    ${element_add}
+AddElements
+    [Arguments]    ${num}
+    Repeat Keyword    ${num}    Addelement
+CountElements
+    #Count all elements that have the same locator.
+    [Arguments]    ${elementpath}
+    ${num}=    Get Element Count    ${elementpath}
+    RETURN    ${num}
+DeleteElements
+    #Click At specific element do delete it.
+    [Arguments]    ${location}
+    ${num}=    Convert To Integer    ${location}
+    @{elem}=    Get WebElements    //*[@class="added-manually btn btn-info"]
+    Click Element    ${elem}[${num}]
+
+#18
+Click Noti And Verify
+    @{msg}=    Create List    Action successful    Action unsuccessful    please try again
+    Click Element    ${noti_btn}
+    SeeEle    ${noti}
+    ${txt}=    Get Text    ${noti}
+    Run Keyword If    '${txt}' in @{msg}    LogNoti    ${txt}
+LogNoti
+    [Arguments]    ${txt}
+    Log    ${txt}
