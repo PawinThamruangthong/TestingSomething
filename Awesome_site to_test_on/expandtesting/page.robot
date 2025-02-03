@@ -256,7 +256,7 @@ GetTitle
     Wait Until Element Is Visible    ${task_msg}
     Element Should Contain    ${task_msg}    The slow task has finished. Thanks for waiting!
 
-29 JS Alert
+29 JS Dialogs
     [Tags]    Alert    JavaScript
     SelectApp    29
     Click Element    ${js_alert}
@@ -273,3 +273,19 @@ GetTitle
     Click Element    ${js_prompt}
     Handle Alert    DISMISS
     VerifyEleMsg    dialog-response    ${EMPTY}
+
+31 JQuery UI
+    [Tags]    JavaScript
+    SelectApp    31
+    Click Element    ${31_js_menu_link}
+32 UIMenu
+    [Tags]    Hover
+    [Setup]    OpenWebForDownloadFile
+    SelectApp    32
+    # Sub1    2
+    # Location Should Be    https://practice.expandtesting.com/jqueryui
+    # Go Back
+    # Wait Until Location Is    https://practice.expandtesting.com/jqueryui/menu
+    Sub2    1    1
+    Sub2    1    2
+    Sub2    1    3

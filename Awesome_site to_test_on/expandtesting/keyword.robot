@@ -1,5 +1,6 @@
 *** Settings ***
 Library                    SeleniumLibrary
+Library                    OperatingSystem
 Library                    String
 Resource                   ${CURDIR}/variable.robot
 
@@ -8,6 +9,15 @@ Resource                   ${CURDIR}/variable.robot
 OpenWeb
     Open Browser    ${url}    ${brw}
     SeeTxt    Practice Test Automation Website for Web UI & API
+OpenWebForDownloadFile
+    ${prefs} =        Create Dictionary    download.default_directory=${CURDIR}
+    #Open Browser with Condition
+    OpenBrowser       ${url}    ${brw}    options=add_experimental_option("prefs",${prefs})
+CheckDownloadAndRemoveFile
+    [Arguments]    ${filename}
+        Wait Until Created    ${CURDIR}\\${filename}
+        File Should Exist     ${CURDIR}\\${filename}
+        Remove File           ${CURDIR}\\${filename}
 SeeTxt
     [Arguments]    ${txt}
     Wait Until Page Contains    ${txt}
@@ -248,3 +258,42 @@ GenParagraph
 MovetoBtm
     Scroll Element Into View    ${btm_container}
 
+#32
+GetSubmenu
+    [Arguments]    ${element}
+    @{Elem}=    Get WebElements    ${element}
+    FOR    ${item}    IN    @{Elem}
+        ${txt}=    Get Text    ${item}
+    END
+    ${num}=    Get Element Count    ${element}
+
+    #${txt}=    Get Text    @{Elem}
+    #${num}=    CountElements    ${element}
+    RETURN    ${num}
+Sub1
+    [Arguments]    ${key}    
+    Click Element   ${32_enable}
+    #Wait Until Element Is Visible    id=ui-id-4
+    IF    ${key=='1'}
+        Mouse Over    id=ui-id-4
+    ELSE IF    ${key=='2'}
+        Click Element    id=ui-id-5
+    ELSE
+        Fail    Not have that menu
+    END
+Sub2
+    [Arguments]    ${key}    ${key2}
+    Sub1    ${key}
+    Wait Until Element Is Visible    id=ui-id-6
+    IF    ${key2=='1'}
+        Click Element    id=ui-id-6
+        CheckDownloadAndRemoveFile    menu.pdf
+    ELSE IF    ${key2=='2'}
+        Click Element    id=ui-id-7
+        CheckDownloadAndRemoveFile    menu.csv
+    ELSE IF    ${key2=='3'}
+        Click Element    id=ui-id-8
+        CheckDownloadAndRemoveFile    menu.xls
+    ELSE
+        Fail    Not have that menu
+    END    

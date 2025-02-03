@@ -99,3 +99,9 @@ ${loading_circle}           xpath=//*[@id="result"]/div/div[1]
 ${js_alert}                 id=js-alert
 ${js_confirm}               id=js-confirm
 ${js_prompt}                id=js-prompt
+
+#31
+${31_js_menu_link}             xpath=/html/body/main/div[3]/div/ul/li/a
+
+#32
+${32_enable}                id=ui-id-2
