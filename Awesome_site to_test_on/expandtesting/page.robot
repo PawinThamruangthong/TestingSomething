@@ -289,3 +289,38 @@ GetTitle
     Sub2    1    1
     Sub2    1    2
     Sub2    1    3
+33 A/B Test
+    [Tags]    A/B
+    SelectApp    33
+    Wait Until Element Contains    xpath=/html/body/main/div[3]/div/h1    A/B Test Variation 1 page for Automation Testing Practice
+    Go To    https://practice.expandtesting.com/abtest?abtest_off=true
+    Wait Until Element Contains    xpath=/html/body/main/div[3]/div/h1    No A/B Test page for Automation Testing Practice
+34 Checkbox
+    [Tags]    Checkbox
+    Set Selenium Speed    1s
+    SelectApp    34
+    SeeEle    ${checkbox_1}
+    Select Checkbox    ${checkbox_1}
+    Checkbox Should Be Selected    ${checkbox_1}
+    Unselect Checkbox    ${checkbox_1}
+    Checkbox Should Not Be Selected    ${checkbox_1}
+    Select Checkbox    ${checkbox_2}
+    Checkbox Should Be Selected    ${checkbox_2}
+    Unselect Checkbox    ${checkbox_2}
+    Checkbox Should Not Be Selected    ${checkbox_2}
+35 ContextMenu
+    [Tags]    Context
+    SelectApp    35
+    Open Context Menu    id=hot-spot
+    Alert Should Be Present    You selected a context menu
+36 Keypress
+    [Tags]    KeyPress
+    SelectApp    36
+    PressKeyAndVerify    L
+    PressKeyAndVerify    M
+    PressKeyAndVerify    A
+    PressKeyAndVerify    C
+37 ElementDisappearing
+    [Tags]    element    disappear
+    SelectApp    37
+    Repeat Keyword    5 times    CheckElem

@@ -105,3 +105,10 @@ ${31_js_menu_link}             xpath=/html/body/main/div[3]/div/ul/li/a
 
 #32
 ${32_enable}                id=ui-id-2
+
+#34
+${checkbox_1}                xpath=//*[@id="checkbox1"]
+${checkbox_2}                xpath=//*[@id="checkbox2"]
+
+#36
+${key_result}                id=result

@@ -297,3 +297,29 @@ Sub2
     ELSE
         Fail    Not have that menu
     END    
+
+#36
+PressKeyAndVerify
+    [Arguments]    ${key}
+    Press Key    id=target    ${key}
+    SeeEle    ${key_result}
+    ${result_txt}=    Get Text    ${key_result}
+    ${txt}=    Strip String    ${result_txt}    mode=left    characters=You entered:
+    Should Be Equal As Strings    ${key}    ${txt}
+
+#37
+DisappearElem_count
+    ${all_elem}=    Get Element Count    xpath=/html/body/main/div[3]/div/div/div/button
+    RETURN    ${all_elem}
+CheckElem
+    SeeTxt    Disappearing Elements page for Automation Testing Practice
+    ${elem_before}=    DisappearElem_count
+    Reload Page
+    ${elem_after}=    DisappearElem_count
+    ${con}=    Run Keyword And Return Status    Should Be Equal    ${elem_before}    ${elem_after}
+    IF    ${con}
+        Log    Element remain the same
+    ELSE    
+        Log    Elemet disappering/reappearing
+    END
+    
