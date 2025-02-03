@@ -2,6 +2,7 @@
 Library    SeleniumLibrary
 Library    String
 Library    OperatingSystem
+Library    geo.py
 Resource   ${CURDIR}/keyword.robot
 Test Setup    OpenWeb
 
@@ -324,3 +325,27 @@ GetTitle
     [Tags]    element    disappear
     SelectApp    37
     Repeat Keyword    5 times    CheckElem
+38 ContextMenu2
+    [Tags]    Context
+    SelectApp    38
+    Open Context Menu    id=hot-spot
+    Alert Should Be Present    You selected a context menu
+39 Dropdown
+    [Tags]    DropDown
+    SelectApp    39
+    Select From List By Value    dropdown    1
+    Select From List By Index    elementsPerPageSelect    2
+    Select From List By Label    country    Aruba
+41 Geo
+    ${latitude}=      Convert To Number    37.33182
+    ${longtitude}=    Convert To Number    -122.03118
+    ${accuracy}=      Convert To Number    100
+    #Use geo.py to set location of browser
+    set geolocation  ${latitude}    ${longtitude}    ${accuracy}
+    SelectApp    41
+    Click Element    ${geo_btn}
+42 Slider
+    SelectApp    42
+    #Drag And Drop By Offset    xpath=/html/body/main/div[3]/div/div/input    10    0
+    Repeat Keyword    5    42Input    Add
+    Repeat Keyword    4    42Input    Sub

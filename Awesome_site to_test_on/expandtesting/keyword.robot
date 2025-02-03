@@ -322,4 +322,26 @@ CheckElem
     ELSE    
         Log    Elemet disappering/reappearing
     END
+
+#42
+42Input
+    [Arguments]    ${action}
+    # For Check element arttributes
+    # ${css}=         Get WebElement    xpath://*[@onchange="showValue(this.value)"]
+    # ${val_max}=    Get Element Attribute    ${css}    max
+    # ${val_step}=    Get Element Attribute    ${css}    step
+    # ${crnt}=    Get Text    id=range
+    # ${crnt_val}=    Convert To Number    ${crnt}
+    # ${max_val}=    Convert To Number    ${val_max}
+    # ${val_step}=    Convert To Number    ${val_step}
+    IF    ${action=='Add'}
+        Set Focus To Element    ${horizon_slider}
+        Press Key        ${horizon_slider}    \ue013
+    ELSE IF    ${action=='Sub'}
+        Set Focus To Element    ${horizon_slider}
+        Press Key        ${horizon_slider}    \ue015
+    ELSE
+        Fail    Not supported method
+    END
+    
     

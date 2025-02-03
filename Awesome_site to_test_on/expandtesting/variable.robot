@@ -112,3 +112,9 @@ ${checkbox_2}                xpath=//*[@id="checkbox2"]
 
 #36
 ${key_result}                id=result
+
+#41
+${geo_btn}                   id=geoBtn
+
+#42
+${horizon_slider}            xpath=/html/body/main/div[3]/div/div/input
