@@ -248,3 +248,28 @@ GetTitle
     SelectApp    27
     SeeTxt    Infinite Scroll page for Automation Testing Practice
     Repeat Keyword    10s    GenParagraph
+
+28 SlowResorce
+    [Tags]    Slow    Loading
+    SelectApp    28
+    Wait Until Element Is Not Visible    ${loading_circle}    20
+    Wait Until Element Is Visible    ${task_msg}
+    Element Should Contain    ${task_msg}    The slow task has finished. Thanks for waiting!
+
+29 JS Alert
+    [Tags]    Alert    JavaScript
+    SelectApp    29
+    Click Element    ${js_alert}
+    Handle Alert    ACCEPT
+    VerifyEleMsg    dialog-response    OK
+    Click Element    ${js_confirm}
+    Handle Alert    ACCEPT
+    VerifyEleMsg    dialog-response    Ok
+    Click Element    ${js_confirm}
+    Handle Alert    DISMISS
+    VerifyEleMsg    dialog-response    Cancel
+    Click Element    ${js_prompt}
+    Input Text Into Alert    AAA
+    Click Element    ${js_prompt}
+    Handle Alert    DISMISS
+    VerifyEleMsg    dialog-response    ${EMPTY}

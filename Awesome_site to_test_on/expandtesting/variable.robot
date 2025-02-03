@@ -88,5 +88,14 @@ ${country_list_data}        xpath=//*[@id="countryautocomplete-list"]/div[1]
 ${normal_btn}               xpath=//*[@id="my-btn"]
 
 #24
-${msg_txt}                      xpath=/html/body/main/div[3]/div/p[2]
-${btm_container}                xpath=/html/body/footer/div
+${msg_txt}                  xpath=/html/body/main/div[3]/div/p[2]
+${btm_container}            xpath=/html/body/footer/div
+
+#28
+${task_msg}                 xpath=//*[@id="result"]/p
+${loading_circle}           xpath=//*[@id="result"]/div/div[1]
+
+#29
+${js_alert}                 id=js-alert
+${js_confirm}               id=js-confirm
+${js_prompt}                id=js-prompt
