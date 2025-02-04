@@ -3,6 +3,7 @@ Library    SeleniumLibrary
 Library    String
 Library    OperatingSystem
 Library    geo.py
+Library    Collections
 Resource   ${CURDIR}/keyword.robot
 Test Setup    OpenWeb
 
@@ -394,3 +395,18 @@ GetTitle
     SeeTxt    Example of a new window page for Automation Testing Practice
     Switch Window    ${txt}[0]
     SeeTxt    Opening a new window page for Automation Testing Practice
+47 ListSorting
+    [Tags]    List    Sorting
+    SelectApp    47
+    #No Class
+        # support 1 - 5 only
+    47Checklist-Noclass    2
+    47Checklist-Noclass    3
+    #47Checklist    4    ?
+    47Checklist-Noclass    5
+    #Class
+    #47SortingTable(Class)    dues
+    47SortingTable(Class)    last-name
+    47SortingTable(Class)    first-name
+    47SortingTable(Class)    email
+    47SortingTable(Class)    web-site

@@ -1,5 +1,6 @@
 *** Settings ***
 Library                    SeleniumLibrary
+Library                    Collections
 Library                    OperatingSystem
 Library                    String
 Resource                   ${CURDIR}/variable.robot
@@ -343,6 +344,7 @@ CheckElem
     ELSE
         Fail    Not supported method
     END
+#43
 43GetEle
     [Arguments]    ${num}
     #Hover mouse over element
@@ -360,3 +362,63 @@ CheckElem
     Click Element    ${prof_href}
     SeeTxt    Welcome user${num}
     Go Back
+
+#47
+47GetList-Noclass
+    [Arguments]    ${tab}
+    #Can Get 1 - 5
+    @{data_list}=    Create List
+    ${elem_head}=    Get WebElement    xpath=//*[@id="table1"]/thead/tr/th[${tab}]
+    @{elem_body}=    Get WebElements    xpath=//*[@id="table1"]/tbody/tr[*]/td[${tab}]
+    ${body_count}=    CountElements    xpath=//*[@id="table1"]/tbody/tr[*]/td[${tab}]
+    FOR    ${i}    IN RANGE    0    4
+        ${txt}=    Get Text    ${elem_body}[${i}]
+        Append To List    ${data_list}    ${txt}
+    END
+    RETURN    @{data_list}
+47Sort-Noclass
+    [Arguments]    ${tab}
+    ${elem_head}=    Get WebElement    xpath=//*[@id="table1"]/thead/tr/th[${tab}]
+    Click Element    ${elem_head}
+47Checklist-Noclass
+    [Arguments]    ${tab}
+    @{list1}=    47GetList-Noclass    ${tab}
+    47Sort-Noclass    ${tab}
+    @{list2}=    47GetList-Noclass    ${tab}
+    Sort List    ${list1}
+    @{sortedList}=    47List Sorting    @{list1}
+    Lists Should Be Equal    ${sortedList}    ${list2}
+47List Sorting
+    [Arguments]    @{list}
+    @{data}=    Create List
+    FOR    ${word}    IN    @{list}
+        Append To List    ${data}    ${word}
+    END
+    RETURN    @{data}
+#
+47GetList-Class
+    [Arguments]    ${class}
+    @{data_list}=    Create List
+    @{elems}=    Get WebElements    xpath=//td[@class="${class}"]
+    FOR    ${elem}    IN    @{elems}
+        ${txt}=    Get Text    ${elem}
+        Append To List    ${data_list}    ${txt}
+    END
+    RETURN    @{data_list}
+47Sort-Class
+    [Arguments]    ${class}
+    Click Element    xpath=//span[@class="${class}"]
+47SortingTable(Class)
+    [Arguments]    ${class}
+    @{list1}=    47GetList-Class    ${class}
+    47Sort-Class    ${class}
+    @{list2}=    47GetList-Class    ${class}
+    Log List    ${list1}
+    IF    ${class=='dues'}
+        #${list3}=    47RemoveStringFromList    ${list1}
+        No Operation
+    ELSE
+        Sort List    ${list1}
+        Log List    ${list1}
+        Lists Should Be Equal    ${list1}    ${list2}
+    END
