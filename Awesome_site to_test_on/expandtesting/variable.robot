@@ -118,3 +118,9 @@ ${geo_btn}                   id=geoBtn
 
 #42
 ${horizon_slider}            xpath=/html/body/main/div[3]/div/div/input
+
+#43
+${floating_menu}             id=menu
+
+#45
+${45_btn}                    id=btn-subscribe

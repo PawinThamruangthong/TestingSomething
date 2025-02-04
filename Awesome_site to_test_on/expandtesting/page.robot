@@ -337,6 +337,7 @@ GetTitle
     Select From List By Index    elementsPerPageSelect    2
     Select From List By Label    country    Aruba
 41 Geo
+    [Tags]    Geo
     ${latitude}=      Convert To Number    37.33182
     ${longtitude}=    Convert To Number    -122.03118
     ${accuracy}=      Convert To Number    100
@@ -345,7 +346,51 @@ GetTitle
     SelectApp    41
     Click Element    ${geo_btn}
 42 Slider
+    [Tags]    Slider
     SelectApp    42
     #Drag And Drop By Offset    xpath=/html/body/main/div[3]/div/div/input    10    0
     Repeat Keyword    5    42Input    Add
     Repeat Keyword    4    42Input    Sub
+43 Hover
+    [Tags]    Hover
+    SelectApp    43
+    43GetEle    1
+    43GetEle    2
+    43GetEle    3
+44 floatingMenu
+    [Tags]    Flaoting
+    SelectApp    44
+    SeeEle    ${floating_menu}
+    Scroll Element Into View    xpath=/html/body/footer
+    SeeEle    ${floating_menu}
+45 Iframe
+    [Tags]    Iframe
+    SelectApp    45
+    SeeTxt          External IFrame: TinyMCE Editor
+    # First IFrame
+    Select Frame    mce_0_ifr
+    Input     xpath=//*[@id="tinymce"]    inputtexttesting
+    Unselect Frame
+    SeeTxt    Internal IFrame: Email Subscription
+    # Second IFrame
+    Select Frame    email-subscribe
+    SeeTxt    Send updates to my inbox ...
+    #Negative
+    Input     id=email    aaaaaaaaaaa
+    Click Element    ${45_btn}
+    SeeEle                    //*[@id="subscription-form"]/div/div
+    Element Should Contain    //*[@id="subscription-form"]/div/div    Please enter a valid email address.
+    #Positive
+    Input                     id=email    aaaaa@gmail.com
+    Click Element    ${45_btn}
+    SeeEle                    id=success-message
+    Element Should Contain    id=success-message    You are now subscribed!
+46 NewTab
+    [Tags]    Window
+    SelectApp    46
+    Click Element    xpath=/html/body/main/div[3]/div/div/a
+    @{txt}=              Get Window Handles
+    Switch Window    ${txt}[1]
+    SeeTxt    Example of a new window page for Automation Testing Practice
+    Switch Window    ${txt}[0]
+    SeeTxt    Opening a new window page for Automation Testing Practice

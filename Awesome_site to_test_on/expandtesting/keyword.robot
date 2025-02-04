@@ -187,7 +187,7 @@ ValidatePass
 
 #15
 downloadFile
-    ${target_File}=    Get WebElement    xpath=//*[@href="download/some-file.json"]
+    ${target_File}=    Get WebElement    xpath=//@href="download/some-file.json
     SeeEle    ${target_File}
     Click Element    ${target_File}
 
@@ -343,5 +343,20 @@ CheckElem
     ELSE
         Fail    Not supported method
     END
-    
-    
+43GetEle
+    [Arguments]    ${num}
+    #Hover mouse over element
+    Mouse Over    xpath=/html/body/main/div[3]/div/div[${num}]/img
+    #Get element
+    ${name}=    Get WebElement    xpath=/html/body/main/div[3]/div/div[${num}]/div/h5
+    ${prof_href}=    Get WebElement    xpath=/html/body/main/div[3]/div/div[${num}]/div/a
+    SeeEle    ${name}
+    #Get data from element
+    ${name_txt}=    Get Text    ${name}
+    ${href}=    Get Element Attribute    ${prof_href}    href
+    #Verify element
+    Should Be Equal As Strings    ${name_txt}    name: user${num}
+    Should Be Equal As Strings    ${href}    https://practice.expandtesting.com/users/${num}
+    Click Element    ${prof_href}
+    SeeTxt    Welcome user${num}
+    Go Back
