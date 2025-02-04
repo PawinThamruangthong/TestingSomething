@@ -4,5 +4,4 @@ Test Automation (  Robot Framework )
 2. https://qaplayground.dev/
 3. https://practice.expandtesting.com/
 
-API ( POSTMAN )
 
