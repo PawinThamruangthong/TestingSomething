@@ -422,3 +422,66 @@ CheckElem
         Log List    ${list1}
         Lists Should Be Equal    ${list1}    ${list2}
     END
+#48
+HoverBtn
+    [Arguments]    ${btn}    ${pos}
+    Mouse Over    id=btn${btn}
+    ${tooltips}=    Get WebElement    xpath=//div[@class="tooltip-inner"]
+    ${txt}=    Get Text    ${tooltips}
+    Log    Tooltip : ${txt}
+#50
+50 Dynamic Checkbox(dis)
+    SeeEle    ${50_chkbox}
+    Element Should Be Enabled    ${50_chkbox}
+    Click Element    ${50_chkbox_rmv}
+    SeeEle    ${50_loading}
+    ${complete_loading}=    Wait Until Element Is Not Visible    ${50_loading}
+    ${chk_ele}=    Element Should Not Be Visible    ${50_chkbox}
+    Run Keyword If    ${complete_loading}    ${chk_ele}
+50 Dynamic Checkbox(add)
+    Element Should Not Be Visible    ${50_chkbox}
+    Click Element    ${50_chkbox_rmv}
+    SeeEle    ${50_loading}
+    ${complete_loading}=    Wait Until Element Is Not Visible    ${50_loading}
+    ${chk_ele}=    Element Should Be Visible    ${50_chkbox}
+    Run Keyword If    ${complete_loading}    ${chk_ele}
+50 TxtEnable
+    Element Should Be Disabled    ${50_input_area}
+    Click Element    ${50_input_area_add/rmv}
+    SeeEle    ${50_loading}
+    ${complete_loading}=    Wait Until Element Is Not Visible    ${50_loading}
+    ${chk_ele}=    Element Should Be Enabled    ${50_input_area}
+    Run Keyword If    ${complete_loading}    ${chk_ele}
+    Input    ${50_input_area}    Test
+50 TxtDisable
+    Element Should Be Enabled    ${50_input_area}
+    Click Element    ${50_input_area_add/rmv}
+    SeeEle    ${50_loading}
+    ${complete_loading}=    Wait Until Element Is Not Visible    ${50_loading}
+    ${chk_ele}=    Element Should Be Disabled    ${50_input_area}
+    Run Keyword If    ${complete_loading}    ${chk_ele}
+    #Get Keyword Status And Verify Result
+    ${50_input}=    Run Keyword And Return Status    Input    ${50_input_area}    Test
+    Should Be Equal    ${50_input}    ${False}
+    #Run Keyword And Get Error Then Verify Error to Expected Error Message
+    #                                        when error is too long use * > compare to part of the expected message
+    ${msg}=    Run Keyword And Expect Error    *    Input    ${50_input_area}    Test
+    Should Contain    ${msg}    Element is not currently interactable and may not be manipulated
+    #Run Keyword And Expect Error    InvalidElementStateException: Message: invalid element state: Element is not currently interactable and may not be manipulated    ${50_input}
+#51
+51Pre-render Element 
+    Click Element    ${51_1_link}
+    SeeEle    ${51_btn}
+    Element Should Not Be Visible    ${51_msg}
+    Click Element    ${51_btn}
+    ${complete_loading}=    Wait Until Element Is Not Visible    ${51_loading}
+    Run Keyword If    ${complete_loading}    Element Should Be Visible    ${51_msg}
+    Element Should Contain    ${51_msg}    Hello World!
+51Post-render Element
+    Click Element    ${51_2_link}
+    SeeEle    ${51_btn}
+    Run Keyword And Expect Error    *    Page Should Contain Element    ${51_msg}
+    Click Element    ${51_btn}
+    ${complete_loading}=    Wait Until Element Is Not Visible    ${51_loading}    10
+    Run Keyword If    ${complete_loading}    Page Should Contain Element    ${51_msg}
+    Element Should Contain    ${51_msg}    Hello World!

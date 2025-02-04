@@ -411,4 +411,31 @@ GetTitle
     47SortingTable(Class)    email
     47SortingTable(Class)    web-site
 48 ToolTips
-    No Operation
+    [Tags]    Tooltips
+    SelectApp    48
+    HoverBtn    1    top
+    HoverBtn    2    end
+    HoverBtn    3    bottom
+    HoverBtn    4    start
+    HoverBtn    5    html
+50 Dynamic Control
+    [Tags]    Dynamic    Control    Checkbox
+    SelectApp    50
+    SeeTxt    Dynamic Controls
+    #CheckBox
+    50 Dynamic Checkbox(dis)
+    50 Dynamic Checkbox(add)
+50-2 Dynamic Control
+    [Tags]    Dynamic    Control    TextArea
+    Select App    50
+    SeeTxt    Dynamic Control
+    #TextArea
+    50 TxtEnable
+    50 TxtDisable
+51 Dynamic Loading
+    [Tags]    Dynamic    Loading    Hidden    Render
+    SelectApp    51
+    SeeTxt    Dynamically Loaded Page Elements
+    51Pre-render Element 
+    Go Back
+    51Post-render Element 
