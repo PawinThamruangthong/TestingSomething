@@ -42,15 +42,15 @@ GetAppData
     #Get Elements From Class
     IF    ${body=="title"}
         @{element}=    Get WebElements    //*[@class="card-title expand-card-title"]
-        ${title}=    Convert To String    Title
+        ${title}=      Convert To String    Title
     ELSE IF    ${body=="body"}
         @{element}=    Get WebElements    //*[@class="card-text"]
-        ${title}=    Convert To String    Body
+        ${title}=      Convert To String    Body
     END
     #Get Selected Element From Elements
     ${word}=    Get WebElements    ${element}[${num}]
     #Get Text From Elements
-    ${txt}=    Get Text    ${word}
+    ${txt}=     Get Text           ${word}
     #Log
     Log    ${title} = ${txt}
 Location
@@ -72,11 +72,12 @@ VerifyEleMsg
     [Arguments]             ${locator1}    ${locator2}
     ${txt1}=    Get Value   ${locator1}
     ${txt2}=    Get Text    ${locator2}
-    Should Be Equal         ${txt1}    ${txt2}
+    Should Be Equal         ${txt1}        ${txt2}
 
 #2
 2 GetText
     ${username}=    Get Text        ${2_given_id}
+    #                                 target                left = only leftside until find the characters
     ${username}=    Strip String    ${username}            mode=left    characters='Username: '
     ${password}=    Get Text        ${2_given_password}
     ${password}=    Strip String    ${password}            mode=left    characters='Password: '
@@ -95,25 +96,25 @@ Login
 #3
 Register
     [Arguments]    ${name}    ${password}    ${confirmpassword}
-    Input Text    ${regis_username}    ${name}
-    Input Text    ${regis_password}    ${password}
+    Input Text    ${regis_username}            ${name}
+    Input Text    ${regis_password}            ${password}
     Input Text    ${regis_comfirm_password}    ${confirmpassword}
     Click Element    ${regis_submit}
-    RETURN    ${name}    ${password}
+    RETURN        ${name}    ${password}
 
 #5
 Otp Email
     [Arguments]    ${email}    ${otp}
-    Input    ${otp_email}    ${email}
+    Input            ${otp_email}    ${email}
     Click Element    ${otp_request}
-    SeeEle    ${otp_input}
-    Input    ${otp_input}      ${otp}
+    SeeEle           ${otp_input}
+    Input            ${otp_input}      ${otp}
     Click Element    ${otp_verify}
 GetDataFromPage
-    ${email}=    Get Text    xpath=/html/body/main/div[3]/div/div[1]/div/ul/li[1]
-    ${otp}=    Get Text    xpath=/html/body/main/div[3]/div/div[1]/div/ul/li[2]
-    ${email}=    Strip String    ${email}    mode=left    characters=Email Address: 
-    ${otp}=    Strip String    ${otp}    mode=left    characters=OTP Code: 
+    ${email}=        Get Text        xpath=/html/body/main/div[3]/div/div[1]/div/ul/li[1]
+    ${otp}=          Get Text        xpath=/html/body/main/div[3]/div/div[1]/div/ul/li[2]
+    ${email}=        Strip String    ${email}    mode=left    characters=Email Address: 
+    ${otp}=          Strip String    ${otp}      mode=left    characters=OTP Code: 
     RETURN    ${email}    ${otp}
 
 #6
@@ -132,7 +133,7 @@ CheckChrome
     END
 GetData
     [Arguments]    ${task_name}    ${resource}
-    ${row}=        GetRow    ${task_name}
+    ${row}=        GetRow       ${task_name}
     ${column}=     GetColumn    ${resource}
     RETURN    ${row}    ${column}
 GetRow
@@ -144,10 +145,11 @@ GetRow
         ${txt}=    Get Text    xpath=/html/body/main/div[3]/div/div[2]/div/div[2]/table/tbody/tr[${i}]/td[1]
         #IF    ${txt=='Chrome'}
         #${${txt2}==${txt}}
+        #    Get Status for IF condition
         ${checkkeyword}=    Run Keyword And Return Status    Should Be Equal As Strings    ${txt2}    ${txt}
         IF    ${checkkeyword}
             ${row}=    Get Variable Value    ${i}
-            Log   ${row}
+            Log       ${row}
             RETURN    ${row}
             BREAK
         ELSE
@@ -158,6 +160,7 @@ GetColumn
     [Arguments]    ${resource}
     FOR    ${i}    IN RANGE    1    6
         ${Col_name}=    Get Text    xpath=/html/body/main/div[3]/div/div[2]/div/div[2]/table/thead/tr/th[${i}]
+        #    Get Status for IF condition
         ${checkkeyword}=    Run Keyword And Return Status    Should Be Equal As Strings    ${Col_name}    ${resource}
         IF    ${checkkeyword}
             ${row}=    Get Variable Value    ${i}
@@ -197,6 +200,7 @@ AddElement
     Click Element    ${element_add}
 AddElements
     [Arguments]    ${num}
+    # Run keyword n time(s)
     Repeat Keyword    ${num}    Addelement
 CountElements
     #Count all elements that have the same locator.
@@ -212,6 +216,7 @@ DeleteElements
 
 #18
 Click Noti And Verify
+    #Check If msg get from page is in the selected msg
     @{msg}=    Create List    Action successful    Action unsuccessful    please try again
     Click Element    ${noti_btn}
     SeeEle    ${noti}
@@ -268,13 +273,10 @@ GetSubmenu
     END
     ${num}=    Get Element Count    ${element}
 
-    #${txt}=    Get Text    @{Elem}
-    #${num}=    CountElements    ${element}
     RETURN    ${num}
 Sub1
     [Arguments]    ${key}    
     Click Element   ${32_enable}
-    #Wait Until Element Is Visible    id=ui-id-4
     IF    ${key=='1'}
         Mouse Over    id=ui-id-4
     ELSE IF    ${key=='2'}
@@ -310,6 +312,7 @@ PressKeyAndVerify
 
 #37
 DisappearElem_count
+    #count all element that have the same xpath
     ${all_elem}=    Get Element Count    xpath=/html/body/main/div[3]/div/div/div/button
     RETURN    ${all_elem}
 CheckElem
@@ -317,6 +320,7 @@ CheckElem
     ${elem_before}=    DisappearElem_count
     Reload Page
     ${elem_after}=    DisappearElem_count
+    #Check if number of elements before reload are the same as after
     ${con}=    Run Keyword And Return Status    Should Be Equal    ${elem_before}    ${elem_after}
     IF    ${con}
         Log    Element remain the same
@@ -327,6 +331,7 @@ CheckElem
 #42
 42Input
     [Arguments]    ${action}
+    [Documentation]    checkInput
     # For Check element arttributes
     # ${css}=         Get WebElement    xpath://*[@onchange="showValue(this.value)"]
     # ${val_max}=    Get Element Attribute    ${css}    max
@@ -485,3 +490,39 @@ HoverBtn
     ${complete_loading}=    Wait Until Element Is Not Visible    ${51_loading}    10
     Run Keyword If    ${complete_loading}    Page Should Contain Element    ${51_msg}
     Element Should Contain    ${51_msg}    Hello World!
+
+#52
+52 SelectContent
+    [Arguments]    ${content}
+    ${element}=    Get WebElement    xpath=//a[@href="/shifting-content/${content}"]
+    Click Element    ${element}
+52 GetAttribute&Check
+    [Arguments]    ${tar_att}    ${value}
+    ${att}=    Get Element Attribute    ${52_1_box}    style
+    #Check if att = value 
+    #in this case I check left attribute that have style="value = xx px;"
+    Should Be Equal As Strings    ${tar_att}: ${value}px;    ${att}
+    RETURN    ${value}
+52 GetAttribute
+    [Arguments]    ${tar_att}
+    ${att}=    Get Element Attribute    ${52_1_box}    style
+    RETURN    ${att}
+52 SetAttwithLink
+    ${old_val}=    52 GetAttribute&Check    left    0
+    Click Element    xpath=/html/body/main/div[3]/div/p[3]/a
+    ${new_val}=    Wait Until Keyword Succeeds    5s    1s    52 GetAttribute&Check    left    100
+    Should Be Equal As Numbers    ${new_val}    100
+52 SetAttwithURL
+    [Arguments]    ${val}
+    ${old_val}=    52 GetAttribute    style
+    Go To    https://practice.expandtesting.com/shifting-content/menu?pixel_shift=${val}
+    ${new_val}=    52 GetAttribute    style
+    Should Not Be Equal    ${old_val}    ${new_val}
+52-List Get_List
+    @{list}=    Get WebElements    xpath=/html/body/main/div[3]/div/div/div/ol/li
+    @{data_list}=    Create List
+    FOR    ${elem}    IN    @{list}
+        ${txt}=    Get Text    ${elem}
+        Append To List    ${data_list}    ${txt}
+    END
+    RETURN    ${data_list}

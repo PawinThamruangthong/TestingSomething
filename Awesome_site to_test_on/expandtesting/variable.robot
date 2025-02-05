@@ -134,7 +134,10 @@ ${50_input_area_add/rmv}     xpath=//*[@id="input-example"]/button
 
 #51
 ${51_1_link}                 xpath=/html/body/main/div[3]/div/div/ul/li[1]/a
-${51_btn}                  xpath=//*[@id="start"]/button
+${51_btn}                    xpath=//*[@id="start"]/button
 ${51_loading}                xpath=//*[@id="loading"]
-${51_msg}                  xpath=//*[@id="finish"]
+${51_msg}                    xpath=//*[@id="finish"]
 ${51_2_link}                 xpath=/html/body/main/div[3]/div/div/ul/li[2]/a
+
+#52
+${52_1_box}                  id=shift

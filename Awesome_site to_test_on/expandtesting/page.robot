@@ -439,3 +439,17 @@ GetTitle
     51Pre-render Element 
     Go Back
     51Post-render Element 
+52 Shifting Content - Menu
+    [Tags]    Shifting
+    SelectApp    52
+    #SelectContnet > menu, image, list
+    52 SelectContent    menu
+    52 SetAttwithLink
+    52 SetAttwithURL    25
+52 Shifting Content - list
+    SelectApp    52
+    52 SelectContent    list
+    @{data_list}=    52-List Get_List
+    Reload Page
+    @{data_list2}=    52-List Get_List
+    List Should Contain Sub List    ${data_list}    ${data_list2}
