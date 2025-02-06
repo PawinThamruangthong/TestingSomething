@@ -11,7 +11,8 @@ OpenApp
     ...                    automationName=UiAutomator2  
     ...                    appPackage=${appPackage2}
     ...                    appActivity=${appActivity2}
-    ...                    NoReset=${True}
+    ...                    NoReset=${True}    
+    ...                    autoGrantPermissions=${True}
     Element Should Be Visible    ${header}
 Eletxt
     [Arguments]    ${ele}    ${txt}
@@ -24,3 +25,24 @@ OpenSubMenu
     Click Element    ${open_menu_btn}
     Wait Until Element Is Visible    ${menu_${menu}}
     Click Element    ${menu_${menu}}
+OpenSubmenuByTab
+    [Arguments]    ${menu}
+    @{finger} =    Create List    ${89}    ${152}
+    @{positions} =    Create List    ${finger}
+    Tap With Positions    ${100}    ${finger}
+    Wait Until Element Is Visible    ${menu_${menu}}    5s
+    Click Element    ${menu_${menu}}
+    Sleep    1s
+#Login/Logout
+Login
+    OpenSubmenuByTab    login
+    Wait Until Element Is Visible    ${username}
+    Input Text    ${username}    bob@example.com
+    Input Text    ${password}    10203040
+    Click Element    ${login_btn}
+    OpenSubmenuByTab    login
+    Text Should Be Visible    No Items
+Logout
+    OpenSubmenuByTab    logout
+    Wait Until Element Is Visible    android:id/button1
+    Click Element    android:id/button1
