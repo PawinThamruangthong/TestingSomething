@@ -32,7 +32,9 @@ ${menu_login}        xpath=//android.view.ViewGroup[@content-desc="menu item log
 ${menu_logout}       xpath=//android.view.ViewGroup[@content-desc="menu item log out"]
 ${menu_api_calls}    xpath=//android.view.ViewGroup[@content-desc="menu item api calls"]
 ${menu_sauce_bot}    xpath=//android.view.ViewGroup[@content-desc="menu item sauce bot video"]
-
+${menu_cart}         xpath=//android.view.ViewGroup[@content-desc="cart badge"]/android.widget.ImageView
+#Catalog
+${cat_sort}          xpath=//android.view.ViewGroup[@content-desc="sort button"]/android.widget.ImageView
 #Webview
 ${web_input}         xpath=//android.widget.EditText[@content-desc="URL input field"]
 
@@ -43,3 +45,8 @@ ${about_link}        xpath=//android.widget.TextView[@text="Go to the Sauce Labs
 ${username}          xpath=//android.widget.EditText[@content-desc="Username input field"]
 ${password}          xpath=//android.widget.EditText[@content-desc="Password input field"]
 ${login_btn}         xpath=//android.view.ViewGroup[@content-desc="Login button"]
+
+#Scenario
+${item1}             xpath=(//android.view.ViewGroup[@content-desc="store item"])[1]/android.view.ViewGroup[1]/android.widget.ImageView
+${add_to_cart}       xpath=//android.view.ViewGroup[@content-desc="Add To Cart button"]
+${checkout_btn}      xpath=//android.view.ViewGroup[@content-desc="Proceed To Checkout button"]
