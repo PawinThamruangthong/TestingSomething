@@ -49,4 +49,23 @@ ${login_btn}         xpath=//android.view.ViewGroup[@content-desc="Login button"
 #Scenario
 ${item1}             xpath=(//android.view.ViewGroup[@content-desc="store item"])[1]/android.view.ViewGroup[1]/android.widget.ImageView
 ${add_to_cart}       xpath=//android.view.ViewGroup[@content-desc="Add To Cart button"]
+#Address
 ${checkout_btn}      xpath=//android.view.ViewGroup[@content-desc="Proceed To Checkout button"]
+${checkout_name}     xpath=//android.widget.EditText[@content-desc="Full Name* input field"]
+${checkout_address1}          xpath=//android.widget.EditText[@content-desc="Address Line 1* input field"]
+${checkout_address2}          xpath=//android.widget.EditText[@content-desc="Address Line 2 input field"]
+${checkout_city}              xpath=//android.widget.EditText[@content-desc="City* input field"]
+${checkout_state}             xpath=//android.widget.EditText[@content-desc="State/Region input field"]
+${checkout_zip}               xpath=//android.widget.EditText[@content-desc="Zip Code* input field"]
+${checkout_country}           xpath=//android.widget.EditText[@content-desc="Country* input field"]
+${checkout_to_payment}        xpath=//android.view.ViewGroup[@content-desc="To Payment button"]
+#Payment
+${payment_name}       xpath=//android.widget.EditText[@content-desc="Full Name* input field"]
+${payment_number}     xpath=//android.widget.EditText[@content-desc="Card Number* input field"]
+${payment_exp}        xpath=//android.widget.EditText[@content-desc="Expiration Date* input field"]
+${payment_cvc}        xpath=//android.widget.EditText[@content-desc="Security Code* input field"]
+${payment_sameadd}    xpath=//android.view.ViewGroup[@content-desc="checkbox for My billing address is the same as my shipping address."]/android.view.ViewGroup/android.widget.ImageView
+${payment_review}     xpath=//android.view.ViewGroup[@content-desc="Review Order button"]
+#Summary
+${summary_address}    xpath=//android.view.ViewGroup[@content-desc="checkout delivery address"]
+${place_order_btn}    xpath=//android.view.ViewGroup[@content-desc="Place Order button"]

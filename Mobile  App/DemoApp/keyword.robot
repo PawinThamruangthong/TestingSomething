@@ -73,3 +73,24 @@ ClickBtn
     [Arguments]    ${locator}
     Wait Until Element Is Visible    ${locator}
     Click Element    ${locator}
+#CheckOut
+ShippingData
+    [Arguments]    ${name}    ${ad1}    ${ad2}    ${city}    ${state}    ${zip}    ${country}
+    Wait Until Element Is Visible    ${checkout_to_payment}
+    Input Text    ${checkout_name}        ${name}
+    Input Text    ${checkout_address1}    ${ad1}
+    Input Text    ${checkout_address2}    ${ad2}
+    Input Text    ${checkout_city}        ${city}
+    Input Text    ${checkout_state}       ${state}
+    Input Text    ${checkout_zip}         ${zip}
+    Input Text    ${checkout_country}     ${country}
+    Click Element    ${checkout_to_payment}
+PaymentData
+    [Arguments]    ${name}    ${card_num}    ${card_exp}    ${card_cvc}
+    Wait Until Element Is Visible    ${payment_review}
+    Input Text    ${payment_name}    ${name}
+    Input Text    ${payment_number}    ${card_num}
+    Input Text    ${payment_exp}    ${card_exp}
+    Input Text    ${payment_cvc}    ${card_cvc}
+    Element Should Be Enabled    ${payment_sameadd}
+    Click Element    ${payment_review}

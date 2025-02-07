@@ -76,3 +76,8 @@ CheckOut - Logged In
     CartCheck
     ClickBtn    ${checkout_btn}
     Wait Until Page Contains    Checkout
+    ShippingData    Rebecca Add    12000NYC    something    NYC    State1    10004    USA
+    PaymentData    Rebecca Add    325812657568789    0338    158
+    Wait Until Element Is Visible    ${summary_address}
+    Click Element    ${place_order_btn}
+    Wait Until Page Contains    Thank you
