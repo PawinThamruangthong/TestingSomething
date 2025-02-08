@@ -526,3 +526,40 @@ HoverBtn
         Append To List    ${data_list}    ${txt}
     END
     RETURN    ${data_list}
+#58
+VerifyFlash
+    [Arguments]    ${event}
+    Wait Until Element Is Visible    id=flash
+    Wait Until Element Contains    id=flash    The ${event} tracking event was triggered successfully!
+Event_Click_1
+    Click Element    click-event-btn
+    VerifyFlash    click
+Event_Click_2
+    Click Element    click-event-link
+    VerifyFlash    click
+Event_Submit
+    Input    id=exampleFormControlInput1    a@aaa
+    Click Element    //*[@id="submit-event-form"]/button
+    VerifyFlash    submit
+Event_Conver
+    Click Element    id=conversion-event-btn
+    VerifyFlash    conversion
+Event_Scroll
+    Set Focus To Element    id=scrollable-div
+    Press Key    id=scrollable-div    '\ue010'
+    VerifyFlash    scroll
+
+#64
+Btn_log
+    Click Button    id=btn-log
+Btn_warn
+    Click Button    id=btn-warn
+Btn_eror
+    Click Button    id=btn-error
+Btn_info
+    Click Button    id=btn-info
+Btn_debug
+    Click Button    id=btn-debug
+Btn_table
+    Click Button    id=btn-table
+    

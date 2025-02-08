@@ -144,3 +144,9 @@ ${52_1_box}                  id=shift
 
 #55
 ${55_modal}                  xpath=//*[@id="exampleModal"]
+
+#58
+${58_event_click}            id=click-event-btn
+
+#61
+${61_target}                 xpath=//*[@id="hidingButton"]

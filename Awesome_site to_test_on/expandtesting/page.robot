@@ -468,6 +468,29 @@ GetTitle
     Element Should Contain    ${element}    It's commonly used to encourage a user to take an action 
     ...    (e.g., give their e-mail address to sign up for something or disable their ad blocker).
 
-56 ExitIntent
-    SelectApp    56
-    Mouse Out    xpath=/html/body
+58 Google Tracking Events
+    SelectApp    58
+    Event_Click_1
+    Event_Click_2
+    Event_Submit
+    Event_Conver
+    Event_Scroll
+59 Sample User Profile
+    SelectApp    59
+
+61 Scrollbars
+    SelectApp    61
+    Set Focus To Element    xpath=/html/body/main/div[3]/div/div/div/div
+    Scroll Element Into View    ${61_target}
+    Click Element    ${61_target}
+62 Cookie Consent Alert
+    SelectApp    62
+    Element Should Be Visible    id=js-cookie-box
+    Click Element    id=js-cookie-button
+    Element Should Not Be Visible    id=js-cookie-box
+# 63 Https Header
+#     SelectApp    63
+64 Log
+    SelectApp    64
+    Btn_log
+    Log To Console    A
