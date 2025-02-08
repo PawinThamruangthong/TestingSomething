@@ -1,0 +1,3060 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.4 on win32)" generated="2025-02-08T17:56:38.221048" rpa="false" schemaversion="5">
+<suite id="s1" name="Page" source="C:\Users\Winner\Automate\TestingSomething\Awesome_site to_test_on\qaPlayground\page.robot">
+<test id="s1-t1" name="01 ALl Href In main page" line="12">
+<kw name="OpenWebBrowser" owner="keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:56:38.469254" level="INFO">Opening browser 'gc' to base url 'https://qaplayground.dev/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-08T17:56:38.467746" elapsed="4.139187"/>
+</kw>
+<kw name="ShouldSeeTxt" owner="keyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${txt}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-08T17:56:42.608836" elapsed="0.015591"/>
+</kw>
+<arg>QA Playground</arg>
+<status status="PASS" start="2025-02-08T17:56:42.608836" elapsed="0.016588"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:56:38.467746" elapsed="4.157678"/>
+</kw>
+<kw name="HrefCheck" owner="keyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:56:42.626519" level="INFO">Clicking element 'xpath=/html/body/nav/div[2]/a'.</msg>
+<arg>${github}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:56:42.626519" elapsed="2.089782"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:56:44.722693" level="INFO">Current location is 'https://github.com/marko-simic/qa-playground-tests'.</msg>
+<arg>https://github.com/marko-simic/qa-playground-tests</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-02-08T17:56:44.717414" elapsed="0.005279"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-02-08T17:56:44.723706" elapsed="0.021064"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:56:44.746008" level="INFO">Clicking element 'xpath=/html/body/main/footer/div/a'.</msg>
+<arg>${credit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:56:44.744770" elapsed="1.267551"/>
+</kw>
+<kw name="ShouldSeeTxt" owner="keyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${txt}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-08T17:56:46.013379" elapsed="1.254613"/>
+</kw>
+<arg>Linkedin</arg>
+<status status="PASS" start="2025-02-08T17:56:46.013379" elapsed="1.255609"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-02-08T17:56:47.268988" elapsed="0.127897"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:56:47.396885" level="INFO">Clicking element 'xpath=/html/body/main/footer/div/div[1]/a'.</msg>
+<arg>${theme}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:56:47.396885" elapsed="2.006664"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:56:49.412554" level="INFO">Current location is 'https://github.com/codercatdev/ajonp-fireship-theme'.</msg>
+<arg>https://github.com/codercatdev/ajonp-fireship-theme</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-02-08T17:56:49.405544" elapsed="0.007010"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:56:42.625424" elapsed="6.788128"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-08T17:56:49.413552" elapsed="2.207708"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:56:38.466746" elapsed="13.154514"/>
+</test>
+<test id="s1-t2" name="02 Challenge2" line="14">
+<kw name="OpenWebBrowser" owner="keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:56:51.629187" level="INFO">Opening browser 'gc' to base url 'https://qaplayground.dev/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-08T17:56:51.628180" elapsed="2.102453"/>
+</kw>
+<kw name="ShouldSeeTxt" owner="keyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${txt}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-08T17:56:53.731747" elapsed="0.017710"/>
+</kw>
+<arg>QA Playground</arg>
+<status status="PASS" start="2025-02-08T17:56:53.731747" elapsed="0.017710"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:56:51.628180" elapsed="2.121277"/>
+</kw>
+<kw name="GotoChallenge" owner="keyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:56:53.750456" level="INFO">Clicking element 'xpath=/html/body/main/div[1]/div[1]/p[2]/a'.</msg>
+<arg>${btn_web_app}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:56:53.750456" elapsed="0.093211"/>
+</kw>
+<kw name="ShouldSeeTxt" owner="keyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${txt}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-08T17:56:53.846013" elapsed="0.032845"/>
+</kw>
+<arg>Each mini-app presents a unique test automation challenge</arg>
+<status status="PASS" start="2025-02-08T17:56:53.844666" elapsed="0.034192"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:56:53.750456" elapsed="0.128402"/>
+</kw>
+<kw name="OpenChallenge" owner="keyword">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-08T17:56:53.879985" elapsed="0.460444"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:56:54.340429" level="INFO">Clicking element 'xpath=/html/body/main/div[3]/a[2]/div'.</msg>
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:56:54.340429" elapsed="1.284683"/>
+</kw>
+<arg>2</arg>
+<status status="PASS" start="2025-02-08T17:56:53.879985" elapsed="1.745127"/>
+</kw>
+<kw name="GetAns" owner="keyword">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:56:55.651809" level="INFO">${txt} = The confirmation code is 9-9-9-9-9-9</msg>
+<var>${txt}</var>
+<arg>${challenge_ans}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:56:55.627623" elapsed="0.024186"/>
+</kw>
+<kw name="Remove String" owner="String">
+<msg time="2025-02-08T17:56:55.652966" level="INFO">${txt} =  9-9-9-9-9-9</msg>
+<var>${txt}</var>
+<arg>${txt}</arg>
+<arg>The confirmation code is</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<status status="PASS" start="2025-02-08T17:56:55.652966" elapsed="0.000000"/>
+</kw>
+<kw name="Remove String" owner="String">
+<msg time="2025-02-08T17:56:55.653962" level="INFO">${txt} =  999999</msg>
+<var>${txt}</var>
+<arg>${txt}</arg>
+<arg>-</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<status status="PASS" start="2025-02-08T17:56:55.652966" elapsed="0.000996"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${challenge_ans}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-08T17:56:55.653962" elapsed="0.021752"/>
+</kw>
+<kw name="InputChallenge2" owner="keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:56:55.676720" level="INFO">Typing text '9' into text field 'xpath=/html/body/main/div/div/input[1]'.</msg>
+<arg>xpath=/html/body/main/div/div/input[1]</arg>
+<arg>${1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:56:55.676720" elapsed="0.083866"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:56:55.761648" level="INFO">Typing text '9' into text field 'xpath=/html/body/main/div/div/input[2]'.</msg>
+<arg>xpath=/html/body/main/div/div/input[2]</arg>
+<arg>${2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:56:55.761648" elapsed="0.072761"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:56:55.835494" level="INFO">Typing text '9' into text field 'xpath=/html/body/main/div/div/input[3]'.</msg>
+<arg>xpath=/html/body/main/div/div/input[3]</arg>
+<arg>${3}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:56:55.835494" elapsed="0.069894"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:56:55.906917" level="INFO">Typing text '9' into text field 'xpath=/html/body/main/div/div/input[4]'.</msg>
+<arg>xpath=/html/body/main/div/div/input[4]</arg>
+<arg>${4}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:56:55.905388" elapsed="0.072066"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:56:55.978984" level="INFO">Typing text '9' into text field 'xpath=/html/body/main/div/div/input[5]'.</msg>
+<arg>xpath=/html/body/main/div/div/input[5]</arg>
+<arg>${5}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:56:55.978984" elapsed="0.109821"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:56:56.090992" level="INFO">Typing text '9' into text field 'xpath=/html/body/main/div/div/input[6]'.</msg>
+<arg>xpath=/html/body/main/div/div/input[6]</arg>
+<arg>${6}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:56:56.089885" elapsed="0.078327"/>
+</kw>
+<arg>${txt}[1]</arg>
+<arg>${txt}[2]</arg>
+<arg>${txt}[3]</arg>
+<arg>${txt}[4]</arg>
+<arg>${txt}[5]</arg>
+<arg>${txt}[6]</arg>
+<status status="PASS" start="2025-02-08T17:56:55.675714" elapsed="0.493502"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:56:55.626620" elapsed="0.542596"/>
+</kw>
+<kw name="ShouldSeeTxt" owner="keyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${txt}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-08T17:56:56.170720" elapsed="0.011603"/>
+</kw>
+<arg>Success</arg>
+<status status="PASS" start="2025-02-08T17:56:56.169216" elapsed="0.013107"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-08T17:56:56.183301" elapsed="2.167775"/>
+</kw>
+<tag>Input</tag>
+<tag>Verify</tag>
+<status status="PASS" start="2025-02-08T17:56:51.626910" elapsed="6.724825"/>
+</test>
+<test id="s1-t3" name="03 Challenge3" line="20">
+<kw name="OpenWebBrowser" owner="keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:56:58.357536" level="INFO">Opening browser 'gc' to base url 'https://qaplayground.dev/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-08T17:56:58.357536" elapsed="2.209063"/>
+</kw>
+<kw name="ShouldSeeTxt" owner="keyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${txt}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-08T17:57:00.569883" elapsed="0.038980"/>
+</kw>
+<arg>QA Playground</arg>
+<status status="PASS" start="2025-02-08T17:57:00.568869" elapsed="0.040499"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:56:58.357536" elapsed="2.251832"/>
+</kw>
+<kw name="OpenChallenge" owner="keyword">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-08T17:57:00.611370" elapsed="0.550944"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:01.162314" level="INFO">Clicking element 'xpath=/html/body/main/div[3]/a[3]/div'.</msg>
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:57:01.162314" elapsed="1.818012"/>
+</kw>
+<arg>3</arg>
+<status status="PASS" start="2025-02-08T17:57:00.610370" elapsed="2.371034"/>
+</kw>
+<kw name="VerifyCh3" owner="keyword">
+<kw name="ShouldSeeTxt" owner="keyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${txt}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-08T17:57:02.982401" elapsed="0.014373"/>
+</kw>
+<arg>Tags</arg>
+<status status="PASS" start="2025-02-08T17:57:02.982401" elapsed="0.014373"/>
+</kw>
+<kw name="ShouldSeeEle" owner="keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-08T17:57:02.998209" elapsed="0.022962"/>
+</kw>
+<arg>${challenge_3_input}</arg>
+<status status="PASS" start="2025-02-08T17:57:02.996774" elapsed="0.024397"/>
+</kw>
+<kw name="ShouldSeeEle" owner="keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-08T17:57:03.021171" elapsed="0.022237"/>
+</kw>
+<arg>${challenge_3_limit}</arg>
+<status status="PASS" start="2025-02-08T17:57:03.021171" elapsed="0.022237"/>
+</kw>
+<kw name="ShouldSeeEle" owner="keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-08T17:57:03.044428" elapsed="0.018054"/>
+</kw>
+<arg>${challenge_3_remove}</arg>
+<status status="PASS" start="2025-02-08T17:57:03.043408" elapsed="0.019074"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:57:02.982401" elapsed="0.081122"/>
+</kw>
+<kw name="Ch3Input" owner="keyword">
+<for flavor="IN">
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:03.064626" level="INFO">Typing text '1111111111' into text field 'xpath=/html/body/main/div/div[2]/ul/input'.</msg>
+<arg>${challenge_3_input}</arg>
+<arg>${item}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:57:03.064626" elapsed="0.085395"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:03.152019" level="INFO">Sending key(s) ('RETURN',) to xpath=/html/body/main/div/div[2]/ul/input element.</msg>
+<msg time="2025-02-08T17:57:03.425379" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2025-02-08T17:57:03.425379" level="INFO">Releasing special key RETURN.</msg>
+<arg>${challenge_3_input}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-02-08T17:57:03.152019" elapsed="0.280292"/>
+</kw>
+<var name="${Item}">1111111111</var>
+<status status="PASS" start="2025-02-08T17:57:03.063523" elapsed="0.369905"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:03.433428" level="INFO">Typing text '2222222222' into text field 'xpath=/html/body/main/div/div[2]/ul/input'.</msg>
+<arg>${challenge_3_input}</arg>
+<arg>${item}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:57:03.433428" elapsed="0.056888"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:03.492389" level="INFO">Sending key(s) ('RETURN',) to xpath=/html/body/main/div/div[2]/ul/input element.</msg>
+<msg time="2025-02-08T17:57:03.765187" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2025-02-08T17:57:03.765187" level="INFO">Releasing special key RETURN.</msg>
+<arg>${challenge_3_input}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-02-08T17:57:03.491316" elapsed="0.281223"/>
+</kw>
+<var name="${Item}">2222222222</var>
+<status status="PASS" start="2025-02-08T17:57:03.433428" elapsed="0.340250"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:03.774675" level="INFO">Typing text '3333333333' into text field 'xpath=/html/body/main/div/div[2]/ul/input'.</msg>
+<arg>${challenge_3_input}</arg>
+<arg>${item}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:57:03.773678" elapsed="0.089201"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:03.863932" level="INFO">Sending key(s) ('RETURN',) to xpath=/html/body/main/div/div[2]/ul/input element.</msg>
+<msg time="2025-02-08T17:57:04.155190" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2025-02-08T17:57:04.155190" level="INFO">Releasing special key RETURN.</msg>
+<arg>${challenge_3_input}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-02-08T17:57:03.863932" elapsed="0.300318"/>
+</kw>
+<var name="${Item}">3333333333</var>
+<status status="PASS" start="2025-02-08T17:57:03.773678" elapsed="0.391569"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:04.166755" level="INFO">Typing text '4444444444' into text field 'xpath=/html/body/main/div/div[2]/ul/input'.</msg>
+<arg>${challenge_3_input}</arg>
+<arg>${item}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:57:04.165247" elapsed="0.072858"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:04.239109" level="INFO">Sending key(s) ('RETURN',) to xpath=/html/body/main/div/div[2]/ul/input element.</msg>
+<msg time="2025-02-08T17:57:04.513532" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2025-02-08T17:57:04.513532" level="INFO">Releasing special key RETURN.</msg>
+<arg>${challenge_3_input}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-02-08T17:57:04.239109" elapsed="0.294713"/>
+</kw>
+<var name="${Item}">4444444444</var>
+<status status="PASS" start="2025-02-08T17:57:04.165247" elapsed="0.369571"/>
+</iter>
+<var>${Item}</var>
+<value>@{Array}</value>
+<status status="PASS" start="2025-02-08T17:57:03.063523" elapsed="1.471295"/>
+</for>
+<arg>1111111111</arg>
+<arg>2222222222</arg>
+<arg>3333333333</arg>
+<arg>4444444444</arg>
+<status status="PASS" start="2025-02-08T17:57:03.063523" elapsed="1.472293"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:04.535816" level="INFO">Clicking element 'xpath=/html/body/main/div/div[3]/button'.</msg>
+<arg>${challenge_3_remove}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:57:04.535816" elapsed="0.074411"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-08T17:57:04.611605" elapsed="2.185510"/>
+</kw>
+<tag>Input</tag>
+<status status="PASS" start="2025-02-08T17:56:58.357536" elapsed="8.439579"/>
+</test>
+<test id="s1-t4" name="06 Challenge6" line="26">
+<kw name="OpenWebBrowser" owner="keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:06.804441" level="INFO">Opening browser 'gc' to base url 'https://qaplayground.dev/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-08T17:57:06.804441" elapsed="2.212780"/>
+</kw>
+<kw name="ShouldSeeTxt" owner="keyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${txt}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-08T17:57:09.020738" elapsed="0.014694"/>
+</kw>
+<arg>QA Playground</arg>
+<status status="PASS" start="2025-02-08T17:57:09.020738" elapsed="0.014694"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:57:06.803440" elapsed="2.231992"/>
+</kw>
+<kw name="OpenChallenge" owner="keyword">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-08T17:57:09.035432" elapsed="0.599027"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:09.635830" level="INFO">Clicking element 'xpath=/html/body/main/div[3]/a[6]/div'.</msg>
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:57:09.634459" elapsed="1.103466"/>
+</kw>
+<arg>6</arg>
+<status status="PASS" start="2025-02-08T17:57:09.035432" elapsed="1.702493"/>
+</kw>
+<kw name="ShouldSeeEle" owner="keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-08T17:57:10.738931" elapsed="0.022560"/>
+</kw>
+<arg>${ch_6_new_tab}</arg>
+<status status="PASS" start="2025-02-08T17:57:10.738931" elapsed="0.022560"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:10.762831" level="INFO">Clicking element 'id=open'.</msg>
+<arg>${ch_6_new_tab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:57:10.761491" elapsed="0.096183"/>
+</kw>
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:10.869162" level="INFO">@{txt} = [ A4867526E78ED1F21CBA0F0AF7059DBC | D217AD8E2D3C73124B211C0414880AA3 ]</msg>
+<var>@{txt}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2025-02-08T17:57:10.860210" elapsed="0.008952"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${txt}[0]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:57:10.870445" elapsed="0.018790"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${txt}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:57:10.890237" elapsed="0.036938"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-08T17:57:10.927175" elapsed="2.120852"/>
+</kw>
+<tag>New Tab</tag>
+<status status="PASS" start="2025-02-08T17:57:06.803440" elapsed="6.244587"/>
+</test>
+<test id="s1-t5" name="07 Challenge7" line="35">
+<kw name="OpenWebBrowser" owner="keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:13.055210" level="INFO">Opening browser 'gc' to base url 'https://qaplayground.dev/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-08T17:57:13.055210" elapsed="2.001724"/>
+</kw>
+<kw name="ShouldSeeTxt" owner="keyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${txt}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-08T17:57:15.057965" elapsed="0.020354"/>
+</kw>
+<arg>QA Playground</arg>
+<status status="PASS" start="2025-02-08T17:57:15.057965" elapsed="0.020354"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:57:13.054099" elapsed="2.024724"/>
+</kw>
+<kw name="OpenChallenge" owner="keyword">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-08T17:57:15.078823" elapsed="0.586278"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:15.666608" level="INFO">Clicking element 'xpath=/html/body/main/div[3]/a[7]/div'.</msg>
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:57:15.666608" elapsed="0.660586"/>
+</kw>
+<arg>7</arg>
+<status status="PASS" start="2025-02-08T17:57:15.078823" elapsed="1.248371"/>
+</kw>
+<kw name="ShouldSeeEle" owner="keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-08T17:57:16.328701" elapsed="0.050915"/>
+</kw>
+<arg>${challenge_7_open_btn}</arg>
+<status status="PASS" start="2025-02-08T17:57:16.328701" elapsed="0.050915"/>
+</kw>
+<kw name="ShouldSeeEle" owner="keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-08T17:57:16.381007" elapsed="0.024773"/>
+</kw>
+<arg>${challenge_7_info}</arg>
+<status status="PASS" start="2025-02-08T17:57:16.381007" elapsed="0.024773"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:16.428790" level="INFO">Element 'id=info' contains text 'Click to open pop-up'.</msg>
+<arg>${challenge_7_info}</arg>
+<arg>Click to open pop-up</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-02-08T17:57:16.406777" elapsed="0.022013"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:16.430860" level="INFO">Clicking element 'id=login'.</msg>
+<arg>${challenge_7_open_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:57:16.429807" elapsed="0.155700"/>
+</kw>
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:16.601217" level="INFO">@{txt} = [ 3F32797EBA39405EBCD2FB02628BF95E | CDCB93DB2E7BC752E0B85615D803A408 ]</msg>
+<var>@{txt}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2025-02-08T17:57:16.591432" elapsed="0.009785"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${txt}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:57:16.603417" elapsed="0.037477"/>
+</kw>
+<kw name="ShouldSeeEle" owner="keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-08T17:57:16.642892" elapsed="0.547179"/>
+</kw>
+<arg>${challenge_7_popup_submit}</arg>
+<status status="PASS" start="2025-02-08T17:57:16.641894" elapsed="0.548177"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:17.191145" level="INFO">Clicking element 'xpath=//*[@id="wrapper"]/button'.</msg>
+<arg>${challenge_7_popup_submit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:57:17.191145" elapsed="0.069183"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${txt}[0]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:57:17.264665" elapsed="0.008671"/>
+</kw>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>${challenge_7_info}</arg>
+<arg>Button Clicked</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2025-02-08T17:57:17.273336" elapsed="0.015607"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-08T17:57:17.288943" elapsed="2.130615"/>
+</kw>
+<tag>Pop-Up Window</tag>
+<status status="PASS" start="2025-02-08T17:57:13.054099" elapsed="6.372956"/>
+</test>
+<test id="s1-t6" name="08 Challenge8" line="51">
+<kw name="OpenWebBrowser" owner="keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:19.435907" level="INFO">Opening browser 'gc' to base url 'https://qaplayground.dev/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-08T17:57:19.435907" elapsed="2.036204"/>
+</kw>
+<kw name="ShouldSeeTxt" owner="keyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${txt}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-08T17:57:21.474357" elapsed="0.443418"/>
+</kw>
+<arg>QA Playground</arg>
+<status status="PASS" start="2025-02-08T17:57:21.473356" elapsed="0.444419"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:57:19.434906" elapsed="2.482869"/>
+</kw>
+<kw name="OpenChallenge" owner="keyword">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-08T17:57:21.920277" elapsed="0.385242"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:22.306877" level="INFO">Clicking element 'xpath=/html/body/main/div[3]/a[8]/div'.</msg>
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:57:22.305519" elapsed="2.036943"/>
+</kw>
+<arg>8</arg>
+<status status="PASS" start="2025-02-08T17:57:21.918773" elapsed="2.424692"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:24.343465" level="INFO">Selecting frame 'xpath=//*[@id="frame1"]'.</msg>
+<arg>xpath=//*[@id="frame1"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2025-02-08T17:57:24.343465" elapsed="0.034686"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:24.379157" level="INFO">Selecting frame 'xpath=//*[@id="frame2"]'.</msg>
+<arg>xpath=//*[@id="frame2"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2025-02-08T17:57:24.379157" elapsed="0.026240"/>
+</kw>
+<kw name="ShouldSeeEle" owner="keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-08T17:57:24.406599" elapsed="0.021379"/>
+</kw>
+<arg>${challenge_8_click_me}</arg>
+<status status="PASS" start="2025-02-08T17:57:24.406599" elapsed="0.021379"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:24.428976" level="INFO">Clicking element 'xpath=/html/body/div/fieldset/a'.</msg>
+<arg>${challenge_8_click_me}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:57:24.428976" elapsed="0.182485"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:24.647611" level="INFO">Element 'id=msg' contains text 'Button Clicked'.</msg>
+<arg>${challenge_8)_message}</arg>
+<arg>Button Clicked</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-02-08T17:57:24.613803" elapsed="0.033808"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-08T17:57:24.649117" elapsed="2.167931"/>
+</kw>
+<tag>Iframe</tag>
+<status status="PASS" start="2025-02-08T17:57:19.433702" elapsed="7.398850"/>
+</test>
+<test id="s1-t7" name="09 Challenge9" line="61">
+<kw name="OpenWebBrowser" owner="keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:26.849054" level="INFO">Opening browser 'gc' to base url 'https://qaplayground.dev/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-08T17:57:26.849054" elapsed="2.385073"/>
+</kw>
+<kw name="ShouldSeeTxt" owner="keyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${txt}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-08T17:57:29.235125" elapsed="0.029856"/>
+</kw>
+<arg>QA Playground</arg>
+<status status="PASS" start="2025-02-08T17:57:29.235125" elapsed="0.029856"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:57:26.849054" elapsed="2.415927"/>
+</kw>
+<kw name="OpenChallenge" owner="keyword">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-08T17:57:29.266023" elapsed="0.602388"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:29.868916" level="INFO">Clicking element 'xpath=/html/body/main/div[3]/a[9]/div'.</msg>
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:57:29.868916" elapsed="1.582592"/>
+</kw>
+<arg>9</arg>
+<status status="PASS" start="2025-02-08T17:57:29.266023" elapsed="2.186483"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:31.460350" level="INFO">${btn} = &lt;selenium.webdriver.remote.webelement.WebElement (session="e766d9bc84888b7255bb002fe7e7870a", element="f.07CC5AA27C7C8DC35F679AB3E270C5F2.d.6DF9BA1B39803788C2C3B417260CDD6D.e.42")&gt;</msg>
+<var>${btn}</var>
+<arg>dom:document.querySelector("body &gt; main &gt; div &gt; progress-bar").shadowRoot.querySelector("div:nth-child(3) &gt; button")</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:57:31.453504" elapsed="0.006846"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:31.512987" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="e766d9bc84888b7255bb002fe7e7870a", element="f.07CC5AA27C7C8DC35F679AB3E270C5F2.d.6DF9BA1B39803788C2C3B417260CDD6D.e.42")&gt;' is displayed.</msg>
+<arg>${btn}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-08T17:57:31.461350" elapsed="0.051637"/>
+</kw>
+<kw name="ShouldSeeEle" owner="keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-08T17:57:31.513987" elapsed="0.020046"/>
+</kw>
+<arg>${challenge_9_guage}</arg>
+<status status="PASS" start="2025-02-08T17:57:31.513987" elapsed="0.020046"/>
+</kw>
+<kw name="AttCheck" owner="keyword">
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:31.550161" level="INFO">Element 'xpath=/html/body/main/div/progress-bar' attribute 'percent' contains value '5'.</msg>
+<msg time="2025-02-08T17:57:31.550161" level="INFO">${txt} = None</msg>
+<var>${txt}</var>
+<arg>${challenge_9_guage}</arg>
+<arg>percent</arg>
+<arg>${Va}</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="PASS" start="2025-02-08T17:57:31.534033" elapsed="0.016128"/>
+</kw>
+<arg>5</arg>
+<status status="PASS" start="2025-02-08T17:57:31.534033" elapsed="0.017192"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:31.552409" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="e766d9bc84888b7255bb002fe7e7870a", element="f.07CC5AA27C7C8DC35F679AB3E270C5F2.d.6DF9BA1B39803788C2C3B417260CDD6D.e.42")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:57:31.552409" elapsed="0.057510"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="AttCheck" owner="keyword">
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:31.710065" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-08T17:57:31.710065" level="FAIL">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</msg>
+<var>${txt}</var>
+<arg>${challenge_9_guage}</arg>
+<arg>percent</arg>
+<arg>${Va}</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="FAIL" start="2025-02-08T17:57:31.612299" elapsed="0.099763">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<arg>95</arg>
+<status status="FAIL" start="2025-02-08T17:57:31.611047" elapsed="0.102013">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<kw name="AttCheck" owner="keyword">
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:32.036948" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-08T17:57:32.036948" level="FAIL">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</msg>
+<var>${txt}</var>
+<arg>${challenge_9_guage}</arg>
+<arg>percent</arg>
+<arg>${Va}</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="FAIL" start="2025-02-08T17:57:31.913599" elapsed="0.124374">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<arg>95</arg>
+<status status="FAIL" start="2025-02-08T17:57:31.913599" elapsed="0.125352">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<kw name="AttCheck" owner="keyword">
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:32.335327" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-08T17:57:32.335327" level="FAIL">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</msg>
+<var>${txt}</var>
+<arg>${challenge_9_guage}</arg>
+<arg>percent</arg>
+<arg>${Va}</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="FAIL" start="2025-02-08T17:57:32.239254" elapsed="0.096073">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<arg>95</arg>
+<status status="FAIL" start="2025-02-08T17:57:32.239254" elapsed="0.096073">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<kw name="AttCheck" owner="keyword">
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:32.633758" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-08T17:57:32.634781" level="FAIL">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</msg>
+<var>${txt}</var>
+<arg>${challenge_9_guage}</arg>
+<arg>percent</arg>
+<arg>${Va}</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="FAIL" start="2025-02-08T17:57:32.535505" elapsed="0.099276">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<arg>95</arg>
+<status status="FAIL" start="2025-02-08T17:57:32.535505" elapsed="0.100280">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<kw name="AttCheck" owner="keyword">
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:32.939785" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-08T17:57:32.939785" level="FAIL">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</msg>
+<var>${txt}</var>
+<arg>${challenge_9_guage}</arg>
+<arg>percent</arg>
+<arg>${Va}</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="FAIL" start="2025-02-08T17:57:32.836329" elapsed="0.104454">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<arg>95</arg>
+<status status="FAIL" start="2025-02-08T17:57:32.836329" elapsed="0.104454">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<kw name="AttCheck" owner="keyword">
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:33.267826" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-08T17:57:33.267826" level="FAIL">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</msg>
+<var>${txt}</var>
+<arg>${challenge_9_guage}</arg>
+<arg>percent</arg>
+<arg>${Va}</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="FAIL" start="2025-02-08T17:57:33.141404" elapsed="0.126422">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<arg>95</arg>
+<status status="FAIL" start="2025-02-08T17:57:33.141404" elapsed="0.128440">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<kw name="AttCheck" owner="keyword">
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:33.563779" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-08T17:57:33.563779" level="FAIL">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</msg>
+<var>${txt}</var>
+<arg>${challenge_9_guage}</arg>
+<arg>percent</arg>
+<arg>${Va}</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="FAIL" start="2025-02-08T17:57:33.470003" elapsed="0.095034">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<arg>95</arg>
+<status status="FAIL" start="2025-02-08T17:57:33.470003" elapsed="0.095034">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<kw name="AttCheck" owner="keyword">
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:33.869955" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-08T17:57:33.869955" level="FAIL">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</msg>
+<var>${txt}</var>
+<arg>${challenge_9_guage}</arg>
+<arg>percent</arg>
+<arg>${Va}</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="FAIL" start="2025-02-08T17:57:33.768708" elapsed="0.102244">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<arg>95</arg>
+<status status="FAIL" start="2025-02-08T17:57:33.768204" elapsed="0.102748">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<kw name="AttCheck" owner="keyword">
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:34.168692" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-08T17:57:34.169216" level="FAIL">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</msg>
+<var>${txt}</var>
+<arg>${challenge_9_guage}</arg>
+<arg>percent</arg>
+<arg>${Va}</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="FAIL" start="2025-02-08T17:57:34.072170" elapsed="0.097046">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<arg>95</arg>
+<status status="FAIL" start="2025-02-08T17:57:34.072170" elapsed="0.098127">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<kw name="AttCheck" owner="keyword">
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:34.466475" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-08T17:57:34.466475" level="FAIL">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</msg>
+<var>${txt}</var>
+<arg>${challenge_9_guage}</arg>
+<arg>percent</arg>
+<arg>${Va}</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="FAIL" start="2025-02-08T17:57:34.370808" elapsed="0.096709">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<arg>95</arg>
+<status status="FAIL" start="2025-02-08T17:57:34.370808" elapsed="0.096709">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<kw name="AttCheck" owner="keyword">
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:34.763671" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-08T17:57:34.763671" level="FAIL">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</msg>
+<var>${txt}</var>
+<arg>${challenge_9_guage}</arg>
+<arg>percent</arg>
+<arg>${Va}</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="FAIL" start="2025-02-08T17:57:34.667846" elapsed="0.095825">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<arg>95</arg>
+<status status="FAIL" start="2025-02-08T17:57:34.667846" elapsed="0.096950">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<kw name="AttCheck" owner="keyword">
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:35.057462" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-08T17:57:35.057462" level="FAIL">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</msg>
+<var>${txt}</var>
+<arg>${challenge_9_guage}</arg>
+<arg>percent</arg>
+<arg>${Va}</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="FAIL" start="2025-02-08T17:57:34.964982" elapsed="0.094007">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<arg>95</arg>
+<status status="FAIL" start="2025-02-08T17:57:34.964982" elapsed="0.094007">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<kw name="AttCheck" owner="keyword">
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:35.391490" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-08T17:57:35.391490" level="FAIL">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</msg>
+<var>${txt}</var>
+<arg>${challenge_9_guage}</arg>
+<arg>percent</arg>
+<arg>${Va}</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="FAIL" start="2025-02-08T17:57:35.259427" elapsed="0.132063">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<arg>95</arg>
+<status status="FAIL" start="2025-02-08T17:57:35.259427" elapsed="0.133060">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<kw name="AttCheck" owner="keyword">
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:35.694361" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-08T17:57:35.694361" level="FAIL">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</msg>
+<var>${txt}</var>
+<arg>${challenge_9_guage}</arg>
+<arg>percent</arg>
+<arg>${Va}</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="FAIL" start="2025-02-08T17:57:35.593080" elapsed="0.101281">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<arg>95</arg>
+<status status="FAIL" start="2025-02-08T17:57:35.593080" elapsed="0.102632">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<kw name="AttCheck" owner="keyword">
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:35.994680" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-15.png"&gt;&lt;img src="selenium-screenshot-15.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-08T17:57:35.994680" level="FAIL">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</msg>
+<var>${txt}</var>
+<arg>${challenge_9_guage}</arg>
+<arg>percent</arg>
+<arg>${Va}</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="FAIL" start="2025-02-08T17:57:35.897065" elapsed="0.097615">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<arg>95</arg>
+<status status="FAIL" start="2025-02-08T17:57:35.897065" elapsed="0.098839">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<kw name="AttCheck" owner="keyword">
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:36.291174" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-16.png"&gt;&lt;img src="selenium-screenshot-16.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-08T17:57:36.292175" level="FAIL">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</msg>
+<var>${txt}</var>
+<arg>${challenge_9_guage}</arg>
+<arg>percent</arg>
+<arg>${Va}</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="FAIL" start="2025-02-08T17:57:36.196483" elapsed="0.095692">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<arg>95</arg>
+<status status="FAIL" start="2025-02-08T17:57:36.196483" elapsed="0.095692">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<kw name="AttCheck" owner="keyword">
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:36.592483" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-17.png"&gt;&lt;img src="selenium-screenshot-17.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-08T17:57:36.592483" level="FAIL">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</msg>
+<var>${txt}</var>
+<arg>${challenge_9_guage}</arg>
+<arg>percent</arg>
+<arg>${Va}</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="FAIL" start="2025-02-08T17:57:36.492406" elapsed="0.101089">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<arg>95</arg>
+<status status="FAIL" start="2025-02-08T17:57:36.492406" elapsed="0.101089">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<kw name="AttCheck" owner="keyword">
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:36.913542" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-18.png"&gt;&lt;img src="selenium-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-08T17:57:36.913542" level="FAIL">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</msg>
+<var>${txt}</var>
+<arg>${challenge_9_guage}</arg>
+<arg>percent</arg>
+<arg>${Va}</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="FAIL" start="2025-02-08T17:57:36.794598" elapsed="0.118944">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<arg>95</arg>
+<status status="FAIL" start="2025-02-08T17:57:36.794598" elapsed="0.120946">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<kw name="AttCheck" owner="keyword">
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:37.217684" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-19.png"&gt;&lt;img src="selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-08T17:57:37.217684" level="FAIL">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</msg>
+<var>${txt}</var>
+<arg>${challenge_9_guage}</arg>
+<arg>percent</arg>
+<arg>${Va}</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="FAIL" start="2025-02-08T17:57:37.116025" elapsed="0.101659">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<arg>95</arg>
+<status status="FAIL" start="2025-02-08T17:57:37.116025" elapsed="0.103188">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<kw name="AttCheck" owner="keyword">
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:37.516816" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-20.png"&gt;&lt;img src="selenium-screenshot-20.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-08T17:57:37.516816" level="FAIL">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</msg>
+<var>${txt}</var>
+<arg>${challenge_9_guage}</arg>
+<arg>percent</arg>
+<arg>${Va}</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="FAIL" start="2025-02-08T17:57:37.419340" elapsed="0.098605">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<arg>95</arg>
+<status status="FAIL" start="2025-02-08T17:57:37.419340" elapsed="0.098605">Element 'xpath=/html/body/main/div/progress-bar' attribute should have value '95' (str) but its value was '5' (str).</status>
+</kw>
+<kw name="AttCheck" owner="keyword">
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:37.735721" level="INFO">Element 'xpath=/html/body/main/div/progress-bar' attribute 'percent' contains value '95'.</msg>
+<msg time="2025-02-08T17:57:37.735721" level="INFO">${txt} = None</msg>
+<var>${txt}</var>
+<arg>${challenge_9_guage}</arg>
+<arg>percent</arg>
+<arg>${Va}</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="PASS" start="2025-02-08T17:57:37.719496" elapsed="0.016225"/>
+</kw>
+<arg>95</arg>
+<status status="PASS" start="2025-02-08T17:57:37.719496" elapsed="0.017245"/>
+</kw>
+<arg>10s</arg>
+<arg>200ms</arg>
+<arg>AttCheck</arg>
+<arg>95</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-02-08T17:57:31.611047" elapsed="6.125694"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-08T17:57:37.737658" elapsed="2.147897"/>
+</kw>
+<tag>Shadow DOM</tag>
+<status status="PASS" start="2025-02-08T17:57:26.848056" elapsed="13.037499"/>
+</test>
+<test id="s1-t8" name="10 Challenge10" line="73">
+<kw name="OpenWebBrowser" owner="keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:39.892898" level="INFO">Opening browser 'gc' to base url 'https://qaplayground.dev/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-08T17:57:39.892898" elapsed="2.135805"/>
+</kw>
+<kw name="ShouldSeeTxt" owner="keyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${txt}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-08T17:57:42.030008" elapsed="0.017212"/>
+</kw>
+<arg>QA Playground</arg>
+<status status="PASS" start="2025-02-08T17:57:42.030008" elapsed="0.017212"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:57:39.892898" elapsed="2.154322"/>
+</kw>
+<kw name="OpenChallenge" owner="keyword">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-08T17:57:42.048728" elapsed="0.587555"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:42.637359" level="INFO">Clicking element 'xpath=/html/body/main/div[3]/a[10]/div'.</msg>
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:57:42.637359" elapsed="1.820517"/>
+</kw>
+<arg>10</arg>
+<status status="PASS" start="2025-02-08T17:57:42.047220" elapsed="2.411652"/>
+</kw>
+<kw name="SelectStar" owner="keyword">
+<if>
+<branch type="IF" condition="(${rating}==1)">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:44.460127" level="INFO">Clicking element 'xpath=/html/body/div/div[1]/div[2]/label[1]'.</msg>
+<arg>xpath=/html/body/div/div[1]/div[2]/label[${rating}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:57:44.460127" elapsed="0.067779"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:57:44.460127" elapsed="0.068777"/>
+</branch>
+<branch type="ELSE IF" condition="(${rating}==2)">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div/div[1]/div[2]/label[${rating}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-08T17:57:44.529409" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-02-08T17:57:44.528904" elapsed="0.000505"/>
+</branch>
+<branch type="ELSE IF" condition="(${rating}==3)">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div/div[1]/div[2]/label[${rating}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-08T17:57:44.529409" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-02-08T17:57:44.529409" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="(${rating}==4)">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div/div[1]/div[2]/label[${rating}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-08T17:57:44.529409" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-02-08T17:57:44.529409" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="(${rating}==5)">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div/div[1]/div[2]/label[${rating}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-08T17:57:44.529409" elapsed="0.001447"/>
+</kw>
+<status status="NOT RUN" start="2025-02-08T17:57:44.529409" elapsed="0.001447"/>
+</branch>
+<status status="PASS" start="2025-02-08T17:57:44.460127" elapsed="0.070729"/>
+</if>
+<kw name="ShouldSeeEle" owner="keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-08T17:57:44.530856" elapsed="0.022019"/>
+</kw>
+<arg>xpath=/html/body/div/div[1]/div[1]/div/li[${rating}]/img</arg>
+<status status="PASS" start="2025-02-08T17:57:44.530856" elapsed="0.022019"/>
+</kw>
+<arg>1</arg>
+<status status="PASS" start="2025-02-08T17:57:44.460127" elapsed="0.093790"/>
+</kw>
+<kw name="SelectStar" owner="keyword">
+<if>
+<branch type="IF" condition="(${rating}==1)">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div/div[1]/div[2]/label[${rating}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-08T17:57:44.553917" elapsed="0.001266"/>
+</kw>
+<status status="NOT RUN" start="2025-02-08T17:57:44.553917" elapsed="0.001266"/>
+</branch>
+<branch type="ELSE IF" condition="(${rating}==2)">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:44.555183" level="INFO">Clicking element 'xpath=/html/body/div/div[1]/div[2]/label[2]'.</msg>
+<arg>xpath=/html/body/div/div[1]/div[2]/label[${rating}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:57:44.555183" elapsed="0.077259"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:57:44.555183" elapsed="0.078458"/>
+</branch>
+<branch type="ELSE IF" condition="(${rating}==3)">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div/div[1]/div[2]/label[${rating}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-08T17:57:44.633641" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-02-08T17:57:44.633641" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="(${rating}==4)">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div/div[1]/div[2]/label[${rating}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-08T17:57:44.634639" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-02-08T17:57:44.634639" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="(${rating}==5)">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div/div[1]/div[2]/label[${rating}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-08T17:57:44.634639" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-02-08T17:57:44.634639" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2025-02-08T17:57:44.553917" elapsed="0.080722"/>
+</if>
+<kw name="ShouldSeeEle" owner="keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-08T17:57:44.635636" elapsed="0.246976"/>
+</kw>
+<arg>xpath=/html/body/div/div[1]/div[1]/div/li[${rating}]/img</arg>
+<status status="PASS" start="2025-02-08T17:57:44.634639" elapsed="0.247973"/>
+</kw>
+<arg>2</arg>
+<status status="PASS" start="2025-02-08T17:57:44.553917" elapsed="0.328695"/>
+</kw>
+<kw name="SelectStar" owner="keyword">
+<if>
+<branch type="IF" condition="(${rating}==1)">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div/div[1]/div[2]/label[${rating}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-08T17:57:44.883608" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-02-08T17:57:44.883608" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="(${rating}==2)">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div/div[1]/div[2]/label[${rating}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-08T17:57:44.884606" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-02-08T17:57:44.884606" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="(${rating}==3)">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:44.884606" level="INFO">Clicking element 'xpath=/html/body/div/div[1]/div[2]/label[3]'.</msg>
+<arg>xpath=/html/body/div/div[1]/div[2]/label[${rating}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:57:44.884606" elapsed="0.081008"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:57:44.884606" elapsed="0.082004"/>
+</branch>
+<branch type="ELSE IF" condition="(${rating}==4)">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div/div[1]/div[2]/label[${rating}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-08T17:57:44.966610" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-02-08T17:57:44.966610" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="(${rating}==5)">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div/div[1]/div[2]/label[${rating}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-08T17:57:44.967611" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-02-08T17:57:44.966610" elapsed="0.001001"/>
+</branch>
+<status status="PASS" start="2025-02-08T17:57:44.883608" elapsed="0.084003"/>
+</if>
+<kw name="ShouldSeeEle" owner="keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-08T17:57:44.969118" elapsed="0.261665"/>
+</kw>
+<arg>xpath=/html/body/div/div[1]/div[1]/div/li[${rating}]/img</arg>
+<status status="PASS" start="2025-02-08T17:57:44.967611" elapsed="0.263172"/>
+</kw>
+<arg>3</arg>
+<status status="PASS" start="2025-02-08T17:57:44.883608" elapsed="0.347175"/>
+</kw>
+<kw name="SelectStar" owner="keyword">
+<if>
+<branch type="IF" condition="(${rating}==1)">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div/div[1]/div[2]/label[${rating}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-08T17:57:45.231782" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-02-08T17:57:45.231782" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="(${rating}==2)">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div/div[1]/div[2]/label[${rating}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-08T17:57:45.232827" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-02-08T17:57:45.232827" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="(${rating}==3)">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div/div[1]/div[2]/label[${rating}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-08T17:57:45.232827" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-02-08T17:57:45.232827" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="(${rating}==4)">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:45.233830" level="INFO">Clicking element 'xpath=/html/body/div/div[1]/div[2]/label[4]'.</msg>
+<arg>xpath=/html/body/div/div[1]/div[2]/label[${rating}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:57:45.233830" elapsed="0.079359"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:57:45.233830" elapsed="0.080357"/>
+</branch>
+<branch type="ELSE IF" condition="(${rating}==5)">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div/div[1]/div[2]/label[${rating}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-08T17:57:45.314187" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-02-08T17:57:45.314187" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2025-02-08T17:57:45.231782" elapsed="0.082405"/>
+</if>
+<kw name="ShouldSeeEle" owner="keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-08T17:57:45.315184" elapsed="0.235019"/>
+</kw>
+<arg>xpath=/html/body/div/div[1]/div[1]/div/li[${rating}]/img</arg>
+<status status="PASS" start="2025-02-08T17:57:45.314187" elapsed="0.237056"/>
+</kw>
+<arg>4</arg>
+<status status="PASS" start="2025-02-08T17:57:45.231782" elapsed="0.319461"/>
+</kw>
+<kw name="SelectStar" owner="keyword">
+<if>
+<branch type="IF" condition="(${rating}==1)">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div/div[1]/div[2]/label[${rating}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-08T17:57:45.552270" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-02-08T17:57:45.551243" elapsed="0.001027"/>
+</branch>
+<branch type="ELSE IF" condition="(${rating}==2)">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div/div[1]/div[2]/label[${rating}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-08T17:57:45.552270" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-02-08T17:57:45.552270" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="(${rating}==3)">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div/div[1]/div[2]/label[${rating}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-08T17:57:45.552270" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-02-08T17:57:45.552270" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="(${rating}==4)">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div/div[1]/div[2]/label[${rating}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-08T17:57:45.553653" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-02-08T17:57:45.553653" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="(${rating}==5)">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:45.553653" level="INFO">Clicking element 'xpath=/html/body/div/div[1]/div[2]/label[5]'.</msg>
+<arg>xpath=/html/body/div/div[1]/div[2]/label[${rating}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:57:45.553653" elapsed="0.063612"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:57:45.553653" elapsed="0.065140"/>
+</branch>
+<status status="PASS" start="2025-02-08T17:57:45.551243" elapsed="0.067550"/>
+</if>
+<kw name="ShouldSeeEle" owner="keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-08T17:57:45.618793" elapsed="0.237246"/>
+</kw>
+<arg>xpath=/html/body/div/div[1]/div[1]/div/li[${rating}]/img</arg>
+<status status="PASS" start="2025-02-08T17:57:45.618793" elapsed="0.237246"/>
+</kw>
+<arg>5</arg>
+<status status="PASS" start="2025-02-08T17:57:45.551243" elapsed="0.304796"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-08T17:57:45.857042" elapsed="2.139756"/>
+</kw>
+<tag>Rating</tag>
+<status status="PASS" start="2025-02-08T17:57:39.891509" elapsed="8.105289"/>
+</test>
+<test id="s1-t9" name="11 Challenge11" line="81">
+<kw name="OpenWebBrowser" owner="keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:48.004692" level="INFO">Opening browser 'gc' to base url 'https://qaplayground.dev/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-08T17:57:48.003605" elapsed="2.118204"/>
+</kw>
+<kw name="ShouldSeeTxt" owner="keyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${txt}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-08T17:57:50.123965" elapsed="0.013991"/>
+</kw>
+<arg>QA Playground</arg>
+<status status="PASS" start="2025-02-08T17:57:50.122968" elapsed="0.015986"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:57:48.003605" elapsed="2.135349"/>
+</kw>
+<kw name="OpenChallenge" owner="keyword">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-08T17:57:50.140459" elapsed="0.595417"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:50.736876" level="INFO">Clicking element 'xpath=/html/body/main/div[3]/a[11]/div'.</msg>
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:57:50.735876" elapsed="0.723349"/>
+</kw>
+<arg>11</arg>
+<status status="PASS" start="2025-02-08T17:57:50.139458" elapsed="1.320768"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:51.531773" level="INFO">Element 'id=info' contains text 'Click the button below'.</msg>
+<arg>${ch11_info}</arg>
+<arg>Click the button below</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-02-08T17:57:51.463222" elapsed="0.068551"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${ch11_btn}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-08T17:57:51.532784" elapsed="0.299616"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:51.833710" level="INFO">Clicking element 'xpath=//*[@id="fugitive"]'.</msg>
+<arg>${ch11_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:57:51.833710" elapsed="0.063304"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${ch11_info}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-08T17:57:51.899101" elapsed="0.274456"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:52.188924" level="INFO">Element 'id=info' contains text 'Mission accomplished'.</msg>
+<arg>${ch11_info}</arg>
+<arg>Mission accomplished</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-02-08T17:57:52.174604" elapsed="0.014320"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-08T17:57:52.190103" elapsed="2.124258"/>
+</kw>
+<tag>Scroll</tag>
+<status status="PASS" start="2025-02-08T17:57:48.003605" elapsed="6.310756"/>
+</test>
+<test id="s1-t10" name="12 Challenge12" line="89">
+<kw name="OpenWebBrowser" owner="keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:54.322188" level="INFO">Opening browser 'gc' to base url 'https://qaplayground.dev/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-08T17:57:54.321017" elapsed="2.005728"/>
+</kw>
+<kw name="ShouldSeeTxt" owner="keyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${txt}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-08T17:57:56.327742" elapsed="0.402467"/>
+</kw>
+<arg>QA Playground</arg>
+<status status="PASS" start="2025-02-08T17:57:56.327742" elapsed="0.402467"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:57:54.321017" elapsed="2.410195"/>
+</kw>
+<kw name="OpenChallenge" owner="keyword">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-08T17:57:56.732206" elapsed="0.397874"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:57.130080" level="INFO">Clicking element 'xpath=/html/body/main/div[3]/a[12]/div'.</msg>
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:57:57.130080" elapsed="1.070944"/>
+</kw>
+<arg>12</arg>
+<status status="PASS" start="2025-02-08T17:57:56.731212" elapsed="1.471055"/>
+</kw>
+<kw name="ShouldSeeEle" owner="keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-08T17:57:58.203409" elapsed="0.039112"/>
+</kw>
+<arg>${ch12_num_file}</arg>
+<status status="PASS" start="2025-02-08T17:57:58.203409" elapsed="0.040187"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:58.261174" level="INFO">Element 'xpath=//*[@id="num-of-files"]' contains text 'No File Selected'.</msg>
+<arg>${ch12_num_file}</arg>
+<arg>No File Selected</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-02-08T17:57:58.243596" elapsed="0.017578"/>
+</kw>
+<kw name="Choose File" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:57:58.263257" level="INFO">Sending C:\Users\Winner\Automate\TestingSomething\Awesome_site to_test_on\qaPlayground\ginger.png to browser.</msg>
+<arg>${ch12_input_btn}</arg>
+<arg>C:\\Users\\Winner\\Automate\\TestingSomething\\Awesome_site to_test_on\\qaPlayground\\ginger.png</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:57:58.262192" elapsed="0.043261"/>
+</kw>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>${ch12_file_name_display}</arg>
+<arg>ginger.png</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2025-02-08T17:57:58.306624" elapsed="0.018978"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-08T17:57:58.325602" elapsed="2.122588"/>
+</kw>
+<tag>File</tag>
+<tag>Upload</tag>
+<status status="PASS" start="2025-02-08T17:57:54.321017" elapsed="6.127676"/>
+</test>
+<test id="s1-t11" name="13 Challenge13" line="97">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-02-08T17:58:00.454969" level="INFO">${prefs} = {'download.default_directory': 'C:\\Users\\Winner\\Automate\\TestingSomething\\Awesome_site to_test_on\\qaPlayground'}</msg>
+<var>${prefs}</var>
+<arg>download.default_directory=C:\\Users\\Winner\\Automate\\TestingSomething\\Awesome_site to_test_on\\qaPlayground</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-02-08T17:58:00.454969" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:00.457593" level="INFO">Opening browser 'gc' to base url 'https://qaplayground.dev/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<arg>options=add_experimental_option("prefs",${prefs})</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-08T17:58:00.457593" elapsed="2.226249"/>
+</kw>
+<kw name="OpenChallenge" owner="keyword">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-08T17:58:02.686624" elapsed="0.597645"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:03.285279" level="INFO">Clicking element 'xpath=/html/body/main/div[3]/a[13]/div'.</msg>
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:03.284269" elapsed="0.687886"/>
+</kw>
+<arg>13</arg>
+<status status="PASS" start="2025-02-08T17:58:02.686624" elapsed="1.288524"/>
+</kw>
+<kw name="ShouldSeeEle" owner="keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-08T17:58:03.978657" elapsed="0.040521"/>
+</kw>
+<arg>${ch13_downlaod}</arg>
+<status status="PASS" start="2025-02-08T17:58:03.978657" elapsed="0.040521"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:04.020178" level="INFO">Clicking element 'id=file'.</msg>
+<arg>${ch13_downlaod}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:04.020178" elapsed="0.101477"/>
+</kw>
+<kw name="Wait Until Created" owner="OperatingSystem">
+<msg time="2025-02-08T17:58:04.928357" level="INFO" html="true">'&lt;a href="file://C:\Users\Winner\Automate\TestingSomething\Awesome_site to_test_on\qaPlayground\sample.pdf"&gt;C:\Users\Winner\Automate\TestingSomething\Awesome_site to_test_on\qaPlayground\sample.pdf&lt;/a&gt;' was created.</msg>
+<arg>C:\\Users\\Winner\\Automate\\TestingSomething\\Awesome_site to_test_on\\qaPlayground\\sample.pdf</arg>
+<doc>Waits until the given file or directory is created.</doc>
+<status status="PASS" start="2025-02-08T17:58:04.122787" elapsed="0.805570"/>
+</kw>
+<kw name="File Should Exist" owner="OperatingSystem">
+<msg time="2025-02-08T17:58:04.930908" level="INFO" html="true">File '&lt;a href="file://C:\Users\Winner\Automate\TestingSomething\Awesome_site to_test_on\qaPlayground\sample.pdf"&gt;C:\Users\Winner\Automate\TestingSomething\Awesome_site to_test_on\qaPlayground\sample.pdf&lt;/a&gt;' exists.</msg>
+<arg>C:\\Users\\Winner\\Automate\\TestingSomething\\Awesome_site to_test_on\\qaPlayground\\sample.pdf</arg>
+<doc>Fails unless the given ``path`` points to an existing file.</doc>
+<status status="PASS" start="2025-02-08T17:58:04.930908" elapsed="0.001465"/>
+</kw>
+<kw name="Remove File" owner="OperatingSystem">
+<msg time="2025-02-08T17:58:04.933841" level="INFO" html="true">Removed file '&lt;a href="file://C:\Users\Winner\Automate\TestingSomething\Awesome_site to_test_on\qaPlayground\sample.pdf"&gt;C:\Users\Winner\Automate\TestingSomething\Awesome_site to_test_on\qaPlayground\sample.pdf&lt;/a&gt;'.</msg>
+<arg>C:\\Users\\Winner\\Automate\\TestingSomething\\Awesome_site to_test_on\\qaPlayground\\sample.pdf</arg>
+<doc>Removes a file with the given path.</doc>
+<status status="PASS" start="2025-02-08T17:58:04.932373" elapsed="0.001468"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-08T17:58:04.935883" elapsed="3.732950"/>
+</kw>
+<tag>Downlaod</tag>
+<tag>File</tag>
+<status status="PASS" start="2025-02-08T17:58:00.453838" elapsed="8.215498"/>
+</test>
+<test id="s1-t12" name="15 Challnege15 Entry" line="123">
+<kw name="OpenWebBrowser" owner="keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:08.675887" level="INFO">Opening browser 'gc' to base url 'https://qaplayground.dev/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-08T17:58:08.675887" elapsed="2.308919"/>
+</kw>
+<kw name="ShouldSeeTxt" owner="keyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${txt}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-08T17:58:10.987247" elapsed="0.019716"/>
+</kw>
+<arg>QA Playground</arg>
+<status status="PASS" start="2025-02-08T17:58:10.986250" elapsed="0.021956"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:58:08.675887" elapsed="2.332319"/>
+</kw>
+<kw name="OpenChallenge" owner="keyword">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-08T17:58:11.008710" elapsed="0.584288"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:11.594447" level="INFO">Clicking element 'xpath=/html/body/main/div[3]/a[15]/div'.</msg>
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:11.594447" elapsed="1.627628"/>
+</kw>
+<arg>15</arg>
+<status status="PASS" start="2025-02-08T17:58:11.008710" elapsed="2.214472"/>
+</kw>
+<kw name="NewEntry" owner="keyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:13.224182" level="INFO">Clicking element 'xpath=//*[@id="app"]/table/tbody[2]/tr/td/button'.</msg>
+<arg>${ch15_add}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:13.224182" elapsed="0.078090"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:58:13.223182" elapsed="0.080269"/>
+</kw>
+<kw name="RowCount" owner="keyword">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:13.314108" level="INFO">@{elem} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="6dc267fc7b24d7129633210f49ef5303", element="f.8A9610C9F113DCF3C182E676D5F02D02.d.D379557C83C572CD4FD7BDAEECA75B8A.e.43")&gt; ]</msg>
+<var>@{elem}</var>
+<arg>xpath://*[@id="app"]/table/tbody[1]/tr[*]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:13.303451" elapsed="0.010657"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2025-02-08T17:58:13.315213" level="INFO">Length is 1.</msg>
+<msg time="2025-02-08T17:58:13.315213" level="INFO">${count} = 1</msg>
+<var>${count}</var>
+<arg>${elem}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2025-02-08T17:58:13.315213" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" start="2025-02-08T17:58:13.316191" elapsed="0.000000"/>
+</return>
+<status status="PASS" start="2025-02-08T17:58:13.303451" elapsed="0.012740"/>
+</kw>
+<kw name="NewEntry" owner="keyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:13.317381" level="INFO">Clicking element 'xpath=//*[@id="app"]/table/tbody[2]/tr/td/button'.</msg>
+<arg>${ch15_add}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:13.317381" elapsed="0.058070"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:58:13.317381" elapsed="0.059349"/>
+</kw>
+<kw name="NewEntry" owner="keyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:13.378060" level="INFO">Clicking element 'xpath=//*[@id="app"]/table/tbody[2]/tr/td/button'.</msg>
+<arg>${ch15_add}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:13.378060" elapsed="0.058759"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:58:13.378060" elapsed="0.059926"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:13.438984" level="INFO">Typing text '55' into text field 'xpath=//*[@id="app"]/table/tbody[1]/tr[2]/td[4]/input'.</msg>
+<arg>xpath=//*[@id="app"]/table/tbody[1]/tr[2]/td[4]/input</arg>
+<arg>55</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:13.438984" elapsed="0.085818"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:13.526002" level="INFO">Clicking element 'xpath=//*[@id="app"]/table/tbody[1]/tr[2]/td[5]'.</msg>
+<arg>xpath=//*[@id="app"]/table/tbody[1]/tr[2]/td[5]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:13.526002" elapsed="0.064373"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:13.591377" level="INFO">Clicking element 'xpath=//*[@id="app"]/table/tbody[1]/tr[2]/td[5]'.</msg>
+<arg>xpath=//*[@id="app"]/table/tbody[1]/tr[2]/td[5]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:13.591377" elapsed="0.054142"/>
+</kw>
+<kw name="RowCount" owner="keyword">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:13.655932" level="INFO">@{elem} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="6dc267fc7b24d7129633210f49ef5303", element="f.8A9610C9F113DCF3C182E676D5F02D02.d.D379557C83C572CD4FD7BDAEECA75B8A.e.43")&gt; ]</msg>
+<var>@{elem}</var>
+<arg>xpath://*[@id="app"]/table/tbody[1]/tr[*]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:13.648287" elapsed="0.007645"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2025-02-08T17:58:13.656932" level="INFO">Length is 1.</msg>
+<msg time="2025-02-08T17:58:13.656932" level="INFO">${count} = 1</msg>
+<var>${count}</var>
+<arg>${elem}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2025-02-08T17:58:13.656932" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" start="2025-02-08T17:58:13.657929" elapsed="0.000000"/>
+</return>
+<status status="PASS" start="2025-02-08T17:58:13.647028" elapsed="0.010901"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-08T17:58:13.658928" elapsed="2.126291"/>
+</kw>
+<tag>Entry</tag>
+<tag>Table</tag>
+<status status="PASS" start="2025-02-08T17:58:08.675887" elapsed="7.109332"/>
+</test>
+<test id="s1-t13" name="17 Hover" line="150">
+<kw name="OpenWebBrowser" owner="keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:15.792175" level="INFO">Opening browser 'gc' to base url 'https://qaplayground.dev/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-08T17:58:15.792175" elapsed="2.096710"/>
+</kw>
+<kw name="ShouldSeeTxt" owner="keyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${txt}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-08T17:58:17.890334" elapsed="0.019678"/>
+</kw>
+<arg>QA Playground</arg>
+<status status="PASS" start="2025-02-08T17:58:17.890334" elapsed="0.019678"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:58:15.792175" elapsed="2.118835"/>
+</kw>
+<kw name="OpenChallenge" owner="keyword">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-08T17:58:17.912063" elapsed="0.589804"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:18.502881" level="INFO">Clicking element 'xpath=/html/body/main/div[3]/a[17]/div'.</msg>
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:18.501867" elapsed="1.359275"/>
+</kw>
+<arg>17</arg>
+<status status="PASS" start="2025-02-08T17:58:17.911010" elapsed="1.951153"/>
+</kw>
+<kw name="ShouldSeeEle" owner="keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-08T17:58:19.863172" elapsed="0.024959"/>
+</kw>
+<arg>${ch17_pic}</arg>
+<status status="PASS" start="2025-02-08T17:58:19.862163" elapsed="0.025968"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:19.889137" level="INFO">Simulating Mouse Over on element 'xpath=/html/body/main/div/div/div[1]'.</msg>
+<arg>${ch17_pic}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:19.889137" elapsed="0.281062"/>
+</kw>
+<kw name="ShouldSeeEle" owner="keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-08T17:58:20.171275" elapsed="0.024549"/>
+</kw>
+<arg>${ch17_desc}</arg>
+<status status="PASS" start="2025-02-08T17:58:20.171275" elapsed="0.024549"/>
+</kw>
+<kw name="ShouldSeeEle" owner="keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-08T17:58:20.195824" elapsed="0.019279"/>
+</kw>
+<arg>${ch17_crnt_price}</arg>
+<status status="PASS" start="2025-02-08T17:58:20.195824" elapsed="0.020947"/>
+</kw>
+<kw name="ShouldSeeEle" owner="keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-08T17:58:20.217923" elapsed="0.033477"/>
+</kw>
+<arg>${ch17_old_price}</arg>
+<status status="PASS" start="2025-02-08T17:58:20.216771" elapsed="0.034629"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:20.272142" level="INFO">${txt} = $24.96</msg>
+<var>${txt}</var>
+<arg>${ch17_crnt_price}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:20.251400" elapsed="0.020742"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:20.288942" level="INFO">${txt2} = $38.99</msg>
+<var>${txt2}</var>
+<arg>${ch17_old_price}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:20.273124" elapsed="0.015818"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:20.305067" level="INFO">${desc} = The Multiverse unleashed.</msg>
+<var>${desc}</var>
+<arg>${ch17_desc}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:20.290327" elapsed="0.014740"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${txt}</arg>
+<arg>$24.96</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-02-08T17:58:20.305067" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${txt2}</arg>
+<arg>$38.99</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-02-08T17:58:20.307289" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${desc}</arg>
+<arg>The Multiverse unleashed.</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-02-08T17:58:20.307289" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-08T17:58:20.308796" elapsed="2.127712"/>
+</kw>
+<tag>Hover</tag>
+<tag>Verify</tag>
+<status status="PASS" start="2025-02-08T17:58:15.790906" elapsed="6.646602"/>
+</test>
+<test id="s1-t14" name="18 Geolocation" line="167">
+<kw name="OpenWebBrowser" owner="keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:22.444499" level="INFO">Opening browser 'gc' to base url 'https://qaplayground.dev/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-08T17:58:22.444499" elapsed="2.119498"/>
+</kw>
+<kw name="ShouldSeeTxt" owner="keyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${txt}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-08T17:58:24.564994" elapsed="0.017248"/>
+</kw>
+<arg>QA Playground</arg>
+<status status="PASS" start="2025-02-08T17:58:24.564994" elapsed="0.017248"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:58:22.444499" elapsed="2.139024"/>
+</kw>
+<kw name="Convert To Number" owner="BuiltIn">
+<msg time="2025-02-08T17:58:24.583523" level="INFO">${latitude} = 37.33182</msg>
+<var>${latitude}</var>
+<arg>37.33182</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<status status="PASS" start="2025-02-08T17:58:24.583523" elapsed="0.000000"/>
+</kw>
+<kw name="Convert To Number" owner="BuiltIn">
+<msg time="2025-02-08T17:58:24.584686" level="INFO">${longtitude} = -122.03118</msg>
+<var>${longtitude}</var>
+<arg>-122.03118</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<status status="PASS" start="2025-02-08T17:58:24.584686" elapsed="0.000000"/>
+</kw>
+<kw name="Convert To Number" owner="BuiltIn">
+<msg time="2025-02-08T17:58:24.586952" level="INFO">${accuracy} = 100.0</msg>
+<var>${accuracy}</var>
+<arg>100</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<status status="PASS" start="2025-02-08T17:58:24.585952" elapsed="0.001000"/>
+</kw>
+<kw name="Set Geolocation" owner="geo">
+<arg>${latitude}</arg>
+<arg>${longtitude}</arg>
+<arg>${accuracy}</arg>
+<status status="PASS" start="2025-02-08T17:58:24.588002" elapsed="0.003341"/>
+</kw>
+<kw name="OpenChallenge" owner="keyword">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-08T17:58:24.592739" elapsed="0.578458"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:25.172500" level="INFO">Clicking element 'xpath=/html/body/main/div[3]/a[18]/div'.</msg>
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:25.172500" elapsed="1.087737"/>
+</kw>
+<arg>18</arg>
+<status status="PASS" start="2025-02-08T17:58:24.591343" elapsed="1.669923"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:26.263260" level="INFO">Clicking element 'id=get-location'.</msg>
+<arg>${ch18_get_location_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:26.262263" elapsed="0.064897"/>
+</kw>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>${ch18_get_location_info}</arg>
+<arg>Cupertino</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2025-02-08T17:58:26.328668" elapsed="0.665357"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-08T17:58:26.994669" elapsed="2.139859"/>
+</kw>
+<tag>GeoLocation</tag>
+<tag>Location</tag>
+<status status="PASS" start="2025-02-08T17:58:22.443270" elapsed="6.691258"/>
+</test>
+<test id="s1-t15" name="19 Naviagetion Menu" line="179">
+<kw name="OpenWebBrowser" owner="keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:29.143309" level="INFO">Opening browser 'gc' to base url 'https://qaplayground.dev/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-08T17:58:29.143309" elapsed="2.183341"/>
+</kw>
+<kw name="ShouldSeeTxt" owner="keyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${txt}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-08T17:58:31.327804" elapsed="0.029823"/>
+</kw>
+<arg>QA Playground</arg>
+<status status="PASS" start="2025-02-08T17:58:31.327804" elapsed="0.029823"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:58:29.142240" elapsed="2.216384"/>
+</kw>
+<kw name="OpenChallenge" owner="keyword">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-08T17:58:31.359131" elapsed="0.576136"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:31.936767" level="INFO">Clicking element 'xpath=/html/body/main/div[3]/a[19]/div'.</msg>
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:31.936767" elapsed="1.140518"/>
+</kw>
+<arg>19</arg>
+<status status="PASS" start="2025-02-08T17:58:31.359131" elapsed="1.718154"/>
+</kw>
+<kw name="ShouldSeeEle" owner="keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-08T17:58:33.078792" elapsed="0.025901"/>
+</kw>
+<arg>${ch19_home_btn}</arg>
+<status status="PASS" start="2025-02-08T17:58:33.078792" elapsed="0.025901"/>
+</kw>
+<kw name="19ElemCount" owner="keyword">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:33.137461" level="INFO">@{elem} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="4edb850b4d5da63ab86fe9d4e6965d00", element="f.36187AE1D1E02FE2546459633624200A.d.48F28BCFC0F01638DCA59A017F03B3CC.e.55")&gt; | &lt;selenium.webdr...</msg>
+<var>@{elem}</var>
+<arg>xpath://*[@id="nav"]/a</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:33.105691" elapsed="0.031770"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2025-02-08T17:58:33.137461" level="INFO">Length is 5.</msg>
+<msg time="2025-02-08T17:58:33.137461" level="INFO">${count} = 5</msg>
+<var>${count}</var>
+<arg>${elem}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2025-02-08T17:58:33.137461" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:33.138967" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="4edb850b4d5da63ab86fe9d4e6965d00", element="f.36187AE1D1E02FE2546459633624200A.d.48F28BCFC0F01638DCA59A017F03B3CC.e.55")&gt;'.</msg>
+<arg>${elem}[${num}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:33.138967" elapsed="0.050854"/>
+</kw>
+<if>
+<branch type="IF" condition="${num != '0'}">
+<kw name="Get Text" owner="SeleniumLibrary">
+<var>${txt}</var>
+<arg>id=title</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-08T17:58:33.192024" elapsed="0.000000"/>
+</kw>
+<kw name="ShouldSeeTxt" owner="keyword">
+<arg>${txt}</arg>
+<status status="NOT RUN" start="2025-02-08T17:58:33.192024" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-02-08T17:58:33.189821" elapsed="0.002203"/>
+</branch>
+<status status="PASS" start="2025-02-08T17:58:33.189821" elapsed="0.002203"/>
+</if>
+<arg>0</arg>
+<status status="PASS" start="2025-02-08T17:58:33.104693" elapsed="0.087331"/>
+</kw>
+<kw name="19ElemCount" owner="keyword">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:33.200804" level="INFO">@{elem} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="4edb850b4d5da63ab86fe9d4e6965d00", element="f.36187AE1D1E02FE2546459633624200A.d.48F28BCFC0F01638DCA59A017F03B3CC.e.55")&gt; | &lt;selenium.webdr...</msg>
+<var>@{elem}</var>
+<arg>xpath://*[@id="nav"]/a</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:33.193300" elapsed="0.007504"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2025-02-08T17:58:33.201807" level="INFO">Length is 5.</msg>
+<msg time="2025-02-08T17:58:33.201807" level="INFO">${count} = 5</msg>
+<var>${count}</var>
+<arg>${elem}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2025-02-08T17:58:33.201807" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:33.202882" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="4edb850b4d5da63ab86fe9d4e6965d00", element="f.36187AE1D1E02FE2546459633624200A.d.48F28BCFC0F01638DCA59A017F03B3CC.e.56")&gt;'.</msg>
+<arg>${elem}[${num}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:33.202882" elapsed="0.688188"/>
+</kw>
+<if>
+<branch type="IF" condition="${num != '0'}">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:33.914499" level="INFO">${txt} = Welcome to the About Page</msg>
+<var>${txt}</var>
+<arg>id=title</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:33.893398" elapsed="0.021101"/>
+</kw>
+<kw name="ShouldSeeTxt" owner="keyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${txt}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-08T17:58:33.915536" elapsed="0.010281"/>
+</kw>
+<arg>${txt}</arg>
+<status status="PASS" start="2025-02-08T17:58:33.915536" elapsed="0.010281"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:58:33.893398" elapsed="0.032419"/>
+</branch>
+<status status="PASS" start="2025-02-08T17:58:33.893398" elapsed="0.033425"/>
+</if>
+<arg>1</arg>
+<status status="PASS" start="2025-02-08T17:58:33.193300" elapsed="0.733523"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-02-08T17:58:33.926823" elapsed="0.017215"/>
+</kw>
+<kw name="19ElemCount" owner="keyword">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:33.953003" level="INFO">@{elem} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="4edb850b4d5da63ab86fe9d4e6965d00", element="f.36187AE1D1E02FE2546459633624200A.d.48F28BCFC0F01638DCA59A017F03B3CC.e.55")&gt; | &lt;selenium.webdr...</msg>
+<var>@{elem}</var>
+<arg>xpath://*[@id="nav"]/a</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:33.945039" elapsed="0.007964"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2025-02-08T17:58:33.955013" level="INFO">Length is 5.</msg>
+<msg time="2025-02-08T17:58:33.955013" level="INFO">${count} = 5</msg>
+<var>${count}</var>
+<arg>${elem}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2025-02-08T17:58:33.955013" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:33.956520" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="4edb850b4d5da63ab86fe9d4e6965d00", element="f.36187AE1D1E02FE2546459633624200A.d.48F28BCFC0F01638DCA59A017F03B3CC.e.57")&gt;'.</msg>
+<arg>${elem}[${num}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:33.956520" elapsed="0.617793"/>
+</kw>
+<if>
+<branch type="IF" condition="${num != '0'}">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:34.600879" level="INFO">${txt} = Welcome to the Blog Page</msg>
+<var>${txt}</var>
+<arg>id=title</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:34.576818" elapsed="0.024061"/>
+</kw>
+<kw name="ShouldSeeTxt" owner="keyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${txt}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-08T17:58:34.601879" elapsed="0.010813"/>
+</kw>
+<arg>${txt}</arg>
+<status status="PASS" start="2025-02-08T17:58:34.600879" elapsed="0.011813"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:58:34.575309" elapsed="0.037383"/>
+</branch>
+<status status="PASS" start="2025-02-08T17:58:34.575309" elapsed="0.037383"/>
+</if>
+<arg>2</arg>
+<status status="PASS" start="2025-02-08T17:58:33.945039" elapsed="0.667653"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-02-08T17:58:34.612692" elapsed="0.018878"/>
+</kw>
+<kw name="19ElemCount" owner="keyword">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:34.640840" level="INFO">@{elem} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="4edb850b4d5da63ab86fe9d4e6965d00", element="f.36187AE1D1E02FE2546459633624200A.d.48F28BCFC0F01638DCA59A017F03B3CC.e.55")&gt; | &lt;selenium.webdr...</msg>
+<var>@{elem}</var>
+<arg>xpath://*[@id="nav"]/a</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:34.632998" elapsed="0.007842"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2025-02-08T17:58:34.642858" level="INFO">Length is 5.</msg>
+<msg time="2025-02-08T17:58:34.642858" level="INFO">${count} = 5</msg>
+<var>${count}</var>
+<arg>${elem}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2025-02-08T17:58:34.642858" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:34.644367" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="4edb850b4d5da63ab86fe9d4e6965d00", element="f.36187AE1D1E02FE2546459633624200A.d.48F28BCFC0F01638DCA59A017F03B3CC.e.58")&gt;'.</msg>
+<arg>${elem}[${num}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:34.644367" elapsed="0.739361"/>
+</kw>
+<if>
+<branch type="IF" condition="${num != '0'}">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:35.400285" level="INFO">${txt} = Welcome to the Portfolio Page</msg>
+<var>${txt}</var>
+<arg>id=title</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:35.385944" elapsed="0.014341"/>
+</kw>
+<kw name="ShouldSeeTxt" owner="keyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${txt}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-08T17:58:35.401285" elapsed="0.011083"/>
+</kw>
+<arg>${txt}</arg>
+<status status="PASS" start="2025-02-08T17:58:35.401285" elapsed="0.011083"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:58:35.384940" elapsed="0.027428"/>
+</branch>
+<status status="PASS" start="2025-02-08T17:58:35.384940" elapsed="0.027428"/>
+</if>
+<arg>3</arg>
+<status status="PASS" start="2025-02-08T17:58:34.631570" elapsed="0.780798"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-02-08T17:58:35.413366" elapsed="0.018366"/>
+</kw>
+<kw name="19ElemCount" owner="keyword">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:35.442276" level="INFO">@{elem} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="4edb850b4d5da63ab86fe9d4e6965d00", element="f.36187AE1D1E02FE2546459633624200A.d.48F28BCFC0F01638DCA59A017F03B3CC.e.55")&gt; | &lt;selenium.webdr...</msg>
+<var>@{elem}</var>
+<arg>xpath://*[@id="nav"]/a</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:35.432729" elapsed="0.009547"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2025-02-08T17:58:35.443497" level="INFO">Length is 5.</msg>
+<msg time="2025-02-08T17:58:35.444493" level="INFO">${count} = 5</msg>
+<var>${count}</var>
+<arg>${elem}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2025-02-08T17:58:35.443497" elapsed="0.000996"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:35.444997" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="4edb850b4d5da63ab86fe9d4e6965d00", element="f.36187AE1D1E02FE2546459633624200A.d.48F28BCFC0F01638DCA59A017F03B3CC.e.59")&gt;'.</msg>
+<arg>${elem}[${num}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:35.444997" elapsed="0.637670"/>
+</kw>
+<if>
+<branch type="IF" condition="${num != '0'}">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:36.100881" level="INFO">${txt} = Welcome to the Contact Page</msg>
+<var>${txt}</var>
+<arg>id=title</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:36.085176" elapsed="0.015705"/>
+</kw>
+<kw name="ShouldSeeTxt" owner="keyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${txt}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-08T17:58:36.102078" elapsed="0.010542"/>
+</kw>
+<arg>${txt}</arg>
+<status status="PASS" start="2025-02-08T17:58:36.102078" elapsed="0.010542"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:58:36.084115" elapsed="0.029527"/>
+</branch>
+<status status="PASS" start="2025-02-08T17:58:36.084115" elapsed="0.029527"/>
+</if>
+<arg>4</arg>
+<status status="PASS" start="2025-02-08T17:58:35.432729" elapsed="0.680913"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-02-08T17:58:36.113642" elapsed="0.017741"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-08T17:58:36.132467" elapsed="2.139550"/>
+</kw>
+<tag>Link</tag>
+<tag>Navigatation</tag>
+<status status="PASS" start="2025-02-08T17:58:29.142240" elapsed="9.129777"/>
+</test>
+<test id="s1-t16" name="20 Redirect" line="192">
+<kw name="OpenWebBrowser" owner="keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:38.278913" level="INFO">Opening browser 'gc' to base url 'https://qaplayground.dev/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-08T17:58:38.278913" elapsed="2.082588"/>
+</kw>
+<kw name="ShouldSeeTxt" owner="keyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${txt}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-08T17:58:40.362563" elapsed="0.019121"/>
+</kw>
+<arg>QA Playground</arg>
+<status status="PASS" start="2025-02-08T17:58:40.362563" elapsed="0.019121"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:58:38.278913" elapsed="2.103767"/>
+</kw>
+<kw name="OpenChallenge" owner="keyword">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-08T17:58:40.383678" elapsed="0.586521"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:40.971396" level="INFO">Clicking element 'xpath=/html/body/main/div[3]/a[20]/div'.</msg>
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:40.971396" elapsed="0.610777"/>
+</kw>
+<arg>20</arg>
+<status status="PASS" start="2025-02-08T17:58:40.382680" elapsed="1.201001"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>https://qaplayground.dev/apps/redirect/</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-02-08T17:58:41.584697" elapsed="0.005193"/>
+</kw>
+<kw name="ShouldSeeEle" owner="keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-08T17:58:41.591021" elapsed="0.020851"/>
+</kw>
+<arg>${ch20_btn}</arg>
+<status status="PASS" start="2025-02-08T17:58:41.589890" elapsed="0.021982"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:41.611872" level="INFO">Clicking element 'id=redirect'.</msg>
+<arg>${ch20_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:41.611872" elapsed="0.597000"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>second</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-08T17:58:42.211026" elapsed="0.010906"/>
+</kw>
+<kw name="20GetText" owner="keyword">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:42.242936" level="INFO">${txt} = Welcome to Second Page</msg>
+<var>${txt}</var>
+<arg>${ch20_location_info}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:42.223178" elapsed="0.019758"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-08T17:58:42.244463" level="INFO">Welcome to Second Page</msg>
+<arg>${txt}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-08T17:58:42.244463" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:58:42.221932" elapsed="0.023803"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>third</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-08T17:58:42.245735" elapsed="0.010520"/>
+</kw>
+<kw name="20GetText" owner="keyword">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:42.271275" level="INFO">${txt} = Welcome to Second Page</msg>
+<var>${txt}</var>
+<arg>${ch20_location_info}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:42.257421" elapsed="0.013854"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-08T17:58:42.272278" level="INFO">Welcome to Second Page</msg>
+<arg>${txt}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-08T17:58:42.272278" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:58:42.257421" elapsed="0.015971"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>fourth</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-08T17:58:42.273392" elapsed="1.509636"/>
+</kw>
+<kw name="20GetText" owner="keyword">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:43.796369" level="INFO">${txt} = Welcome to Third Page</msg>
+<var>${txt}</var>
+<arg>${ch20_location_info}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:43.784360" elapsed="0.012009"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-08T17:58:43.797433" level="INFO">Welcome to Third Page</msg>
+<arg>${txt}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-08T17:58:43.797433" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:58:43.783028" elapsed="0.014405"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>fifth</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-08T17:58:43.797433" elapsed="1.893335"/>
+</kw>
+<kw name="20GetText" owner="keyword">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:45.704306" level="INFO">${txt} = Welcome to Fourth Page</msg>
+<var>${txt}</var>
+<arg>${ch20_location_info}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:45.691972" elapsed="0.012334"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-08T17:58:45.705309" level="INFO">Welcome to Fourth Page</msg>
+<arg>${txt}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-08T17:58:45.705309" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:58:45.691972" elapsed="0.013337"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>sixth</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-08T17:58:45.705309" elapsed="1.522955"/>
+</kw>
+<kw name="20GetText" owner="keyword">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:47.243609" level="INFO">${txt} = Welcome to Fifth Page</msg>
+<var>${txt}</var>
+<arg>${ch20_location_info}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:47.228787" elapsed="0.014822"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-08T17:58:47.244714" level="INFO">Welcome to Fifth Page</msg>
+<arg>${txt}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-08T17:58:47.244714" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:58:47.228787" elapsed="0.016936"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>last</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-08T17:58:47.245723" elapsed="0.011392"/>
+</kw>
+<kw name="20GetText" owner="keyword">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:47.273342" level="INFO">${txt} = Welcome to Fifth Page</msg>
+<var>${txt}</var>
+<arg>${ch20_location_info}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:47.258155" elapsed="0.015187"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-08T17:58:47.275415" level="INFO">Welcome to Fifth Page</msg>
+<arg>${txt}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-08T17:58:47.274417" elapsed="0.000998"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:58:47.257115" elapsed="0.019808"/>
+</kw>
+<kw name="ShouldSeeEle" owner="keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-08T17:58:47.278231" elapsed="5.171737"/>
+</kw>
+<arg>${ch20_btn_go_back}</arg>
+<status status="PASS" start="2025-02-08T17:58:47.276923" elapsed="5.174048"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:52.450971" level="INFO">Clicking element 'xpath=/html/body/main/div[2]/a'.</msg>
+<arg>${ch20_btn_go_back}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:52.450971" elapsed="0.321546"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-08T17:58:52.773835" elapsed="2.163292"/>
+</kw>
+<tag>Redirection</tag>
+<tag>WIP</tag>
+<status status="PASS" start="2025-02-08T17:58:38.278913" elapsed="16.658214"/>
+</test>
+<test id="s1-t17" name="21 FetchData" line="212">
+<kw name="OpenWebBrowser" owner="keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:54.944950" level="INFO">Opening browser 'gc' to base url 'https://qaplayground.dev/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-08T17:58:54.943936" elapsed="2.165471"/>
+</kw>
+<kw name="ShouldSeeTxt" owner="keyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${txt}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-08T17:58:57.110407" elapsed="0.016451"/>
+</kw>
+<arg>QA Playground</arg>
+<status status="PASS" start="2025-02-08T17:58:57.110407" elapsed="0.016451"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:58:54.943936" elapsed="2.182922"/>
+</kw>
+<kw name="OpenChallenge" owner="keyword">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-08T17:58:57.128287" elapsed="0.596020"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:57.724307" level="INFO">Clicking element 'xpath=/html/body/main/div[3]/a[21]/div'.</msg>
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:57.724307" elapsed="2.137982"/>
+</kw>
+<arg>21</arg>
+<status status="PASS" start="2025-02-08T17:58:57.126858" elapsed="2.736622"/>
+</kw>
+<kw name="21GetSpecifictext" owner="keyword">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:59.879928" level="INFO">${elem} = &lt;selenium.webdriver.remote.webelement.WebElement (session="6b5231a67640e1a040dd09bfe13e13e2", element="f.9C57B090188E1F432D6C2AAEA33F2F2A.d.A1EC5D97B77A11C740DA92F2E14113B7.e.126")&gt;</msg>
+<var>${elem}</var>
+<arg>xpath=/html/body/div/div[${number}]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:59.865635" elapsed="0.014293"/>
+</kw>
+<if>
+<branch type="IF" condition="${type=='title'}">
+<kw name="21Text" owner="keyword">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:59.897601" level="INFO">@{elem} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="6b5231a67640e1a040dd09bfe13e13e2", element="f.9C57B090188E1F432D6C2AAEA33F2F2A.d.A1EC5D97B77A11C740DA92F2E14113B7.e.127")&gt; | &lt;selenium.webd...</msg>
+<var>@{elem}</var>
+<arg>${element}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:59.882134" elapsed="0.015467"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:59.918967" level="INFO">${txt} = QUI EST ESSE</msg>
+<var>${txt}</var>
+<arg>${elem}[${type}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:59.899107" elapsed="0.019860"/>
+</kw>
+<if>
+<branch type="IF" condition="${type=='0'}">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-08T17:58:59.920470" level="INFO">Title = QUI EST ESSE</msg>
+<arg>Title = ${txt}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-08T17:58:59.920470" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:58:59.919470" elapsed="0.002112"/>
+</branch>
+<branch type="ELSE IF" condition="${type=='1'}">
+<kw name="Log" owner="BuiltIn">
+<arg>Body = ${txt}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-02-08T17:58:59.922583" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-02-08T17:58:59.921582" elapsed="0.001001"/>
+</branch>
+<status status="PASS" start="2025-02-08T17:58:59.919470" elapsed="0.003113"/>
+</if>
+<arg>xpath=/html/body/div/div[${number}]/div</arg>
+<arg>0</arg>
+<status status="PASS" start="2025-02-08T17:58:59.882134" elapsed="0.040449"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:58:59.880957" elapsed="0.041626"/>
+</branch>
+<branch type="ELSE IF" condition="${type=='body'}">
+<kw name="21Text" owner="keyword">
+<arg>xpath=/html/body/div/div[${number}]/div</arg>
+<arg>1</arg>
+<status status="NOT RUN" start="2025-02-08T17:58:59.922583" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-02-08T17:58:59.922583" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2025-02-08T17:58:59.880957" elapsed="0.041626"/>
+</if>
+<arg>2</arg>
+<arg>title</arg>
+<status status="PASS" start="2025-02-08T17:58:59.864637" elapsed="0.059400"/>
+</kw>
+<kw name="21GetSpecifictext" owner="keyword">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:59.934769" level="INFO">${elem} = &lt;selenium.webdriver.remote.webelement.WebElement (session="6b5231a67640e1a040dd09bfe13e13e2", element="f.9C57B090188E1F432D6C2AAEA33F2F2A.d.A1EC5D97B77A11C740DA92F2E14113B7.e.126")&gt;</msg>
+<var>${elem}</var>
+<arg>xpath=/html/body/div/div[${number}]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:59.924037" elapsed="0.010732"/>
+</kw>
+<if>
+<branch type="IF" condition="${type=='title'}">
+<kw name="21Text" owner="keyword">
+<arg>xpath=/html/body/div/div[${number}]/div</arg>
+<arg>0</arg>
+<status status="NOT RUN" start="2025-02-08T17:58:59.936765" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-02-08T17:58:59.935765" elapsed="0.001000"/>
+</branch>
+<branch type="ELSE IF" condition="${type=='body'}">
+<kw name="21Text" owner="keyword">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:59.949657" level="INFO">@{elem} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="6b5231a67640e1a040dd09bfe13e13e2", element="f.9C57B090188E1F432D6C2AAEA33F2F2A.d.A1EC5D97B77A11C740DA92F2E14113B7.e.127")&gt; | &lt;selenium.webd...</msg>
+<var>@{elem}</var>
+<arg>${element}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:59.937788" elapsed="0.011869"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:58:59.974349" level="INFO">${txt} = Est Rerum Tempore Vitae Sequi Sint Nihil Reprehenderit Dolor Beatae Ea Dolores Neque Fugiat Blanditiis Voluptate Porro Vel Nihil Molestiae Ut Reiciendis Qui Aperiam Non Debitis Possimus Qui Neque Nisi...</msg>
+<var>${txt}</var>
+<arg>${elem}[${type}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:58:59.950655" elapsed="0.023694"/>
+</kw>
+<if>
+<branch type="IF" condition="${type=='0'}">
+<kw name="Log" owner="BuiltIn">
+<arg>Title = ${txt}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-02-08T17:58:59.975346" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-02-08T17:58:59.974349" elapsed="0.000997"/>
+</branch>
+<branch type="ELSE IF" condition="${type=='1'}">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-08T17:58:59.976827" level="INFO">Body = Est Rerum Tempore Vitae Sequi Sint Nihil Reprehenderit Dolor Beatae Ea Dolores Neque Fugiat Blanditiis Voluptate Porro Vel Nihil Molestiae Ut Reiciendis Qui Aperiam Non Debitis Possimus Qui Neque Nisi Nulla</msg>
+<arg>Body = ${txt}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-08T17:58:59.976827" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:58:59.975346" elapsed="0.002511"/>
+</branch>
+<status status="PASS" start="2025-02-08T17:58:59.974349" elapsed="0.003508"/>
+</if>
+<arg>xpath=/html/body/div/div[${number}]/div</arg>
+<arg>1</arg>
+<status status="PASS" start="2025-02-08T17:58:59.937788" elapsed="0.040069"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:58:59.936765" elapsed="0.042090"/>
+</branch>
+<status status="PASS" start="2025-02-08T17:58:59.935765" elapsed="0.043090"/>
+</if>
+<arg>2</arg>
+<arg>body</arg>
+<status status="PASS" start="2025-02-08T17:58:59.924037" elapsed="0.054818"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-08T17:58:59.979262" elapsed="2.113791"/>
+</kw>
+<tag>Fetching</tag>
+<status status="PASS" start="2025-02-08T17:58:54.943936" elapsed="7.149117"/>
+</test>
+<test id="s1-t18" name="22 QR Code" line="217">
+<kw name="OpenWebBrowser" owner="keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:59:02.101225" level="INFO">Opening browser 'gc' to base url 'https://qaplayground.dev/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-08T17:59:02.101225" elapsed="2.115447"/>
+</kw>
+<kw name="ShouldSeeTxt" owner="keyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${txt}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-08T17:59:04.218672" elapsed="0.016450"/>
+</kw>
+<arg>QA Playground</arg>
+<status status="PASS" start="2025-02-08T17:59:04.218672" elapsed="0.017959"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:59:02.100158" elapsed="2.136473"/>
+</kw>
+<kw name="OpenChallenge" owner="keyword">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-08T17:59:04.237635" elapsed="0.299171"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:59:04.537809" level="INFO">Clicking element 'xpath=/html/body/main/div[3]/a[22]/div'.</msg>
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:59:04.536806" elapsed="1.439952"/>
+</kw>
+<arg>22</arg>
+<status status="PASS" start="2025-02-08T17:59:04.237635" elapsed="1.740212"/>
+</kw>
+<kw name="CreateQR" owner="keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:59:05.979328" level="INFO">Typing text 'Helloworld' into text field 'xpath=/html/body/div/div[1]/input'.</msg>
+<arg>${ch22_input}</arg>
+<arg>${key}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:59:05.978823" elapsed="0.099111"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:59:06.079474" level="INFO">Clicking element 'xpath=/html/body/div/div[1]/button'.</msg>
+<arg>${ch22_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:59:06.079474" elapsed="0.076040"/>
+</kw>
+<kw name="ShouldSeeEle" owner="keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-08T17:59:06.156753" elapsed="1.316288"/>
+</kw>
+<arg>${ch22_qr}</arg>
+<status status="PASS" start="2025-02-08T17:59:06.156753" elapsed="1.316288"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:59:07.487283" level="INFO">${txt} = https://api.qrserver.com/v1/create-qr-code/?size=200x200&amp;data=Helloworld</msg>
+<var>${txt}</var>
+<arg>${ch22_qr}</arg>
+<arg>src</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:59:07.473041" elapsed="0.014242"/>
+</kw>
+<return>
+<value>${txt}</value>
+<value>${key}</value>
+<status status="PASS" start="2025-02-08T17:59:07.488790" elapsed="0.000000"/>
+</return>
+<msg time="2025-02-08T17:59:07.489801" level="INFO">${qr_result} = ['https://api.qrserver.com/v1/create-qr-code/?size=200x200&amp;data=Helloworld', 'Helloworld']</msg>
+<var>${qr_result}</var>
+<arg>Helloworld</arg>
+<status status="PASS" start="2025-02-08T17:59:05.978823" elapsed="1.510978"/>
+</kw>
+<kw name="OpenGoogleLens" owner="keyword">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:59:07.491055" level="INFO">Opening url 'https://lens.google.com'</msg>
+<arg>https://lens.google.com</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-02-08T17:59:07.491055" elapsed="2.410046"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:59:07.491055" elapsed="2.411048"/>
+</kw>
+<kw name="LensSearch" owner="keyword">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:59:09.917762" level="INFO">${txt} = &lt;selenium.webdriver.remote.webelement.WebElement (session="f9a95e576c9f23dffd1b06e747b82037", element="f.4CC48CD6EDAC8F1B19643D3B3DCFEF65.d.41EA73AEED491AC635D2A872F3C93C17.e.18")&gt;</msg>
+<var>${txt}</var>
+<arg>xpath=//*[@placeholder="วางลิงก์รูปภาพ"]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:59:09.903099" elapsed="0.014663"/>
+</kw>
+<kw name="ShouldSeeEle" owner="keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-08T17:59:09.918759" elapsed="0.012686"/>
+</kw>
+<arg>${txt}</arg>
+<status status="PASS" start="2025-02-08T17:59:09.917762" elapsed="0.013683"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:59:09.932548" level="INFO">Typing text 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&amp;data=Helloworld' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="f9a95e576c9f23dffd1b06e747b82037", element="f.4CC48CD6EDAC8F1B19643D3B3DCFEF65.d.41EA73AEED491AC635D2A872F3C93C17.e.18")&gt;'.</msg>
+<arg>${txt}</arg>
+<arg>${QR}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:59:09.931445" elapsed="0.142574"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:59:10.086826" level="INFO">${button} = &lt;selenium.webdriver.remote.webelement.WebElement (session="f9a95e576c9f23dffd1b06e747b82037", element="f.4CC48CD6EDAC8F1B19643D3B3DCFEF65.d.41EA73AEED491AC635D2A872F3C93C17.e.21")&gt;</msg>
+<var>${button}</var>
+<arg>xpath=//*[@class="Qwbd3"]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:59:10.075020" elapsed="0.011806"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:59:10.088011" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="f9a95e576c9f23dffd1b06e747b82037", element="f.4CC48CD6EDAC8F1B19643D3B3DCFEF65.d.41EA73AEED491AC635D2A872F3C93C17.e.21")&gt;'.</msg>
+<arg>${button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:59:10.086826" elapsed="3.058309"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:59:13.170175" level="INFO">${qr_result} = Helloworld</msg>
+<var>${qr_result}</var>
+<arg>xpath=//*[@class="z3rBle Pqkn2e"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:59:13.146187" elapsed="0.023988"/>
+</kw>
+<return>
+<value>${qr_result}</value>
+<status status="PASS" start="2025-02-08T17:59:13.171248" elapsed="0.000000"/>
+</return>
+<msg time="2025-02-08T17:59:13.171248" level="INFO">${qr_text} = Helloworld</msg>
+<var>${qr_text}</var>
+<arg>${qr_result}[0]</arg>
+<status status="PASS" start="2025-02-08T17:59:09.903099" elapsed="3.268149"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${qr_result}[1]</arg>
+<arg>${qr_text}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-02-08T17:59:13.172354" elapsed="0.000998"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-08T17:59:13.173352" elapsed="2.143427"/>
+</kw>
+<tag>QR</tag>
+<status status="PASS" start="2025-02-08T17:59:02.100158" elapsed="13.216621"/>
+</test>
+<test id="s1-t19" name="23 CountDown" line="224">
+<kw name="OpenWebBrowser" owner="keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:59:15.324271" level="INFO">Opening browser 'gc' to base url 'https://qaplayground.dev/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-08T17:59:15.324271" elapsed="2.076985"/>
+</kw>
+<kw name="ShouldSeeTxt" owner="keyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${txt}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-08T17:59:17.402550" elapsed="0.014890"/>
+</kw>
+<arg>QA Playground</arg>
+<status status="PASS" start="2025-02-08T17:59:17.401256" elapsed="0.017691"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:59:15.324271" elapsed="2.094676"/>
+</kw>
+<kw name="OpenChallenge" owner="keyword">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-08T17:59:17.419985" elapsed="0.598706"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:59:18.019194" level="INFO">Clicking element 'xpath=/html/body/main/div[3]/a[23]/div'.</msg>
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:59:18.019194" elapsed="1.098410"/>
+</kw>
+<arg>23</arg>
+<status status="PASS" start="2025-02-08T17:59:17.418947" elapsed="1.699654"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:59:19.119105" level="INFO">Selecting frame 'id=frame1'.</msg>
+<arg>id=frame1</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2025-02-08T17:59:19.119105" elapsed="0.064574"/>
+</kw>
+<kw name="23CheckCountdownElement" owner="keyword">
+<kw name="ShouldSeeEle" owner="keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-08T17:59:19.184988" elapsed="0.023838"/>
+</kw>
+<arg>${ch23_timer}</arg>
+<status status="PASS" start="2025-02-08T17:59:19.184988" elapsed="0.023838"/>
+</kw>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>${ch23_timer}</arg>
+<arg>Registration closes in 00:${time} minutes!</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2025-02-08T17:59:19.208826" elapsed="7.952431"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:59:27.175541" level="INFO">${txt} = Registration closes in 00:53 minutes!</msg>
+<var>${txt}</var>
+<arg>${ch23_timer}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:59:27.161257" elapsed="0.014284"/>
+</kw>
+<return>
+<value>${txt}</value>
+<status status="PASS" start="2025-02-08T17:59:27.177374" elapsed="0.000000"/>
+</return>
+<msg time="2025-02-08T17:59:27.177374" level="INFO">${txt} = Registration closes in 00:53 minutes!</msg>
+<var>${txt}</var>
+<arg>53</arg>
+<status status="PASS" start="2025-02-08T17:59:19.184988" elapsed="7.992386"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-08T17:59:27.178881" level="INFO">Registration closes in 00:53 minutes!</msg>
+<arg>${txt}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-08T17:59:27.178881" elapsed="0.000000"/>
+</kw>
+<kw name="23CountdownComplete" owner="keyword">
+<kw name="Wait Until Page Does Not Contain" owner="SeleniumLibrary">
+<arg>Registration closes in</arg>
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<status status="PASS" start="2025-02-08T17:59:27.180286" elapsed="2.474529"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:59:29.691087" level="INFO">${txt2} = This is the end of the journey</msg>
+<var>${txt2}</var>
+<arg>id=msg</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:59:29.654815" elapsed="0.036272"/>
+</kw>
+<return>
+<value>${txt2}</value>
+<status status="PASS" start="2025-02-08T17:59:29.691087" elapsed="0.000000"/>
+</return>
+<msg time="2025-02-08T17:59:29.692172" level="INFO">${txt2} = This is the end of the journey</msg>
+<var>${txt2}</var>
+<status status="PASS" start="2025-02-08T17:59:27.178881" elapsed="2.513291"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${txt2}</arg>
+<arg>This is the end of the journey</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-02-08T17:59:29.693184" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-08T17:59:29.693184" elapsed="2.201712"/>
+</kw>
+<tag>Iframe</tag>
+<status status="PASS" start="2025-02-08T17:59:15.323271" elapsed="16.571625"/>
+</test>
+<test id="s1-t20" name="24 Slider" line="234">
+<kw name="OpenWebBrowser" owner="keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:59:31.902169" level="INFO">Opening browser 'gc' to base url 'https://qaplayground.dev/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-08T17:59:31.902169" elapsed="2.109530"/>
+</kw>
+<kw name="ShouldSeeTxt" owner="keyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${txt}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-08T17:59:34.013913" elapsed="0.025199"/>
+</kw>
+<arg>QA Playground</arg>
+<status status="PASS" start="2025-02-08T17:59:34.012916" elapsed="0.026196"/>
+</kw>
+<status status="PASS" start="2025-02-08T17:59:31.901095" elapsed="2.138017"/>
+</kw>
+<kw name="OpenChallenge" owner="keyword">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-08T17:59:34.040113" elapsed="0.411910"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:59:34.452023" level="INFO">Clicking element 'xpath=/html/body/main/div[3]/a[24]/div'.</msg>
+<arg>xpath=/html/body/main/div[3]/a[${challengenum}]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:59:34.452023" elapsed="1.536958"/>
+</kw>
+<arg>24</arg>
+<status status="PASS" start="2025-02-08T17:59:34.040113" elapsed="1.949372"/>
+</kw>
+<kw name="ShouldSeeEle" owner="keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-08T17:59:35.990839" elapsed="0.023487"/>
+</kw>
+<arg>xpath=/html/body/div/div[2]/div[1]</arg>
+<status status="PASS" start="2025-02-08T17:59:35.989485" elapsed="0.024841"/>
+</kw>
+<kw name="24Input" owner="keyword">
+<kw name="24GetElementWidth" owner="keyword">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:59:36.026349" level="INFO">${css} = &lt;selenium.webdriver.remote.webelement.WebElement (session="df1f7fc3e6aa6ec507dc47a113cd87d3", element="f.D02AD99F2334CA3FAB7B56E0CAAC742E.d.20391487E407A68AC6B13114CB729D97.e.31")&gt;</msg>
+<var>${css}</var>
+<arg>xpath://*[@class="slider"]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:59:36.015155" elapsed="0.011194"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2025-02-08T17:59:36.035980" level="INFO">${prop_val} = 270px</msg>
+<var>${prop_val}</var>
+<arg>${css}</arg>
+<arg>value_of_css_property</arg>
+<arg>width</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-02-08T17:59:36.027394" elapsed="0.009612"/>
+</kw>
+<kw name="Strip String" owner="String">
+<msg time="2025-02-08T17:59:36.038224" level="INFO">${percent} = 270</msg>
+<var>${percent}</var>
+<arg>${prop_val}</arg>
+<arg>characters=px</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-02-08T17:59:36.037006" elapsed="0.001218"/>
+</kw>
+<return>
+<value>${percent}</value>
+<status status="PASS" start="2025-02-08T17:59:36.038728" elapsed="0.000000"/>
+</return>
+<msg time="2025-02-08T17:59:36.039267" level="INFO">${percent} = 270</msg>
+<var>${percent}</var>
+<status status="PASS" start="2025-02-08T17:59:36.015155" elapsed="0.024112"/>
+</kw>
+<kw name="Convert To Number" owner="BuiltIn">
+<msg time="2025-02-08T17:59:36.040476" level="INFO">${n1} = 50.0</msg>
+<var>${n1}</var>
+<arg>${input_percent}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<status status="PASS" start="2025-02-08T17:59:36.039267" elapsed="0.001209"/>
+</kw>
+<kw name="Convert To Number" owner="BuiltIn">
+<msg time="2025-02-08T17:59:36.040476" level="INFO">${n2} = 270.0</msg>
+<var>${n2}</var>
+<arg>${percent}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<status status="PASS" start="2025-02-08T17:59:36.040476" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-02-08T17:59:36.041756" level="INFO">${output} = 135.0</msg>
+<var>${output}</var>
+<arg>${n1}/100*${n2}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-02-08T17:59:36.041756" elapsed="0.000000"/>
+</kw>
+<kw name="Drag And Drop By Offset" owner="SeleniumLibrary">
+<arg>${ch24_guage}</arg>
+<arg>${output}</arg>
+<arg>0</arg>
+<doc>Drags the element identified with ``locator`` by ``xoffset/yoffset``.</doc>
+<status status="PASS" start="2025-02-08T17:59:36.042779" elapsed="0.537964"/>
+</kw>
+<arg>50</arg>
+<status status="PASS" start="2025-02-08T17:59:36.015155" elapsed="0.565588"/>
+</kw>
+<kw name="ShouldSeeEle" owner="keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-08T17:59:36.581811" elapsed="0.022610"/>
+</kw>
+<arg>${ch24_feedback_btn}</arg>
+<status status="PASS" start="2025-02-08T17:59:36.581811" elapsed="0.022610"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:59:36.604421" level="INFO">Clicking element 'id=feedback'.</msg>
+<arg>${ch24_feedback_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-08T17:59:36.604421" elapsed="0.062230"/>
+</kw>
+<kw name="ShouldSeeEle" owner="keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-08T17:59:36.667664" elapsed="0.018229"/>
+</kw>
+<arg>${ch24_msg}</arg>
+<status status="PASS" start="2025-02-08T17:59:36.667664" elapsed="0.019254"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-02-08T17:59:36.705694" level="INFO">Element 'id=ty-msg' contains text 'Thank you for your feedback!'.</msg>
+<arg>${ch24_msg}</arg>
+<arg>Thank you for your feedback!</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-02-08T17:59:36.686918" elapsed="0.019838"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-08T17:59:36.707923" elapsed="2.203841"/>
+</kw>
+<tag>Slider</tag>
+<status status="PASS" start="2025-02-08T17:59:31.901095" elapsed="7.010669"/>
+</test>
+<status status="PASS" start="2025-02-08T17:56:38.284457" elapsed="180.634459"/>
+</suite>
+<statistics>
+<total>
+<stat pass="20" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Downlaod</stat>
+<stat pass="1" fail="0" skip="0">Entry</stat>
+<stat pass="1" fail="0" skip="0">Fetching</stat>
+<stat pass="2" fail="0" skip="0">File</stat>
+<stat pass="1" fail="0" skip="0">GeoLocation</stat>
+<stat pass="1" fail="0" skip="0">Hover</stat>
+<stat pass="2" fail="0" skip="0">Iframe</stat>
+<stat pass="2" fail="0" skip="0">Input</stat>
+<stat pass="1" fail="0" skip="0">Link</stat>
+<stat pass="1" fail="0" skip="0">Location</stat>
+<stat pass="1" fail="0" skip="0">Navigatation</stat>
+<stat pass="1" fail="0" skip="0">New Tab</stat>
+<stat pass="1" fail="0" skip="0">Pop-Up Window</stat>
+<stat pass="1" fail="0" skip="0">QR</stat>
+<stat pass="1" fail="0" skip="0">Rating</stat>
+<stat pass="1" fail="0" skip="0">Redirection</stat>
+<stat pass="1" fail="0" skip="0">Scroll</stat>
+<stat pass="1" fail="0" skip="0">Shadow DOM</stat>
+<stat pass="1" fail="0" skip="0">Slider</stat>
+<stat pass="1" fail="0" skip="0">Table</stat>
+<stat pass="1" fail="0" skip="0">Upload</stat>
+<stat pass="2" fail="0" skip="0">Verify</stat>
+<stat pass="1" fail="0" skip="0">WIP</stat>
+</tag>
+<suite>
+<stat pass="20" fail="0" skip="0" id="s1" name="Page">Page</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
