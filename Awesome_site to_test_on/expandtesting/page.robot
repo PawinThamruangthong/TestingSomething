@@ -453,3 +453,21 @@ GetTitle
     Reload Page
     @{data_list2}=    52-List Get_List
     List Should Contain Sub List    ${data_list}    ${data_list2}
+54 Dynamic ID
+    SelectApp    54
+    ${id_before}=    Get Element Attribute    xpath=//*[@class="btn btn-primary"]    id
+    Reload Page
+    ${id_after}=     Get Element Attribute    xpath=//*[@class="btn btn-primary"]    id
+    Should Not Be Equal    ${id_before}    ${id_after}
+55 Entry Ad
+    SelectApp    55
+    #modal window
+    Wait Until Element Is Visible    xpath=//*[@class="modal-body"]
+    ${element}=    Get WebElement    xpath=//*[@class="modal-body"]
+    ${txt}=    Get Text    ${element}
+    Element Should Contain    ${element}    It's commonly used to encourage a user to take an action 
+    ...    (e.g., give their e-mail address to sign up for something or disable their ad blocker).
+
+56 ExitIntent
+    SelectApp    56
+    Mouse Out    xpath=/html/body

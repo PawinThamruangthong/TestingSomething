@@ -141,3 +141,6 @@ ${51_2_link}                 xpath=/html/body/main/div[3]/div/div/ul/li[2]/a
 
 #52
 ${52_1_box}                  id=shift
+
+#55
+${55_modal}                  xpath=//*[@id="exampleModal"]
