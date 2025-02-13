@@ -223,8 +223,17 @@ GetTitle
     END
     #Click first option
     Click Element    ${txt_list}[0]
+#20 Cypress spies sutbs clocks Not Robot
+21 Dom
+    [Tags]    Dom
+    SelectApp    21
+    ${btn}    Get WebElements    xpath=/html/body/main/div[3]/div/div[1]/div/div[1]/a
+    ${num}=    CountElements    xpath=/html/body/main/div[3]/div/div[1]/div/div[1]/a
+    ${label1}=    Get Text    ${btn}[0]
+    ${label2}=    Get Text    ${btn}[1]
+    ${label3}=    Get Text    ${btn}[2]
 23 ShadowDom
-    [Tags]    ShadowDom
+    [Tags]    ShadowDom    Dom
     SelectApp    23
     SeeTxt    Shadow DOM page for Automation Testing Practice
     SeeEle    ${normal_btn}
