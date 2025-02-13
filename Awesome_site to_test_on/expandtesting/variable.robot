@@ -1,7 +1,7 @@
 *** Variables ***
 
 ${url}    https://practice.expandtesting.com/
-${brw}    gc
+${brw}    headlesschrome
 
 #1
 ${1_num}    id=input-number
