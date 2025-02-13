@@ -31,3 +31,11 @@ Insert Multiple Data to table
 Check Data
     ${output}=    Execute Sql String    Select first_name From person;
     Log    ${output}
+Verify data
+    #             Return Result with String
+    ${output}=    Catenate    Select * From person Where first_name= 'Johna';
+    Check Row Count    ${output}    >    0
+Verify No data
+    #             Return Result with String
+    ${output}=    Catenate    Select * From person Where first_name= 'Helloworld';
+    Check Row Count    ${output}    ==    0
