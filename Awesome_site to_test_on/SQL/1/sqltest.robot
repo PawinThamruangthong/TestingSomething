@@ -19,3 +19,15 @@ Create person table
     ${output}=    Execute Sql String    Create table person(id integer, first_name varchar(20), last_name varchar(20));
     Log To Console    ${output}
     Should Be Equal As Strings    ${output}    ${None}
+
+Insert Data to table
+    ${output}=    Execute Sql String    Insert Into person values(101,"tom","smith");
+    Log    ${output}
+    Should Be Equal As Strings    ${output}    None
+Insert Multiple Data to table
+    ${output}=    Execute Sql Script    ${CURDIR}/mydb_insert_into_person_multiple.sql
+    Log    ${output}
+    Should Be Equal As Strings    ${output}    None
+Check Data
+    ${output}=    Execute Sql String    Select first_name From person;
+    Log    ${output}
