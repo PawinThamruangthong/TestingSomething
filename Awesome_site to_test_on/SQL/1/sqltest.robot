@@ -14,7 +14,8 @@ ${DBHOST}    localhost
 ${DBPORT}    3306
 
 *** Test Cases ***
-
+# DOCUMENT
+# https://marketsquare.github.io/Robotframework-Database-Library/
 Create person table
     ${output}=    Execute Sql String    Create table person(id integer, first_name varchar(20), last_name varchar(20));
     Log To Console    ${output}
@@ -44,3 +45,10 @@ CheckTable
 Update Data
     ${output}    Execute Sql String    Update person set last_name= "Silver" where id=104;
     Check Query Result    Select last_name From person Where id=104    ==    Silver
+Retrieve Record From Table
+    @{query_result}=    Query    Select * From Person;
+    Log Many    @{query_result}
+Delete
+    Execute Sql String    Delete from person;
+    ${output}=    Query    Select * From Person;
+    Should Be Empty    ${output}
