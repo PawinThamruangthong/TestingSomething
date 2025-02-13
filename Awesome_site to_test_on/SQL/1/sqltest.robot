@@ -39,3 +39,8 @@ Verify No data
     #             Return Result with String
     ${output}=    Catenate    Select * From person Where first_name= 'Helloworld';
     Check Row Count    ${output}    ==    0
+CheckTable
+    Table Must Exist    person
+Update Data
+    ${output}    Execute Sql String    Update person set last_name= "Silver" where id=104;
+    Check Query Result    Select last_name From person Where id=104    ==    Silver
