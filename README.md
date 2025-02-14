@@ -9,6 +9,6 @@ Mobile (Appium)
 1. Saucelabs my demo app
 
 SQL
-1. SQL test with Robot Framework & DatavaseLibrary using MySQL
+1. SQL test with Robot Framework & DatabaseLibrary using MySQL
 
 
