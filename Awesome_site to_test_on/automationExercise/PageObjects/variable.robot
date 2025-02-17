@@ -49,7 +49,7 @@ ${git_subject}          xpath=//*[@id="contact-us-form"]/div[3]/input
 ${git_msg}              id=message
 ${git_upload}           css=#contact-us-form > div:nth-child(6) > input
 ${git_submit}           css=#contact-us-form > div:nth-child(7) > input
-${git_file}             ${CURDIR}\\upload.txt
+${git_file}             ${CURDIR}../File/upload.txt
 ${git_upload_msg}       xpath=//*[@id="contact-page"]/div[2]/div[1]/div/div[2]
 ${git_home_btn}         xpath=//*[@id="form-section"]/a
 ######################## TEST CASE ###################################
