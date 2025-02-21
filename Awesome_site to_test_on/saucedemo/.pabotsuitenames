@@ -1,0 +1,7 @@
+datasources:1e5ec6e5e23ad031fca66f71cd21b8037b339f38
+commandlineoptions:9f8598a690c7367accf83ead504756ddd374acc9
+suitesfrom:no-suites-from-option
+file:e122318d575b35bf662065405cfcf2dca9be280b
+--suite Suites.01 Login
+--suite Suites.02 Inventory
+--suite Suites.03 Cart
