@@ -1,8 +1,8 @@
 *** Variables ***
 
 ${url}        https://www.saucedemo.com/
-${browser}    gc
-
+#${browser}    gc
+${browser}    headlesschrome
 # Login Page
 ${login_username}    id=user-name
 ${login_password}    id=password

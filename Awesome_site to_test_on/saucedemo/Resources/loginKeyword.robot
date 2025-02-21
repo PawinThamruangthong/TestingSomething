@@ -6,6 +6,7 @@ OpenSite
     Open Browser    ${url}    ${browser}    
 Login
     [Arguments]    ${username}    ${password}
+    Wait Until Element Is Visible    ${login_username}
     Input Text    ${login_username}    ${username}
     Input Text    ${login_password}    ${password}
     Click Element    ${login_button}
