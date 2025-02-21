@@ -28,7 +28,18 @@ CartBtn
     Location Should Be    https://www.saucedemo.com/cart.html
 Sort
     # az za lohi hilo
+    #Name Sort
     CheckList    az
     CheckList    za
-
-
+    #Price Sort
+    # CheckList    lohi
+    # CheckList    hilo
+AddTocart
+    GetitemBtn    1
+    GetitemBtn    2
+RemoveFromCart
+    #N: able to delete specific item
+    GetitemBtn    1
+    GetitemBtn    2
+    RemoveitemBtn    0
+    RemoveitemBtn    0
