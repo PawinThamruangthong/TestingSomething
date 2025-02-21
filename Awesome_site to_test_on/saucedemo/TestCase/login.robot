@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 Resource    ../Resources/loginPage.robot
 Task Setup    OpenSite
-#Task Teardown    Close Browser
+Task Teardown    Close Browser
 
 
 *** Test Cases ***
@@ -24,3 +24,19 @@ LoginFailWrongPassword
     LoginErrorPassword    performance_glitch_user    32132156
     LoginErrorPassword    error_user    asdasdasd
     LoginErrorPassword    visual_user    ahsdgdasdasdfsd
+Login Success
+    LoginSuccess    standard_user
+    Go Back
+    LoginSuccess    problem_user
+    Go Back
+    LoginSuccess    performance_glitch_user
+    Go Back
+    LoginSuccess    error_user
+    Go Back
+    LoginSuccess    visual_user
+    Go Back
+Login LockedOut
+    Login    locked_out_user    secret_sauce
+    ErrorMessageCheck    Epic sadface: Sorry, this user has been locked out.
+CheckLogin Status
+    NotLoggedIn

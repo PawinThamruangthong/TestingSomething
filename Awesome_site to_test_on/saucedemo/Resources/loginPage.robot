@@ -21,3 +21,10 @@ LoginErrorPassword
     [Arguments]    ${username}    ${password}
     Login    ${username}    ${password}
     ErrorMessageCheck    Epic sadface: Username and password do not match any user in this service
+LoginSuccess
+    [Arguments]    ${username}
+    Login    ${username}    secret_sauce
+    Wait Until Page Contains    Products
+NotLoggedIn
+    Go To    https://www.saucedemo.com/inventory.html
+    ErrorMessageCheck    Epic sadface: You can only access '/inventory.html' when you are logged in.
