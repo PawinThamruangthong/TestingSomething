@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ../Resources/loginPage.robot
+Resource    ../Resources/loginKeyword.robot
 Task Setup    OpenSite
 Task Teardown    Close Browser
 

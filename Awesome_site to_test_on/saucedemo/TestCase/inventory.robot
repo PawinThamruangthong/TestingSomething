@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ../Resources/inventoryPage.robot
+Resource    ../Resources/inventoryKeyword.robot
 Test Setup    NormalUser
 
 *** Test Cases ***

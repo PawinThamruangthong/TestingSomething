@@ -3,7 +3,7 @@ Library    SeleniumLibrary
 Library    Collections
 Library    String
 Resource    ../PageObject/variable.robot
-Resource    ../Resources/loginPage.robot
+Resource    ../Resources/loginKeyword.robot
 
 *** Keywords ***
 NormalUser
