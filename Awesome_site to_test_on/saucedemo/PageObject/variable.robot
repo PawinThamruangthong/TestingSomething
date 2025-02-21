@@ -20,3 +20,9 @@ ${allitem}    xpath=//*[@id="inventory_sidebar_link"]
 ${about}      id=about_sidebar_link
 ${logout}     id=logout_sidebar_link
 ${resetApp}   id=reset_sidebar_link
+
+#Cart Page
+${btn_continue_shopping}    id=continue-shopping
+${btn_checkout}             id=checkout
+${cart_item_0}              xpath=//*[@id="cart_contents_container"]/div/div[1]/div[3]
+${cart_item_1}              xpath=//*[@id="cart_contents_container"]/div/div[1]/div[4]
