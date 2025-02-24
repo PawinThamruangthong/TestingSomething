@@ -39,3 +39,7 @@ CartRemoveItem
     Click Element    ${item_remove_btn}[${num}]
     #Page Should Contain Element    ${item_remove_btn}[${num}]
     Page Should Contain Element    ${cart_item_${num}}
+CartCheckOut
+    Wait Until Element Is Visible    ${btn_checkout}
+    Click Button    ${btn_checkout}
+    Location Should Be    https://www.saucedemo.com/checkout-step-one.html
