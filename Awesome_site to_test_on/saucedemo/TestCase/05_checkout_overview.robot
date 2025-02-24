@@ -10,6 +10,8 @@ Default
     Page Should Contain    Checkout: Overview
 Submenu
     Submenu - CheckAll
+Href
+    hrefCheck
 Cart
     CartItem Detail    1
     CartItem Detail    2

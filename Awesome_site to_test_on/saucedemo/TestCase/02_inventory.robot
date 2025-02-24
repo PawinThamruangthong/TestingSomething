@@ -1,7 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
 Resource    ../Resources/inventoryKeyword.robot
-Resource    ../Resources/submenuKeyword.robot
 Test Setup    NormalUser
 
 *** Test Cases ***
@@ -15,9 +14,8 @@ ElementCheck
 Submenu
 #${allitem},${about},${logout},${resetApp}
     Submenu - CheckAll
-CartBtn
-    Click Element    ${btn_cart}
-    Location Should Be    https://www.saucedemo.com/cart.html
+Href
+    hrefCheck
 Sort
     # az za lohi hilo
     #Name Sort

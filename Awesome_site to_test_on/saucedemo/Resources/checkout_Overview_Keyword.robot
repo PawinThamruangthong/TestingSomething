@@ -26,3 +26,7 @@ VerifyInformationData
 VerifyButton
     Element Should Be Visible    ${checkout_2_cancel}
     Element Should Be Visible    ${checkout_2_finish}
+FinishTransaction
+    Click Element    ${checkout_2_finish}
+    Location Should Be    https://www.saucedemo.com/checkout-complete.html
+    Page Should Contain    Thank you for your order!

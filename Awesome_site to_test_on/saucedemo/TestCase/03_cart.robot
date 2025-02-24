@@ -10,6 +10,8 @@ Default
     Page Should Contain    Your Cart
 Submenu
     Submenu - CheckAll
+Href
+    hrefCheck
 Cart - Continue Shopping
     Click Button    ${btn_continue_shopping}
     Location Should Be    https://www.saucedemo.com/inventory.html

@@ -9,6 +9,11 @@ ${login_password}    id=password
 ${login_button}      id=login-button
 ${login_error_message}    xpath=//*[@data-test="error"]
 
+# href link
+${href_twitter}    xpath=//*[@id="page_wrapper"]/footer/ul/li[1]
+${href_facebook}   xpath=//*[@id="page_wrapper"]/footer/ul/li[2]
+${href_linkedin}   xpath=//*[@id="page_wrapper"]/footer/ul/li[3]
+
 # Inventory Page
 ${btn_submenu}    id=react-burger-menu-btn
 ${btn_cart}       xpath=//*[@id="shopping_cart_container"]/a
@@ -49,3 +54,8 @@ ${checkout_tax_price}            xpath=//*[@id="checkout_summary_container"]/div
 ${checkout_final_price}          xpath=//*[@id="checkout_summary_container"]/div/div[2]/div[8]
 ${checkout_2_cancel}             id=cancel
 ${checkout_2_finish}             id=finish
+
+#3
+${checkout_complete_header}            xpath=//*[@class="complete-header"]
+${checkout_complete_text}              xpath=//*[@class="complete-text"]
+${checkout_complete_back_home_btn}     id=back-to-products

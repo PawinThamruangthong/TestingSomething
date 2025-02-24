@@ -31,7 +31,3 @@ CartCheckOut
     Wait Until Element Is Visible    ${btn_checkout}
     Click Button    ${btn_checkout}
     Location Should Be    https://www.saucedemo.com/checkout-step-one.html
-FinishTransaction
-    Click Element    ${checkout_2_finish}
-    Location Should Be    https://www.saucedemo.com/checkout-complete.html
-    Page Should Contain    Thank you for your order!

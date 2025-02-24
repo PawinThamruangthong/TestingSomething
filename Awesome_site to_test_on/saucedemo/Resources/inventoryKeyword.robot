@@ -4,7 +4,7 @@ Library    Collections
 Library    String
 Resource    ../PageObject/variable.robot
 Resource    ../Resources/loginKeyword.robot
-Resource    ../Resources/submenuKeyword.robot
+Resource    ../Resources/href.robot
 
 *** Keywords ***
 NormalUser

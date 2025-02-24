@@ -9,6 +9,8 @@ Default
     Page Should Contain    Checkout: Your Information
 Submenu
     Submenu - CheckAll
+Href
+    hrefCheck
 Cancel Button
     Click Element    ${checkout_cancel}
     Location Should Be    https://www.saucedemo.com/cart.html
