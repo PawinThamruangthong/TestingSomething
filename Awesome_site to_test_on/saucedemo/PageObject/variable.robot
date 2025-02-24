@@ -40,3 +40,12 @@ ${checkout_hide_error_msg}    xpath=//*[@id="checkout_info_container"]/div/form/
 ${error_symbol_fname}       xpath=//*[@id="checkout_info_container"]/div/form/div[1]/div[1]/*[local-name()='svg']
 ${error_symbol_lname}       xpath=//*[@id="checkout_info_container"]/div/form/div[1]/div[2]/*[local-name()='svg']
 ${error_symbol_zip}         xpath=//*[@id="checkout_info_container"]/div/form/div[1]/div[3]/*[local-name()='svg']
+
+#2
+${checkout_info_payment}         xpath=//*[@id="checkout_summary_container"]/div/div[2]/div[2]
+${checkout_info_shipping}        xpath=//*[@id="checkout_summary_container"]/div/div[2]/div[4]
+${checkout_item_total_price}     xpath=//*[@id="checkout_summary_container"]/div/div[2]/div[6]
+${checkout_tax_price}            xpath=//*[@id="checkout_summary_container"]/div/div[2]/div[7]
+${checkout_final_price}          xpath=//*[@id="checkout_summary_container"]/div/div[2]/div[8]
+${checkout_2_cancel}             id=cancel
+${checkout_2_finish}             id=finish

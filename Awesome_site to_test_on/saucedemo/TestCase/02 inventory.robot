@@ -1,6 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Resource    ../Resources/inventoryKeyword.robot
+Resource    ../Resources/submenuKeyword.robot
 Test Setup    NormalUser
 
 *** Test Cases ***
@@ -13,16 +14,7 @@ ElementCheck
     Element Should Be Visible    ${btn_sort}
 Submenu
 #${allitem},${about},${logout},${resetApp}
-    SelectSubmenu    about
-    Location Should Be    https://saucelabs.com/
-    Go Back
-    SelectSubmenu    resetApp
-    Click Element    ${btn_cart}
-    SelectSubmenu    allitem
-    Location Should Be    https://www.saucedemo.com/inventory.html
-    SelectSubmenu    logout
-    Location Should Be    https://www.saucedemo.com/
-    NotLoggedIn
+    Submenu - CheckAll
 CartBtn
     Click Element    ${btn_cart}
     Location Should Be    https://www.saucedemo.com/cart.html

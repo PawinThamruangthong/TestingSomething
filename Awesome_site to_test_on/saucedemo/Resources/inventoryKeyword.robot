@@ -4,6 +4,7 @@ Library    Collections
 Library    String
 Resource    ../PageObject/variable.robot
 Resource    ../Resources/loginKeyword.robot
+Resource    ../Resources/submenuKeyword.robot
 
 *** Keywords ***
 NormalUser
@@ -15,11 +16,7 @@ GetAllitem
     ${element}=    Get WebElements    xpath=//*[@class="inventory_item"]
     RETURN    ${element}
 
-SelectSubmenu
-    [Arguments]    ${sub}
-    Click Element    ${btn_submenu}
-    Wait Until Element Is Visible    ${submenu_item_list}
-    Click Element    ${${sub}}
+
 GetAllitemName
     @{name}=    Create List
     @{item}=    Get WebElements    xpath=//*[@class="inventory_item_name "]
