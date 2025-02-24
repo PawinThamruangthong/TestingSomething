@@ -7,10 +7,6 @@ Resource    ../Resources/loginKeyword.robot
 Resource    ../Resources/href.robot
 
 *** Keywords ***
-NormalUser
-    OpenSite
-    LoginSuccess    standard_user
-    Wait Until Page Contains   Swag Labs
 GetAllitem
     #${count}=    Get Element Count    xpath=//*[@class="inventory_item"]
     ${element}=    Get WebElements    xpath=//*[@class="inventory_item"]

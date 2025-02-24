@@ -1,0 +1,1312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.4 on win32)" generated="2025-02-24T13:45:26.240601" rpa="false" schemaversion="5">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="03 Cart" source="C:\Users\Winner\Automate\TestingSomething\Awesome_site to_test_on\saucedemo\TestCase\03_cart.robot">
+<test id="s1-s1-t1" name="Default" line="9">
+<kw name="CartSetUp" owner="cartKeyword" type="SETUP">
+<kw name="NormalUser" owner="inventoryKeyword">
+<kw name="OpenSite" owner="loginKeyword">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:45:26.518809" level="INFO">Opening browser 'headlesschrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-24T13:45:26.518809" elapsed="4.559597"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:45:26.516814" elapsed="4.561592"/>
+</kw>
+<kw name="LoginSuccess" owner="loginKeyword">
+<kw name="Login" owner="loginKeyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_username}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-24T13:45:31.079404" elapsed="1.680963"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:45:32.760367" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>${login_username}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:45:32.760367" elapsed="0.808818"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:45:33.570182" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>${login_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:45:33.569185" elapsed="0.143069"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:45:33.713269" level="INFO">Clicking element 'id=login-button'.</msg>
+<arg>${login_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:45:33.712254" elapsed="0.798325"/>
+</kw>
+<arg>${username}</arg>
+<arg>secret_sauce</arg>
+<status status="PASS" start="2025-02-24T13:45:31.079404" elapsed="3.431175"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Products</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-24T13:45:34.510579" elapsed="0.059011"/>
+</kw>
+<arg>standard_user</arg>
+<status status="PASS" start="2025-02-24T13:45:31.078406" elapsed="3.491184"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Swag Labs</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-24T13:45:34.569590" elapsed="0.040987"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:45:26.516814" elapsed="8.095271"/>
+</kw>
+<kw name="AddItemAndGotoCart" owner="cartKeyword">
+<kw name="GetitemBtn" owner="inventoryKeyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Swag</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-24T13:45:34.613129" elapsed="0.131659"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:45:34.779302" level="INFO">@{add_to_cart} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="ef59ddbfcdc9c9278bd4bd6b68420857", element="f.0E2593A408A4145F492C1B0467DAD3F2.d.21C4577D9AC695A1992C2050AAAB1066.e.42")&gt; | &lt;selenium.webdr...</msg>
+<var>@{add_to_cart}</var>
+<arg>xpath=//*[@class="btn btn_primary btn_small btn_inventory "]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:45:34.745800" elapsed="0.033502"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:45:34.779302" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="ef59ddbfcdc9c9278bd4bd6b68420857", element="f.0E2593A408A4145F492C1B0467DAD3F2.d.21C4577D9AC695A1992C2050AAAB1066.e.43")&gt;'.</msg>
+<arg>${add_to_cart}[${item}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:45:34.779302" elapsed="0.117599"/>
+</kw>
+<arg>1</arg>
+<status status="PASS" start="2025-02-24T13:45:34.612085" elapsed="0.284816"/>
+</kw>
+<kw name="GetitemBtn" owner="inventoryKeyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Swag</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-24T13:45:34.897899" elapsed="0.021987"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:45:34.932388" level="INFO">@{add_to_cart} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="ef59ddbfcdc9c9278bd4bd6b68420857", element="f.0E2593A408A4145F492C1B0467DAD3F2.d.21C4577D9AC695A1992C2050AAAB1066.e.42")&gt; | &lt;selenium.webdr...</msg>
+<var>@{add_to_cart}</var>
+<arg>xpath=//*[@class="btn btn_primary btn_small btn_inventory "]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:45:34.919886" elapsed="0.013007"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:45:34.932893" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="ef59ddbfcdc9c9278bd4bd6b68420857", element="f.0E2593A408A4145F492C1B0467DAD3F2.d.21C4577D9AC695A1992C2050AAAB1066.e.45")&gt;'.</msg>
+<arg>${add_to_cart}[${item}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:45:34.932893" elapsed="0.072778"/>
+</kw>
+<arg>2</arg>
+<status status="PASS" start="2025-02-24T13:45:34.896901" elapsed="0.109769"/>
+</kw>
+<kw name="GotoCartPage" owner="cartKeyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:45:35.006670" level="INFO">Clicking element 'xpath=//*[@id="shopping_cart_container"]/a'.</msg>
+<arg>${btn_cart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:45:35.006670" elapsed="0.099572"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:45:35.006670" elapsed="0.099572"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:45:34.612085" elapsed="0.494157"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:45:26.515816" elapsed="8.590426"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:45:35.134725" level="INFO">Current page contains text 'Your Cart'.</msg>
+<arg>Your Cart</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-02-24T13:45:35.107240" elapsed="0.027485"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:45:26.515816" elapsed="8.618909"/>
+</test>
+<test id="s1-s1-t2" name="Submenu" line="11">
+<kw name="CartSetUp" owner="cartKeyword" type="SETUP">
+<kw name="NormalUser" owner="inventoryKeyword">
+<kw name="OpenSite" owner="loginKeyword">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:45:35.137717" level="INFO">Opening browser 'headlesschrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-24T13:45:35.136720" elapsed="4.417187"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:45:35.136720" elapsed="4.417187"/>
+</kw>
+<kw name="LoginSuccess" owner="loginKeyword">
+<kw name="Login" owner="loginKeyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_username}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-24T13:45:39.555904" elapsed="0.341152"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:45:39.898054" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>${login_username}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:45:39.898054" elapsed="3.416384"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:45:43.315436" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>${login_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:45:43.314438" elapsed="1.924316"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:45:45.239751" level="INFO">Clicking element 'id=login-button'.</msg>
+<arg>${login_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:45:45.239751" elapsed="0.619377"/>
+</kw>
+<arg>${username}</arg>
+<arg>secret_sauce</arg>
+<status status="PASS" start="2025-02-24T13:45:39.554907" elapsed="6.304221"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Products</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-24T13:45:45.860126" elapsed="0.037016"/>
+</kw>
+<arg>standard_user</arg>
+<status status="PASS" start="2025-02-24T13:45:39.554907" elapsed="6.342235"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Swag Labs</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-24T13:45:45.897142" elapsed="0.024988"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:45:35.136720" elapsed="10.785410"/>
+</kw>
+<kw name="AddItemAndGotoCart" owner="cartKeyword">
+<kw name="GetitemBtn" owner="inventoryKeyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Swag</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-24T13:45:45.923136" elapsed="0.143157"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:45:46.249343" level="INFO">@{add_to_cart} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="77dbfca9443c910c2310477ee5c209ab", element="f.7BF0CEAE3F688AEA65091984429705A0.d.442B071F1D6EFCC0EBF6A88201F2887A.e.41")&gt; | &lt;selenium.webdr...</msg>
+<var>@{add_to_cart}</var>
+<arg>xpath=//*[@class="btn btn_primary btn_small btn_inventory "]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:45:46.066293" elapsed="0.183050"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:45:46.251401" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="77dbfca9443c910c2310477ee5c209ab", element="f.7BF0CEAE3F688AEA65091984429705A0.d.442B071F1D6EFCC0EBF6A88201F2887A.e.42")&gt;'.</msg>
+<arg>${add_to_cart}[${item}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:45:46.249343" elapsed="1.218771"/>
+</kw>
+<arg>1</arg>
+<status status="PASS" start="2025-02-24T13:45:45.923136" elapsed="1.545975"/>
+</kw>
+<kw name="GetitemBtn" owner="inventoryKeyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Swag</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-24T13:45:47.469111" elapsed="0.041500"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:45:47.542349" level="INFO">@{add_to_cart} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="77dbfca9443c910c2310477ee5c209ab", element="f.7BF0CEAE3F688AEA65091984429705A0.d.442B071F1D6EFCC0EBF6A88201F2887A.e.41")&gt; | &lt;selenium.webdr...</msg>
+<var>@{add_to_cart}</var>
+<arg>xpath=//*[@class="btn btn_primary btn_small btn_inventory "]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:45:47.510611" elapsed="0.031738"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:45:47.542854" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="77dbfca9443c910c2310477ee5c209ab", element="f.7BF0CEAE3F688AEA65091984429705A0.d.442B071F1D6EFCC0EBF6A88201F2887A.e.44")&gt;'.</msg>
+<arg>${add_to_cart}[${item}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:45:47.542349" elapsed="0.866988"/>
+</kw>
+<arg>2</arg>
+<status status="PASS" start="2025-02-24T13:45:47.469111" elapsed="0.940226"/>
+</kw>
+<kw name="GotoCartPage" owner="cartKeyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:45:48.410335" level="INFO">Clicking element 'xpath=//*[@id="shopping_cart_container"]/a'.</msg>
+<arg>${btn_cart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:45:48.410335" elapsed="0.778343"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:45:48.410335" elapsed="0.779341"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:45:45.922130" elapsed="3.267546"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:45:35.135722" elapsed="14.054951"/>
+</kw>
+<kw name="Submenu - CheckAll" owner="submenuKeyword">
+<kw name="Submenu - about" owner="submenuKeyword">
+<kw name="SelectSubmenu" owner="submenuKeyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:45:49.192180" level="INFO">Clicking element 'id=react-burger-menu-btn'.</msg>
+<arg>${btn_submenu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:45:49.192180" elapsed="0.428218"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${submenu_item_list}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-24T13:45:49.620398" elapsed="0.085832"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:45:49.707226" level="INFO">Clicking element 'id=about_sidebar_link'.</msg>
+<arg>${${sub}}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:45:49.707226" elapsed="5.261961"/>
+</kw>
+<arg>about</arg>
+<status status="PASS" start="2025-02-24T13:45:49.190673" elapsed="5.778514"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:45:55.024170" level="INFO">Current location is 'https://saucelabs.com/'.</msg>
+<arg>https://saucelabs.com/</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-02-24T13:45:54.969187" elapsed="0.054983"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:45:49.190673" elapsed="5.833497"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-02-24T13:45:55.025167" elapsed="2.276847"/>
+</kw>
+<kw name="Submenu - Cart" owner="submenuKeyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:45:57.303191" level="INFO">Clicking element 'xpath=//*[@id="shopping_cart_container"]/a'.</msg>
+<arg>${btn_cart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:45:57.302014" elapsed="1.273215"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:45:58.618725" level="INFO">Current page contains text 'Your Cart'.</msg>
+<arg>Your Cart</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-02-24T13:45:58.576225" elapsed="0.042500"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:45:57.302014" elapsed="1.316711"/>
+</kw>
+<kw name="Submenu - Item" owner="submenuKeyword">
+<kw name="SelectSubmenu" owner="submenuKeyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:45:58.620719" level="INFO">Clicking element 'id=react-burger-menu-btn'.</msg>
+<arg>${btn_submenu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:45:58.619722" elapsed="0.130069"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${submenu_item_list}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-24T13:45:58.749791" elapsed="0.071014"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:45:58.820805" level="INFO">Clicking element 'xpath=//*[@id="inventory_sidebar_link"]'.</msg>
+<arg>${${sub}}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:45:58.820805" elapsed="0.231130"/>
+</kw>
+<arg>allitem</arg>
+<status status="PASS" start="2025-02-24T13:45:58.619722" elapsed="0.432718"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:45:59.090940" level="INFO">Current location is 'https://www.saucedemo.com/inventory.html'.</msg>
+<arg>https://www.saucedemo.com/inventory.html</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-02-24T13:45:59.052440" elapsed="0.039498"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:45:58.618725" elapsed="0.473213"/>
+</kw>
+<kw name="Submenu - ResetApp" owner="submenuKeyword">
+<kw name="SelectSubmenu" owner="submenuKeyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:45:59.093443" level="INFO">Clicking element 'id=react-burger-menu-btn'.</msg>
+<arg>${btn_submenu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:45:59.092443" elapsed="0.242669"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${submenu_item_list}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-24T13:45:59.335112" elapsed="0.086017"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:45:59.422126" level="INFO">Clicking element 'id=reset_sidebar_link'.</msg>
+<arg>${${sub}}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:45:59.422126" elapsed="0.141686"/>
+</kw>
+<arg>resetApp</arg>
+<status status="PASS" start="2025-02-24T13:45:59.092443" elapsed="0.471369"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2025-02-24T13:45:59.564812" elapsed="1.008341"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:46:00.574154" level="INFO">Clicking element 'xpath=//*[@id="shopping_cart_container"]/a'.</msg>
+<arg>${btn_cart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:46:00.574154" elapsed="0.117978"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:46:00.833825" level="INFO">Current location is 'https://www.saucedemo.com/cart.html'.</msg>
+<arg>https://www.saucedemo.com/cart.html</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-02-24T13:46:00.692132" elapsed="0.141693"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:46:01.009043" level="INFO">Current page does not contain element 'xpath=//*[@class="cart_item"]'.</msg>
+<arg>xpath=//*[@class="cart_item"]</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-02-24T13:46:00.833825" elapsed="0.175218"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:45:59.092443" elapsed="1.916600"/>
+</kw>
+<kw name="Submenu - Logout" owner="submenuKeyword">
+<kw name="SelectSubmenu" owner="submenuKeyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:46:01.011038" level="INFO">Clicking element 'id=react-burger-menu-btn'.</msg>
+<arg>${btn_submenu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:46:01.010041" elapsed="0.152066"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${submenu_item_list}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-24T13:46:01.162107" elapsed="0.268841"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:46:01.431946" level="INFO">Clicking element 'id=logout_sidebar_link'.</msg>
+<arg>${${sub}}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:46:01.431946" elapsed="0.161558"/>
+</kw>
+<arg>logout</arg>
+<status status="PASS" start="2025-02-24T13:46:01.010041" elapsed="0.583463"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:46:01.603496" level="INFO">Current location is 'https://www.saucedemo.com/'.</msg>
+<arg>https://www.saucedemo.com/</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-02-24T13:46:01.593504" elapsed="0.010992"/>
+</kw>
+<kw name="NotLoggedIn" owner="loginKeyword">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:46:01.605493" level="INFO">Opening url 'https://www.saucedemo.com/inventory.html'</msg>
+<arg>https://www.saucedemo.com/inventory.html</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-02-24T13:46:01.604496" elapsed="0.360070"/>
+</kw>
+<kw name="ErrorMessageCheck" owner="loginKeyword">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:46:01.994089" level="INFO">Element 'xpath=//*[@data-test="error"]' is displayed.</msg>
+<arg>${login_error_message}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-24T13:46:01.966561" elapsed="0.027528"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:46:02.025607" level="INFO">Element 'xpath=//*[@data-test="error"]' contains text 'Epic sadface: You can only access '/inventory.html' when you are logged in.'.</msg>
+<arg>${login_error_message}</arg>
+<arg>${msg}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-02-24T13:46:01.994089" elapsed="0.031518"/>
+</kw>
+<arg>Epic sadface: You can only access '/inventory.html' when you are logged in.</arg>
+<status status="PASS" start="2025-02-24T13:46:01.965563" elapsed="0.060044"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:46:01.604496" elapsed="0.422109"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:46:01.009043" elapsed="1.017562"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:45:49.190673" elapsed="12.835932"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:45:35.135722" elapsed="26.890883"/>
+</test>
+<test id="s1-s1-t3" name="Href" line="13">
+<kw name="CartSetUp" owner="cartKeyword" type="SETUP">
+<kw name="NormalUser" owner="inventoryKeyword">
+<kw name="OpenSite" owner="loginKeyword">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:46:02.028600" level="INFO">Opening browser 'headlesschrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-24T13:46:02.027602" elapsed="16.751088"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:46:02.027602" elapsed="16.751088"/>
+</kw>
+<kw name="LoginSuccess" owner="loginKeyword">
+<kw name="Login" owner="loginKeyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_username}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-24T13:46:18.780685" elapsed="0.058559"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:46:18.839244" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>${login_username}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:46:18.839244" elapsed="0.204243"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:46:19.045486" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>${login_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:46:19.044489" elapsed="0.390803"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:46:19.436290" level="INFO">Clicking element 'id=login-button'.</msg>
+<arg>${login_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:46:19.436290" elapsed="1.145819"/>
+</kw>
+<arg>${username}</arg>
+<arg>secret_sauce</arg>
+<status status="PASS" start="2025-02-24T13:46:18.779686" elapsed="1.802423"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Products</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-24T13:46:20.583124" elapsed="0.062993"/>
+</kw>
+<arg>standard_user</arg>
+<status status="PASS" start="2025-02-24T13:46:18.778690" elapsed="1.867427"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Swag Labs</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-24T13:46:20.646117" elapsed="0.062554"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:46:02.027602" elapsed="18.681069"/>
+</kw>
+<kw name="AddItemAndGotoCart" owner="cartKeyword">
+<kw name="GetitemBtn" owner="inventoryKeyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Swag</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-24T13:46:20.710666" elapsed="0.068003"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:46:20.887282" level="INFO">@{add_to_cart} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="7874c31757863645d19082fa54eeb057", element="f.C3B407CF9B797D6784C87F7E05B5ECB2.d.A7B46362F9D2C6C79EFC1BA65F4D6C7C.e.42")&gt; | &lt;selenium.webdr...</msg>
+<var>@{add_to_cart}</var>
+<arg>xpath=//*[@class="btn btn_primary btn_small btn_inventory "]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:46:20.778669" elapsed="0.108613"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:46:20.887282" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="7874c31757863645d19082fa54eeb057", element="f.C3B407CF9B797D6784C87F7E05B5ECB2.d.A7B46362F9D2C6C79EFC1BA65F4D6C7C.e.43")&gt;'.</msg>
+<arg>${add_to_cart}[${item}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:46:20.887282" elapsed="1.421006"/>
+</kw>
+<arg>1</arg>
+<status status="PASS" start="2025-02-24T13:46:20.709668" elapsed="1.598620"/>
+</kw>
+<kw name="GetitemBtn" owner="inventoryKeyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Swag</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-24T13:46:22.308288" elapsed="0.077548"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:46:22.428358" level="INFO">@{add_to_cart} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="7874c31757863645d19082fa54eeb057", element="f.C3B407CF9B797D6784C87F7E05B5ECB2.d.A7B46362F9D2C6C79EFC1BA65F4D6C7C.e.42")&gt; | &lt;selenium.webdr...</msg>
+<var>@{add_to_cart}</var>
+<arg>xpath=//*[@class="btn btn_primary btn_small btn_inventory "]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:46:22.385836" elapsed="0.042522"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:46:22.429354" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="7874c31757863645d19082fa54eeb057", element="f.C3B407CF9B797D6784C87F7E05B5ECB2.d.A7B46362F9D2C6C79EFC1BA65F4D6C7C.e.45")&gt;'.</msg>
+<arg>${add_to_cart}[${item}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:46:22.428358" elapsed="0.678717"/>
+</kw>
+<arg>2</arg>
+<status status="PASS" start="2025-02-24T13:46:22.308288" elapsed="0.798787"/>
+</kw>
+<kw name="GotoCartPage" owner="cartKeyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:46:23.108073" level="INFO">Clicking element 'xpath=//*[@id="shopping_cart_container"]/a'.</msg>
+<arg>${btn_cart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:46:23.108073" elapsed="0.210519"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:46:23.107075" elapsed="0.211517"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:46:20.708671" elapsed="2.610919"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:46:02.026605" elapsed="21.292985"/>
+</kw>
+<kw name="hrefCheck" owner="href">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${href_twitter}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-24T13:46:23.319590" elapsed="0.096102"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${href_facebook}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-24T13:46:23.415692" elapsed="0.062620"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${href_linkedin}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-24T13:46:23.478312" elapsed="0.094471"/>
+</kw>
+<kw name="hrefTwitter" owner="href">
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>www.saucedemo.com</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" start="2025-02-24T13:46:23.573784" elapsed="0.033008"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:46:23.607790" level="INFO">Clicking element 'xpath=//*[@id="page_wrapper"]/footer/ul/li[1]'.</msg>
+<arg>${href_twitter}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:46:23.606792" elapsed="0.787658"/>
+</kw>
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:46:26.759842" level="INFO">@{browser} = [ C3B407CF9B797D6784C87F7E05B5ECB2 | 40B591FBE0EE9D2DD1FE19E9436C60B7 ]</msg>
+<var>@{browser}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2025-02-24T13:46:24.394450" elapsed="2.365392"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${browser}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:46:26.759842" elapsed="0.118065"/>
+</kw>
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>https://x.com/saucelabs</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" start="2025-02-24T13:46:26.877907" elapsed="5.785921"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${browser}[0]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:46:32.664828" elapsed="0.107699"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:46:23.572783" elapsed="9.199744"/>
+</kw>
+<kw name="hrefFacebook" owner="href">
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>www.saucedemo.com</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" start="2025-02-24T13:46:32.773528" elapsed="0.036985"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:46:32.812019" level="INFO">Clicking element 'xpath=//*[@id="page_wrapper"]/footer/ul/li[2]'.</msg>
+<arg>${href_facebook}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:46:32.812019" elapsed="4.461222"/>
+</kw>
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:46:37.287234" level="INFO">@{browser} = [ C3B407CF9B797D6784C87F7E05B5ECB2 | 40B591FBE0EE9D2DD1FE19E9436C60B7 | 019857BEC4D26937E40661B09E7DAECD ]</msg>
+<var>@{browser}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2025-02-24T13:46:37.273241" elapsed="0.013993"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${browser}[2]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:46:37.287234" elapsed="28.183663"/>
+</kw>
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>https://www.facebook.com/saucelabs</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" start="2025-02-24T13:47:05.470897" elapsed="0.066566"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${browser}[0]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:05.538461" elapsed="0.035979"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:46:32.772527" elapsed="32.801913"/>
+</kw>
+<kw name="hrefLinkedin" owner="href">
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>www.saucedemo.com</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" start="2025-02-24T13:47:05.574440" elapsed="0.036476"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:05.611914" level="INFO">Clicking element 'xpath=//*[@id="page_wrapper"]/footer/ul/li[3]'.</msg>
+<arg>${href_linkedin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:05.610916" elapsed="0.308706"/>
+</kw>
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:05.994199" level="INFO">@{browser} = [ C3B407CF9B797D6784C87F7E05B5ECB2 | 40B591FBE0EE9D2DD1FE19E9436C60B7 | 019857BEC4D26937E40661B09E7DAECD | C301FAF359BF275863FBF51DAD7C727F ]</msg>
+<var>@{browser}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2025-02-24T13:47:05.920620" elapsed="0.073579"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${browser}[3]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:05.994199" elapsed="0.311966"/>
+</kw>
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>https://www.linkedin.com/company/sauce-labs/</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" start="2025-02-24T13:47:06.307163" elapsed="1.090313"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${browser}[0]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:07.398475" elapsed="0.207549"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:47:05.574440" elapsed="2.031584"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:46:23.319590" elapsed="44.287431"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:46:02.026605" elapsed="65.580416"/>
+</test>
+<test id="s1-s1-t4" name="Cart - Continue Shopping" line="15">
+<kw name="CartSetUp" owner="cartKeyword" type="SETUP">
+<kw name="NormalUser" owner="inventoryKeyword">
+<kw name="OpenSite" owner="loginKeyword">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:07.609015" level="INFO">Opening browser 'headlesschrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-24T13:47:07.609015" elapsed="3.692975"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:47:07.608018" elapsed="3.695008"/>
+</kw>
+<kw name="LoginSuccess" owner="loginKeyword">
+<kw name="Login" owner="loginKeyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_username}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-24T13:47:11.304024" elapsed="0.859606"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:12.164631" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>${login_username}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:12.163630" elapsed="0.410823"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:12.574453" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>${login_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:12.574453" elapsed="0.432748"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:13.009197" level="INFO">Clicking element 'id=login-button'.</msg>
+<arg>${login_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:13.008199" elapsed="1.864216"/>
+</kw>
+<arg>${username}</arg>
+<arg>secret_sauce</arg>
+<status status="PASS" start="2025-02-24T13:47:11.304024" elapsed="3.568391"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Products</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-24T13:47:14.873417" elapsed="0.214582"/>
+</kw>
+<arg>standard_user</arg>
+<status status="PASS" start="2025-02-24T13:47:11.303026" elapsed="3.784973"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Swag Labs</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-24T13:47:15.087999" elapsed="0.257286"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:47:07.608018" elapsed="7.737267"/>
+</kw>
+<kw name="AddItemAndGotoCart" owner="cartKeyword">
+<kw name="GetitemBtn" owner="inventoryKeyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Swag</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-24T13:47:15.346282" elapsed="0.100969"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:15.497807" level="INFO">@{add_to_cart} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="3a8e3b2b2b4f6e8ebc5a6a997bbadc0f", element="f.774E95F2C0153EC786272BF878C6F4FB.d.28297D404B20477FDB9DB70F663033BB.e.43")&gt; | &lt;selenium.webdr...</msg>
+<var>@{add_to_cart}</var>
+<arg>xpath=//*[@class="btn btn_primary btn_small btn_inventory "]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:15.447251" elapsed="0.050556"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:15.497807" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="3a8e3b2b2b4f6e8ebc5a6a997bbadc0f", element="f.774E95F2C0153EC786272BF878C6F4FB.d.28297D404B20477FDB9DB70F663033BB.e.44")&gt;'.</msg>
+<arg>${add_to_cart}[${item}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:15.497807" elapsed="0.646593"/>
+</kw>
+<arg>1</arg>
+<status status="PASS" start="2025-02-24T13:47:15.346282" elapsed="0.798118"/>
+</kw>
+<kw name="GetitemBtn" owner="inventoryKeyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Swag</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-24T13:47:16.145398" elapsed="0.011503"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:16.166388" level="INFO">@{add_to_cart} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="3a8e3b2b2b4f6e8ebc5a6a997bbadc0f", element="f.774E95F2C0153EC786272BF878C6F4FB.d.28297D404B20477FDB9DB70F663033BB.e.43")&gt; | &lt;selenium.webdr...</msg>
+<var>@{add_to_cart}</var>
+<arg>xpath=//*[@class="btn btn_primary btn_small btn_inventory "]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:16.156901" elapsed="0.009487"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:16.167386" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="3a8e3b2b2b4f6e8ebc5a6a997bbadc0f", element="f.774E95F2C0153EC786272BF878C6F4FB.d.28297D404B20477FDB9DB70F663033BB.e.46")&gt;'.</msg>
+<arg>${add_to_cart}[${item}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:16.166388" elapsed="0.233796"/>
+</kw>
+<arg>2</arg>
+<status status="PASS" start="2025-02-24T13:47:16.145398" elapsed="0.254786"/>
+</kw>
+<kw name="GotoCartPage" owner="cartKeyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:16.401183" level="INFO">Clicking element 'xpath=//*[@id="shopping_cart_container"]/a'.</msg>
+<arg>${btn_cart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:16.401183" elapsed="0.215717"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:47:16.400184" elapsed="0.216716"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:47:15.345285" elapsed="1.271615"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:47:07.607021" elapsed="9.009879"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:16.617897" level="INFO">Clicking button 'id=continue-shopping'.</msg>
+<arg>${btn_continue_shopping}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:16.616900" elapsed="0.325242"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:16.953154" level="INFO">Current location is 'https://www.saucedemo.com/inventory.html'.</msg>
+<arg>https://www.saucedemo.com/inventory.html</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-02-24T13:47:16.942142" elapsed="0.011012"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:47:07.607021" elapsed="9.346133"/>
+</test>
+<test id="s1-s1-t5" name="Cart - CheckOut" line="18">
+<kw name="CartSetUp" owner="cartKeyword" type="SETUP">
+<kw name="NormalUser" owner="inventoryKeyword">
+<kw name="OpenSite" owner="loginKeyword">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:16.957148" level="INFO">Opening browser 'headlesschrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-24T13:47:16.955153" elapsed="4.264883"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:47:16.955153" elapsed="4.264883"/>
+</kw>
+<kw name="LoginSuccess" owner="loginKeyword">
+<kw name="Login" owner="loginKeyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_username}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-24T13:47:21.222057" elapsed="0.446182"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:21.668239" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>${login_username}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:21.668239" elapsed="1.354876"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:23.024617" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>${login_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:23.024112" elapsed="0.468445"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:23.493558" level="INFO">Clicking element 'id=login-button'.</msg>
+<arg>${login_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:23.493558" elapsed="0.661423"/>
+</kw>
+<arg>${username}</arg>
+<arg>secret_sauce</arg>
+<status status="PASS" start="2025-02-24T13:47:21.222057" elapsed="2.932924"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Products</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-24T13:47:24.155979" elapsed="0.163562"/>
+</kw>
+<arg>standard_user</arg>
+<status status="PASS" start="2025-02-24T13:47:21.221544" elapsed="3.097997"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Swag Labs</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-24T13:47:24.320540" elapsed="0.153493"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:47:16.955153" elapsed="7.518880"/>
+</kw>
+<kw name="AddItemAndGotoCart" owner="cartKeyword">
+<kw name="GetitemBtn" owner="inventoryKeyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Swag</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-24T13:47:24.475031" elapsed="0.242597"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:24.919658" level="INFO">@{add_to_cart} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="fc5599b4a3a5fd27f577efcf7cce0130", element="f.A0A652DA97560972790FDB6CCAF87BA5.d.1346DE4C37003C15EF42033D215050C0.e.41")&gt; | &lt;selenium.webdr...</msg>
+<var>@{add_to_cart}</var>
+<arg>xpath=//*[@class="btn btn_primary btn_small btn_inventory "]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:24.717628" elapsed="0.202030"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:24.920655" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="fc5599b4a3a5fd27f577efcf7cce0130", element="f.A0A652DA97560972790FDB6CCAF87BA5.d.1346DE4C37003C15EF42033D215050C0.e.42")&gt;'.</msg>
+<arg>${add_to_cart}[${item}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:24.919658" elapsed="0.312186"/>
+</kw>
+<arg>1</arg>
+<status status="PASS" start="2025-02-24T13:47:24.475031" elapsed="0.756813"/>
+</kw>
+<kw name="GetitemBtn" owner="inventoryKeyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Swag</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-24T13:47:25.232856" elapsed="0.015473"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:25.262372" level="INFO">@{add_to_cart} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="fc5599b4a3a5fd27f577efcf7cce0130", element="f.A0A652DA97560972790FDB6CCAF87BA5.d.1346DE4C37003C15EF42033D215050C0.e.41")&gt; | &lt;selenium.webdr...</msg>
+<var>@{add_to_cart}</var>
+<arg>xpath=//*[@class="btn btn_primary btn_small btn_inventory "]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:25.249325" elapsed="0.013047"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:25.263372" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="fc5599b4a3a5fd27f577efcf7cce0130", element="f.A0A652DA97560972790FDB6CCAF87BA5.d.1346DE4C37003C15EF42033D215050C0.e.44")&gt;'.</msg>
+<arg>${add_to_cart}[${item}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:25.262372" elapsed="0.214842"/>
+</kw>
+<arg>2</arg>
+<status status="PASS" start="2025-02-24T13:47:25.231844" elapsed="0.245370"/>
+</kw>
+<kw name="GotoCartPage" owner="cartKeyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:25.478212" level="INFO">Clicking element 'xpath=//*[@id="shopping_cart_container"]/a'.</msg>
+<arg>${btn_cart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:25.478212" elapsed="0.272468"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:47:25.477214" elapsed="0.273466"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:47:24.474033" elapsed="1.276647"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:47:16.954152" elapsed="8.796528"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:25.751678" level="INFO">Clicking button 'id=checkout'.</msg>
+<arg>${btn_checkout}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:25.750680" elapsed="0.284558"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:26.042808" level="INFO">Current location is 'https://www.saucedemo.com/checkout-step-one.html'.</msg>
+<arg>https://www.saucedemo.com/checkout-step-one.html</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-02-24T13:47:26.035238" elapsed="0.008568"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:47:16.954152" elapsed="9.089654"/>
+</test>
+<test id="s1-s1-t6" name="Cart - Detail" line="21">
+<kw name="CartSetUp" owner="cartKeyword" type="SETUP">
+<kw name="NormalUser" owner="inventoryKeyword">
+<kw name="OpenSite" owner="loginKeyword">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:26.045803" level="INFO">Opening browser 'headlesschrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-24T13:47:26.044806" elapsed="2.942777"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:47:26.044806" elapsed="2.942777"/>
+</kw>
+<kw name="LoginSuccess" owner="loginKeyword">
+<kw name="Login" owner="loginKeyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_username}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-24T13:47:28.988580" elapsed="1.240683"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:30.230260" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>${login_username}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:30.230260" elapsed="0.598923"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:30.829183" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>${login_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:30.829183" elapsed="0.402911"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:31.232094" level="INFO">Clicking element 'id=login-button'.</msg>
+<arg>${login_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:31.232094" elapsed="0.218600"/>
+</kw>
+<arg>${username}</arg>
+<arg>secret_sauce</arg>
+<status status="PASS" start="2025-02-24T13:47:28.988580" elapsed="2.462114"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Products</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-24T13:47:31.450694" elapsed="0.077142"/>
+</kw>
+<arg>standard_user</arg>
+<status status="PASS" start="2025-02-24T13:47:28.987583" elapsed="2.540253"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Swag Labs</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-24T13:47:31.527836" elapsed="0.025502"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:47:26.044806" elapsed="5.508532"/>
+</kw>
+<kw name="AddItemAndGotoCart" owner="cartKeyword">
+<kw name="GetitemBtn" owner="inventoryKeyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Swag</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-24T13:47:31.554339" elapsed="0.018589"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:31.597439" level="INFO">@{add_to_cart} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="e64771df2d7e94ea5e815f756a5f49d2", element="f.EDB6863A980442E51063E1AB6EB802D4.d.6F416ECC7D82B27C9D962D4B405E2324.e.42")&gt; | &lt;selenium.webdr...</msg>
+<var>@{add_to_cart}</var>
+<arg>xpath=//*[@class="btn btn_primary btn_small btn_inventory "]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:31.572928" elapsed="0.024511"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:31.598436" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="e64771df2d7e94ea5e815f756a5f49d2", element="f.EDB6863A980442E51063E1AB6EB802D4.d.6F416ECC7D82B27C9D962D4B405E2324.e.43")&gt;'.</msg>
+<arg>${add_to_cart}[${item}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:31.597439" elapsed="0.262311"/>
+</kw>
+<arg>1</arg>
+<status status="PASS" start="2025-02-24T13:47:31.553338" elapsed="0.306412"/>
+</kw>
+<kw name="GetitemBtn" owner="inventoryKeyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Swag</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-24T13:47:31.860747" elapsed="0.023521"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:31.912805" level="INFO">@{add_to_cart} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="e64771df2d7e94ea5e815f756a5f49d2", element="f.EDB6863A980442E51063E1AB6EB802D4.d.6F416ECC7D82B27C9D962D4B405E2324.e.42")&gt; | &lt;selenium.webdr...</msg>
+<var>@{add_to_cart}</var>
+<arg>xpath=//*[@class="btn btn_primary btn_small btn_inventory "]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:31.884268" elapsed="0.028537"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:31.912805" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="e64771df2d7e94ea5e815f756a5f49d2", element="f.EDB6863A980442E51063E1AB6EB802D4.d.6F416ECC7D82B27C9D962D4B405E2324.e.45")&gt;'.</msg>
+<arg>${add_to_cart}[${item}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:31.912805" elapsed="0.091547"/>
+</kw>
+<arg>2</arg>
+<status status="PASS" start="2025-02-24T13:47:31.859750" elapsed="0.144602"/>
+</kw>
+<kw name="GotoCartPage" owner="cartKeyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:32.005349" level="INFO">Clicking element 'xpath=//*[@id="shopping_cart_container"]/a'.</msg>
+<arg>${btn_cart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:32.005349" elapsed="0.078566"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:47:32.004352" elapsed="0.079563"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:47:31.553338" elapsed="0.530577"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:47:26.043806" elapsed="6.040109"/>
+</kw>
+<kw name="CartItem Detail" owner="cartKeyword">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:32.099386" level="INFO">@{item_name} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="e64771df2d7e94ea5e815f756a5f49d2", element="f.EDB6863A980442E51063E1AB6EB802D4.d.6F416ECC7D82B27C9D962D4B405E2324.e.55")&gt; | &lt;selenium.webdr...</msg>
+<var>@{item_name}</var>
+<arg>xpath=//*[@class="inventory_item_name"]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:32.084913" elapsed="0.014473"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:32.119411" level="INFO">@{item_quantity} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="e64771df2d7e94ea5e815f756a5f49d2", element="f.EDB6863A980442E51063E1AB6EB802D4.d.6F416ECC7D82B27C9D962D4B405E2324.e.57")&gt; | &lt;selenium.webdr...</msg>
+<var>@{item_quantity}</var>
+<arg>xpath=//*[@class="cart_quantity"]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:32.100384" elapsed="0.019027"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:32.128918" level="INFO">@{item_detail} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="e64771df2d7e94ea5e815f756a5f49d2", element="f.EDB6863A980442E51063E1AB6EB802D4.d.6F416ECC7D82B27C9D962D4B405E2324.e.59")&gt; | &lt;selenium.webdr...</msg>
+<var>@{item_detail}</var>
+<arg>xpath=//*[@class="inventory_item_desc"]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:32.119411" elapsed="0.009507"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:32.138919" level="INFO">@{item_price} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="e64771df2d7e94ea5e815f756a5f49d2", element="f.EDB6863A980442E51063E1AB6EB802D4.d.6F416ECC7D82B27C9D962D4B405E2324.e.61")&gt; | &lt;selenium.webdr...</msg>
+<var>@{item_price}</var>
+<arg>xpath=//*[@class="inventory_item_price"]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:32.128918" elapsed="0.010001"/>
+</kw>
+<arg>0</arg>
+<status status="PASS" start="2025-02-24T13:47:32.083915" elapsed="0.055004"/>
+</kw>
+<kw name="CartItem Detail" owner="cartKeyword">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:32.146953" level="INFO">@{item_name} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="e64771df2d7e94ea5e815f756a5f49d2", element="f.EDB6863A980442E51063E1AB6EB802D4.d.6F416ECC7D82B27C9D962D4B405E2324.e.55")&gt; | &lt;selenium.webdr...</msg>
+<var>@{item_name}</var>
+<arg>xpath=//*[@class="inventory_item_name"]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:32.138919" elapsed="0.008034"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:32.154444" level="INFO">@{item_quantity} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="e64771df2d7e94ea5e815f756a5f49d2", element="f.EDB6863A980442E51063E1AB6EB802D4.d.6F416ECC7D82B27C9D962D4B405E2324.e.57")&gt; | &lt;selenium.webdr...</msg>
+<var>@{item_quantity}</var>
+<arg>xpath=//*[@class="cart_quantity"]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:32.146953" elapsed="0.007491"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:32.161936" level="INFO">@{item_detail} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="e64771df2d7e94ea5e815f756a5f49d2", element="f.EDB6863A980442E51063E1AB6EB802D4.d.6F416ECC7D82B27C9D962D4B405E2324.e.59")&gt; | &lt;selenium.webdr...</msg>
+<var>@{item_detail}</var>
+<arg>xpath=//*[@class="inventory_item_desc"]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:32.154444" elapsed="0.007492"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:32.169934" level="INFO">@{item_price} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="e64771df2d7e94ea5e815f756a5f49d2", element="f.EDB6863A980442E51063E1AB6EB802D4.d.6F416ECC7D82B27C9D962D4B405E2324.e.61")&gt; | &lt;selenium.webdr...</msg>
+<var>@{item_price}</var>
+<arg>xpath=//*[@class="inventory_item_price"]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:32.161936" elapsed="0.007998"/>
+</kw>
+<arg>1</arg>
+<status status="PASS" start="2025-02-24T13:47:32.138919" elapsed="0.031015"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:47:26.043806" elapsed="6.126128"/>
+</test>
+<test id="s1-s1-t7" name="Cart - RemoveItem" line="24">
+<kw name="CartSetUp" owner="cartKeyword" type="SETUP">
+<kw name="NormalUser" owner="inventoryKeyword">
+<kw name="OpenSite" owner="loginKeyword">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:32.171928" level="INFO">Opening browser 'headlesschrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-24T13:47:32.170930" elapsed="5.118275"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:47:32.170930" elapsed="5.118275"/>
+</kw>
+<kw name="LoginSuccess" owner="loginKeyword">
+<kw name="Login" owner="loginKeyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_username}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-24T13:47:37.290202" elapsed="0.496367"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:37.786569" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>${login_username}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:37.786569" elapsed="0.195496"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:37.982570" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>${login_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:37.982570" elapsed="0.298624"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:38.282203" level="INFO">Clicking element 'id=login-button'.</msg>
+<arg>${login_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:38.281699" elapsed="0.740591"/>
+</kw>
+<arg>${username}</arg>
+<arg>secret_sauce</arg>
+<status status="PASS" start="2025-02-24T13:47:37.290202" elapsed="1.733089"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Products</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-24T13:47:39.023291" elapsed="0.057524"/>
+</kw>
+<arg>standard_user</arg>
+<status status="PASS" start="2025-02-24T13:47:37.289205" elapsed="1.791610"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Swag Labs</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-24T13:47:39.081813" elapsed="0.076041"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:47:32.170930" elapsed="6.986924"/>
+</kw>
+<kw name="AddItemAndGotoCart" owner="cartKeyword">
+<kw name="GetitemBtn" owner="inventoryKeyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Swag</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-24T13:47:39.158850" elapsed="0.054038"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:39.229357" level="INFO">@{add_to_cart} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="9ee92702fd985ce75fc2e5ad3431ec7b", element="f.778C0C63D45F5304F4864B6AE034373E.d.1EEC7FC1DE3EF34E7C07BC1BEB7E4D79.e.41")&gt; | &lt;selenium.webdr...</msg>
+<var>@{add_to_cart}</var>
+<arg>xpath=//*[@class="btn btn_primary btn_small btn_inventory "]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:39.213888" elapsed="0.016466"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:39.230354" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="9ee92702fd985ce75fc2e5ad3431ec7b", element="f.778C0C63D45F5304F4864B6AE034373E.d.1EEC7FC1DE3EF34E7C07BC1BEB7E4D79.e.42")&gt;'.</msg>
+<arg>${add_to_cart}[${item}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:39.230354" elapsed="0.337943"/>
+</kw>
+<arg>1</arg>
+<status status="PASS" start="2025-02-24T13:47:39.157854" elapsed="0.410443"/>
+</kw>
+<kw name="GetitemBtn" owner="inventoryKeyword">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Swag</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-24T13:47:39.569299" elapsed="0.008497"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:39.585287" level="INFO">@{add_to_cart} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="9ee92702fd985ce75fc2e5ad3431ec7b", element="f.778C0C63D45F5304F4864B6AE034373E.d.1EEC7FC1DE3EF34E7C07BC1BEB7E4D79.e.41")&gt; | &lt;selenium.webdr...</msg>
+<var>@{add_to_cart}</var>
+<arg>xpath=//*[@class="btn btn_primary btn_small btn_inventory "]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:39.577796" elapsed="0.007491"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:39.586284" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="9ee92702fd985ce75fc2e5ad3431ec7b", element="f.778C0C63D45F5304F4864B6AE034373E.d.1EEC7FC1DE3EF34E7C07BC1BEB7E4D79.e.44")&gt;'.</msg>
+<arg>${add_to_cart}[${item}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:39.585287" elapsed="0.075503"/>
+</kw>
+<arg>2</arg>
+<status status="PASS" start="2025-02-24T13:47:39.568297" elapsed="0.092493"/>
+</kw>
+<kw name="GotoCartPage" owner="cartKeyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:39.662292" level="INFO">Clicking element 'xpath=//*[@id="shopping_cart_container"]/a'.</msg>
+<arg>${btn_cart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:39.662292" elapsed="0.507442"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:47:39.661787" elapsed="0.507947"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:47:39.157854" elapsed="1.011880"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:47:32.169934" elapsed="7.999800"/>
+</kw>
+<kw name="CartRemoveItem" owner="cartKeyword">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:40.265274" level="INFO">@{item_remove_btn} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="9ee92702fd985ce75fc2e5ad3431ec7b", element="f.778C0C63D45F5304F4864B6AE034373E.d.1EEC7FC1DE3EF34E7C07BC1BEB7E4D79.e.54")&gt; | &lt;selenium.webdr...</msg>
+<var>@{item_remove_btn}</var>
+<arg>xpath=//*[@class="btn btn_secondary btn_small cart_button"]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:40.170787" elapsed="0.094487"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${item_remove_btn}[${num}]</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-02-24T13:47:40.265274" elapsed="0.218494"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:40.483768" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="9ee92702fd985ce75fc2e5ad3431ec7b", element="f.778C0C63D45F5304F4864B6AE034373E.d.1EEC7FC1DE3EF34E7C07BC1BEB7E4D79.e.55")&gt;'.</msg>
+<arg>${item_remove_btn}[${num}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:40.483768" elapsed="0.604094"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:41.102863" level="INFO">Current page contains element 'xpath=//*[@id="cart_contents_container"]/div/div[1]/div[4]'.</msg>
+<arg>${cart_item_${num}}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-02-24T13:47:41.088860" elapsed="0.015000"/>
+</kw>
+<arg>1</arg>
+<status status="PASS" start="2025-02-24T13:47:40.169734" elapsed="0.934126"/>
+</kw>
+<kw name="CartRemoveItem" owner="cartKeyword">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:41.129909" level="INFO">@{item_remove_btn} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="9ee92702fd985ce75fc2e5ad3431ec7b", element="f.778C0C63D45F5304F4864B6AE034373E.d.1EEC7FC1DE3EF34E7C07BC1BEB7E4D79.e.54")&gt; ]</msg>
+<var>@{item_remove_btn}</var>
+<arg>xpath=//*[@class="btn btn_secondary btn_small cart_button"]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:41.103860" elapsed="0.026049"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${item_remove_btn}[${num}]</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-02-24T13:47:41.129909" elapsed="0.061075"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:41.192487" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="9ee92702fd985ce75fc2e5ad3431ec7b", element="f.778C0C63D45F5304F4864B6AE034373E.d.1EEC7FC1DE3EF34E7C07BC1BEB7E4D79.e.54")&gt;'.</msg>
+<arg>${item_remove_btn}[${num}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-24T13:47:41.191982" elapsed="0.107534"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-02-24T13:47:41.311097" level="INFO">Current page contains element 'xpath=//*[@id="cart_contents_container"]/div/div[1]/div[3]'.</msg>
+<arg>${cart_item_${num}}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-02-24T13:47:41.299516" elapsed="0.011581"/>
+</kw>
+<arg>0</arg>
+<status status="PASS" start="2025-02-24T13:47:41.103860" elapsed="0.207237"/>
+</kw>
+<status status="PASS" start="2025-02-24T13:47:32.169934" elapsed="9.141163"/>
+</test>
+<status status="PASS" start="2025-02-24T13:45:26.296151" elapsed="135.521775"/>
+</suite>
+<status status="PASS" start="2025-02-24T13:45:26.278631" elapsed="135.539295"/>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="7" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="7" fail="0" skip="0" id="s1-s1" name="03 Cart">Suites.03 Cart</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

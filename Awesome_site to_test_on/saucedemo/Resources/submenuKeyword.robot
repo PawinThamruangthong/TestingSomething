@@ -5,6 +5,7 @@ Resource    ../Resources/loginKeyword.robot
 
 
 *** Keywords ***
+# Normal User
 Submenu - CheckAll
     Submenu - about
     Go Back
@@ -37,3 +38,7 @@ SelectSubmenu
     Click Element    ${btn_submenu}
     Wait Until Element Is Visible    ${submenu_item_list}
     Click Element    ${${sub}}
+
+# Problem user
+Prob_Submenu - About
+    Run Keyword And Expect Error    *    Submenu - about

@@ -1,26 +1,26 @@
 ==============================================================================
 Suites                                                                        
 ==============================================================================
-Suites.01 Login                                                               
+Suites.03 Cart                                                                
 ==============================================================================
-LoginUserRequired                                                     | PASS |
+Default                                                               | PASS |
 ------------------------------------------------------------------------------
-LoginPasswordRequired                                                 | PASS |
+Submenu                                                               | PASS |
 ------------------------------------------------------------------------------
-LoginFailWrongUsername                                                | PASS |
+Href                                                                  | PASS |
 ------------------------------------------------------------------------------
-LoginFailWrongPassword                                                | PASS |
+Cart - Continue Shopping                                              | PASS |
 ------------------------------------------------------------------------------
-Login Success                                                         | PASS |
+Cart - CheckOut                                                       | PASS |
 ------------------------------------------------------------------------------
-Login LockedOut                                                       | PASS |
+Cart - Detail                                                         | PASS |
 ------------------------------------------------------------------------------
-CheckLogin Status                                                     | PASS |
+Cart - RemoveItem                                                     | PASS |
 ------------------------------------------------------------------------------
-Suites.01 Login                                                       | PASS |
+Suites.03 Cart                                                        | PASS |
 7 tests, 7 passed, 0 failed
 ==============================================================================
 Suites                                                                | PASS |
 7 tests, 7 passed, 0 failed
 ==============================================================================
-Output:  C:\Users\Winner\Automate\TestingSomething\Awesome_site to_test_on\saucedemo\Results\pabot_results\0\output.xml
+Output:  C:\Users\Winner\Automate\TestingSomething\Awesome_site to_test_on\saucedemo\Results\pabot_results\2\output.xml

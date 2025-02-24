@@ -5,6 +5,7 @@ Test Setup    CheckoutSetup
 
 
 *** Test Cases ***
+# Normal User
 Default
     Page Should Contain    Checkout: Your Information
 Submenu
@@ -43,3 +44,16 @@ ErrorShouldNotVisibleForCorrectedInput
     Wait Until Element Is Visible    ${error_symbol_lname}
     Run Keyword And Expect Error    *    Element Should Not Be Visible    ${error_symbol_fname}
     Run Keyword And Expect Error    *    Element Should Not Be Visible    ${error_symbol_zip}
+
+#Prob User
+Prob_default
+    [Setup]    Prob_CheckOut
+    Page Should Contain    Checkout: Your Information
+Prob_Continue
+    [Setup]    Prob_CheckOut
+    [Tags]    Fail
+    CheckoutInformationInput    John    smith    12000
+    Run Keyword And Expect Error    *    Element Should Not Be Visible    ${checkout_error_msg}
+Prob_Href
+    [Setup]    Prob_CheckOut
+    hrefCheck

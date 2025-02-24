@@ -1,26 +1,26 @@
 ==============================================================================
 Suites                                                                        
 ==============================================================================
-Suites.01 Login                                                               
+Suites.02 Inventory                                                           
 ==============================================================================
-LoginUserRequired                                                     | PASS |
+Default                                                               | PASS |
 ------------------------------------------------------------------------------
-LoginPasswordRequired                                                 | PASS |
+ElementCheck                                                          | PASS |
 ------------------------------------------------------------------------------
-LoginFailWrongUsername                                                | PASS |
+Submenu                                                               | PASS |
 ------------------------------------------------------------------------------
-LoginFailWrongPassword                                                | PASS |
+Href                                                                  | PASS |
 ------------------------------------------------------------------------------
-Login Success                                                         | PASS |
+Sort                                                                  | PASS |
 ------------------------------------------------------------------------------
-Login LockedOut                                                       | PASS |
+AddTocart                                                             | PASS |
 ------------------------------------------------------------------------------
-CheckLogin Status                                                     | PASS |
+RemoveFromCart                                                        | PASS |
 ------------------------------------------------------------------------------
-Suites.01 Login                                                       | PASS |
+Suites.02 Inventory                                                   | PASS |
 7 tests, 7 passed, 0 failed
 ==============================================================================
 Suites                                                                | PASS |
 7 tests, 7 passed, 0 failed
 ==============================================================================
-Output:  C:\Users\Winner\Automate\TestingSomething\Awesome_site to_test_on\saucedemo\Results\pabot_results\0\output.xml
+Output:  C:\Users\Winner\Automate\TestingSomething\Awesome_site to_test_on\saucedemo\Results\pabot_results\1\output.xml

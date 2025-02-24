@@ -29,3 +29,25 @@ LoginSuccess
 NotLoggedIn
     Go To    https://www.saucedemo.com/inventory.html
     ErrorMessageCheck    Epic sadface: You can only access '/inventory.html' when you are logged in.
+
+#User Type Login
+#UserKeyword
+NormalUser
+    OpenSite
+    LoginSuccess    standard_user
+    Wait Until Page Contains   Swag Labs
+ProblemUser
+    OpenSite
+    LoginSuccess    problem_user
+    Wait Until Page Contains   Swag Labs
+PerformanceGlitchUser
+    OpenSite
+    Login    performance_glitch_user    secret_sauce
+ErrorUser
+    OpenSite
+    LoginSuccess    error_user
+    Wait Until Page Contains   Swag Labs
+VisualUser
+    OpenSite
+    LoginSuccess    visual_user
+    Wait Until Page Contains   Swag Labs
