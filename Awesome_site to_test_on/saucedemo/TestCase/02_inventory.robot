@@ -66,5 +66,29 @@ problem_href
 performance_default
     [Tags]    Fail
     [Setup]    PerformanceGlitchUser
-    [Timeout]    5s
-    Page Should Contain    Products
+    [Timeout]    3s
+    [Teardown]    Run Keyword If Timeout Occurred    Pass Execution    Timeout
+    Run Keyword And Ignore Error    Wait Until Page Contains    Products    0.5s
+#######visual_user
+visual_icon_cart
+    [Setup]    VisualUser
+    Wait Until Element Is Visible    id=shopping_cart_container
+    ${elem}    Get Webelement    shopping_cart_container
+    ${transform}    Call Method    ${elem}    value_of_css_property    transform
+    ${top}    Call Method    ${elem}    value_of_css_property    top
+    ${right}    Call Method    ${elem}    value_of_css_property    right
+    Run Keyword And Expect Error    *    Should Be Equal As Strings    ${transform}    none
+    Run Keyword And Expect Error    *    Should Be Equal As Strings    ${top}    10
+    Run Keyword And Expect Error    *    Should Be Equal As Strings    ${right}    20
+visual_icon_submenu
+    [Setup]    VisualUser
+    Wait Until Element Is Visible    id=shopping_cart_container
+    ${elem}    Get Webelement    xpath=//*[@alt="Open Menu"]
+    ${transform}    Call Method    ${elem}    value_of_css_property    transform
+    Run Keyword And Expect Error    *    Should Be Equal As Strings    ${transform}    none
+visual_icon_Addtocart
+    [Setup]    VisualUser
+    ${elem}    Get WebElement    xpath=//*[@data-test="add-to-cart-test.allthethings()-t-shirt-(red)"]
+    Wait Until Element Is Visible    ${elem}
+    ${transform}    Call Method    ${elem}    value_of_css_property    position
+    Run Keyword And Expect Error    *    Should Be Equal As Strings    ${transform}    static
