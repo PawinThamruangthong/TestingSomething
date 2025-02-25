@@ -65,6 +65,7 @@ problem_href
 ########performance_user
 performance_default
     [Tags]    Fail
+    [Documentation]    Loading time is too long
     [Setup]    PerformanceGlitchUser
     [Timeout]    3s
     [Teardown]    Run Keyword If Timeout Occurred    Pass Execution    Timeout
@@ -72,6 +73,7 @@ performance_default
 #######visual_user
 visual_icon_cart
     [Setup]    VisualUser
+    [Documentation]    cart icon position is not where it is suppose to be
     Wait Until Element Is Visible    id=shopping_cart_container
     ${elem}    Get Webelement    shopping_cart_container
     ${transform}    Call Method    ${elem}    value_of_css_property    transform
@@ -81,6 +83,7 @@ visual_icon_cart
     Run Keyword And Expect Error    *    Should Be Equal As Strings    ${top}    10
     Run Keyword And Expect Error    *    Should Be Equal As Strings    ${right}    20
 visual_icon_submenu
+    [Documentation]    submenu icon is rotate
     [Setup]    VisualUser
     Wait Until Element Is Visible    id=shopping_cart_container
     ${elem}    Get Webelement    xpath=//*[@alt="Open Menu"]
@@ -88,12 +91,14 @@ visual_icon_submenu
     Run Keyword And Expect Error    *    Should Be Equal As Strings    ${transform}    none
 visual_icon_Addtocart
     [Setup]    VisualUser
+    [Documentation]    AddtoCart button position is not where it is suppose to be
     ${elem}    Get WebElement    xpath=//*[@data-test="add-to-cart-test.allthethings()-t-shirt-(red)"]
     Wait Until Element Is Visible    ${elem}
     ${transform}    Call Method    ${elem}    value_of_css_property    position
     Run Keyword And Expect Error    *    Should Be Equal As Strings    ${transform}    static
 visual_text_align
     [Setup]    VisualUser
+    [Documentation]    item name text should not align to right
     ${elem}    Get WebElement    xpath=//*[@class="inventory_item_name "]
     @{elem1}    Create List
     @{empty_list}    Create List
@@ -103,6 +108,7 @@ visual_text_align
     #@{elem1}    Get WebElements    xpath=//*[@class="inventory_item_name align_right"]
 visual_price
     [Setup]    VisualUser
+    [Documentation]    Item price are not correct and always change when reload page
     @{price1}=    GetAllitemPrice
     Reload Page
     @{price2}=    GetAllitemPrice
