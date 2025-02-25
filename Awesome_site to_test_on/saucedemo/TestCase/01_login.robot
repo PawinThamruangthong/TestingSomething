@@ -36,6 +36,7 @@ Login Success
     LoginSuccess    visual_user
     Go Back
 Login LockedOut
+    [Documentation]    Login to locked account.
     Login    locked_out_user    secret_sauce
     ErrorMessageCheck    Epic sadface: Sorry, this user has been locked out.
 CheckLogin Status

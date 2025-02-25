@@ -8,15 +8,19 @@ Test Setup    NormalUser
 Default
     Location Should Be    https://www.saucedemo.com/inventory.html
 ElementCheck
+    [Documentation]    Check button
     Element Should Be Visible    ${btn_submenu}
     Element Should Be Visible    ${btn_cart}
     Element Should Be Visible    ${btn_sort}
 Submenu
+    [Documentation]    Check submenu
 #${allitem},${about},${logout},${resetApp}
     Submenu - CheckAll
 Href
+    [Documentation]    Check external link to facebook/X/linkedIn
     hrefCheck
 Sort
+    [Documentation]    CheckSorting Function
     # az za lohi hilo
     #Name Sort
     CheckList    az
@@ -25,9 +29,11 @@ Sort
     # CheckList    lohi
     # CheckList    hilo
 AddTocart
+    [Documentation]    Add item to cart
     GetitemBtn    1
     GetitemBtn    2
 RemoveFromCart
+    [Documentation]    Remove item from cart
     #N: able to delete specific item
     GetitemBtn    1
     GetitemBtn    2
@@ -35,6 +41,7 @@ RemoveFromCart
     RemoveitemBtn    0
 ########problem_user
 problem_Submenu_about
+    [Documentation]    check submenu about from problem user
     [Setup]    ProblemUser
     [Tags]    Fail
     Prob_Submenu - About
