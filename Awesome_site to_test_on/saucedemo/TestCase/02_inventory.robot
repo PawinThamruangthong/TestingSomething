@@ -92,3 +92,18 @@ visual_icon_Addtocart
     Wait Until Element Is Visible    ${elem}
     ${transform}    Call Method    ${elem}    value_of_css_property    position
     Run Keyword And Expect Error    *    Should Be Equal As Strings    ${transform}    static
+visual_text_align
+    [Setup]    VisualUser
+    ${elem}    Get WebElement    xpath=//*[@class="inventory_item_name "]
+    @{elem1}    Create List
+    @{empty_list}    Create List
+    @{elem1}    Get WebElements    xpath=//*[@class="inventory_item_name align_right"]
+    Run Keyword And Expect Error    *    Lists Should Be Equal    ${elem1}    ${empty_list}
+    #Lists Should Be Equal    ${elem1}    ${empty_list}
+    #@{elem1}    Get WebElements    xpath=//*[@class="inventory_item_name align_right"]
+visual_price
+    [Setup]    VisualUser
+    @{price1}=    GetAllitemPrice
+    Reload Page
+    @{price2}=    GetAllitemPrice
+    Run Keyword And Expect Error    *    Lists Should Be Equal    ${price1}    ${price2}
