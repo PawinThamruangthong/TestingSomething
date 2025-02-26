@@ -22,7 +22,26 @@ TransactionTableCheck
     TableCheck
     Table Column Should Contain    ${cus_transaction_table}    1    Feb 2
     Table Cell Should Contain    ${cus_transaction_table}    2    1    Feb 2
-Deposit
+Deposit Pass
     SelectAccount    1001
     Deposit    5000
-    DepositMsg
+Withdrawl Pass
+    SelectAccount    1001
+    Withdrawl    250
+Withdrawl Fail
+    SelectAccount    1001
+    Withdrawl    50000
+DepositTransactionCheck
+    SelectAccount    1001
+    Deposit    10000
+    OpenTransaction
+    TransactionRangeStart    010120250000AM
+    Table Cell Should Contain    //*[@class="table table-bordered table-striped"]    2    2    10000
+    Table Cell Should Contain    //*[@class="table table-bordered table-striped"]    2    3    Credit
+WithdrawlTransactionCheck
+    SelectAccount    1001
+    Withdrawl    500
+    OpenTransaction
+    TransactionRangeStart    010120250000AM
+    Table Cell Should Contain    //*[@class="table table-bordered table-striped"]    2    2    500
+    Table Cell Should Contain    //*[@class="table table-bordered table-striped"]    2    3    Debit

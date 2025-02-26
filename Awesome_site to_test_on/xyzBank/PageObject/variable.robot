@@ -30,6 +30,9 @@ ${cus_transaction_table}    xpath=//*[@class="table table-bordered table-striped
     #Customer deposit
 ${cus_deposit_amount}      xpath=//*[@ng-model="amount"]
 ${cus_deposit_confirm}     xpath=/html/body/div/div/div[2]/div/div[4]/div/form/button
+    #Customer withdrawl
+${cus_withdrawl_amount}    xpath=//*[@ng-model="amount"]
+${cus_withdrawl_confirm}    xpath=/html/body/div/div/div[2]/div/div[4]/div/form/button
     #Message
 ${cus_msg}                 xpath=//*[@ng-show="message"]
 #Manager
