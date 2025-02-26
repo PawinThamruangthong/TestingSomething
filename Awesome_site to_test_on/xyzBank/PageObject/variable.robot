@@ -39,3 +39,17 @@ ${cus_msg}                 xpath=//*[@ng-show="message"]
 ${mng_add_cus}             xpath=//*[@ng-click="addCust()"]
 ${mng_open_acc}            xpath=//*[@ng-click="openAccount()"]
 ${mng_cus_list}            xpath=//*[@ng-click="showCust()"]
+
+    #Add Customer
+${mng_add_cus_first_name}    xpath=//*[@ng-model="fName"]
+${mng_add_cus_last_name}     xpath=//*[@ng-model="lName"]
+${mng_add_cus_post_code}     xpath=//*[@ng-model="postCd"]
+${mng_add_cus_confirm_btn}   xpath=/html/body/div/div/div[2]/div/div[2]/div/div/form/button
+    #Open Account
+${mng_add_acc_cus_name}    id=userSelect
+${mng_add_acc_currency}    id=currency
+${mng_open_acc_process}    xpath=/html/body/div/div/div[2]/div/div[2]/div/div/form/button
+    #Customer Management
+${mng_cus_search}          xpath=//*[@ng-model="searchCustomer"]
+${mng_cus_table}           xpath=//*[@class="table table-bordered table-striped"]
+${mng_cus_delete}          xpath=//*[@ng-click="deleteCust(cust)"]
